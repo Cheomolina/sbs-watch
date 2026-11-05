@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SBS Watch</title>
+<meta name="description" content="In-house brand monitoring and AI-visibility tracking, built with Claude Code.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b5bdb' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #1b2333; --muted: #5b6577; --line: #e3e7ee; --soft: #f5f7fa; --bg: #eef1f6; --card: #fff;
+    --navy: #14213d; --accent: #3b5bdb;
+    --ok: #2b8a3e; --ok-bg: #e6f4ea; --best: #0b7285; --best-bg: #dff3f6;
+    --warn: #b35c00; --warn-bg: #fff1dc; --no: #c92a2a; --no-bg: #fde8e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e4e8f0; --muted: #9aa4b6; --line: #2c3445; --soft: #1b2232; --bg: #10151f; --card: #161c29;
+      --accent: #8da2ff; --ok-bg: #173323; --ok: #8ce99a; --best-bg: #10323a; --best: #66d9e8;
+      --warn-bg: #3a2a12; --warn: #ffc078; --no-bg: #3a1a1a; --no: #ffa8a8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  a { color: var(--accent); }
+  svg.i { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { background: linear-gradient(135deg, #14213d 0%, #23397a 100%); color: #fff; padding: 44px 0 40px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #9fb4ff; font-weight: 600; }
+  .hero h1 { font-size: clamp(30px, 6vw, 44px); margin: 6px 0 8px; line-height: 1.1; display: flex; align-items: center; gap: 12px; }
+  .hero h1 svg.i { width: 40px; height: 40px; color: #9fb4ff; }
+  .hero p { color: #d3dcf5; max-width: 640px; margin: 0 0 22px; font-size: 16.5px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14.5px; }
+  .btn.primary { background: #fff; color: #14213d; }
+  .btn.ghost { color: #fff; border: 1px solid rgba(255,255,255,.35); }
+  .btn:hover { filter: brightness(.95); }
+
+  main { padding: 28px 0 48px; }
+  h2 { font-size: 21px; margin: 30px 0 12px; display: flex; align-items: center; gap: 9px; }
+  h2 svg.i { color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .lede { font-size: 15.5px; }
+  .lede p { margin: 0 0 8px; } .lede p:last-child { margin: 0; }
+
+  .phases { display: grid; gap: 12px; }
+  .phase { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 10px; padding: 14px 18px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: start; }
+  .phase h3 { margin: 0; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+  .phase p { margin: 0; color: var(--muted); grid-column: 1 / -1; font-size: 14.5px; }
+  .phase.done { border-left-color: var(--ok); }
+  .phase.now { border-left-color: var(--best); }
+  .phase.next { border-left-color: var(--accent); }
+  .phase.later { border-left-color: var(--warn); }
+  .status { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+  .done .status { background: var(--ok-bg); color: var(--ok); }
+  .now .status { background: var(--best-bg); color: var(--best); }
+  .next .status { background: var(--soft); color: var(--accent); }
+  .later .status { background: var(--warn-bg); color: var(--warn); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .tile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .tile h3 { margin: 0 0 4px; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+  .tile p { margin: 0; color: var(--muted); font-size: 14px; }
+  .tile.rule h3 svg.i { color: var(--no); }
+  .tile.how h3 svg.i { color: var(--accent); }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; padding: 18px 0 30px; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="down" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="map" viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></symbol>
+    <symbol id="ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="branch" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="8" r="3"/><path d="M6 9v6M18 11c0 4-6 3-12 4"/></symbol>
+    <symbol id="issue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+    <symbol id="db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Team workspace</div>
+    <h1><svg class="i"><use href="#eye"/></svg>SBS Watch</h1>
+    <p>In-house brand monitoring and AI-visibility tracking, built with Claude Code. We build the parts we can own, starting with the parts that pay off first.</p>
+    <div class="btns">
+      <a class="btn primary" href="feasibility.html"><svg class="i"><use href="#file"/></svg>Read the feasibility map</a>
+      <a class="btn ghost" href="assets/Feasibility-Map.pdf"><svg class="i"><use href="#down"/></svg>PDF version</a>
+      <a class="btn ghost" href="https://github.com/Cheomolina/sbs-watch"><svg class="i"><use href="#branch"/></svg>Repository</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card lede">
+    <p><b>Why this exists.</b> Commercial social-listening tools combine data collection, AI analysis and reporting. Claude Code can build almost all of the analysis and reporting. Data access is the limit: news, blogs, Reddit, YouTube and reviews are within reach, while Instagram, Facebook, TikTok and LinkedIn are closed.</p>
+    <p>So we start where data access isn't a problem: tracking how AI assistants talk about us and our competitors.</p>
+  </section>
+
+  <h2><svg class="i"><use href="#map"/></svg>Roadmap</h2>
+  <div class="phases">
+    <div class="phase done"><h3><svg class="i"><use href="#check"/></svg>Phase 0 · Feasibility and workspace</h3><span class="status">Done</span><p>Feasibility map of 33 social-listening features, this site and the shared repository.</p></div>
+    <div class="phase now"><h3><svg class="i"><use href="#target"/></svg>Phase 1 · AI visibility tracker</h3><span class="status">Up next</span><p>Run a set of buyer prompts against ChatGPT, Perplexity, Gemini and Claude on a schedule. Track mentions, rank, share of voice and cited sources against competitors. Prompts come from Semrush keywords and our personas.</p></div>
+    <div class="phase next"><h3><svg class="i"><use href="#news"/></svg>Phase 2 · Focused listening</h3><span class="status">Planned</span><p>News, blogs, Reddit, YouTube, Hacker News and reviews, with Claude sentiment, intent and topics, a weekly briefing and Slack or Teams alerts. Needs a GDPR review and a private dashboard before it starts.</p></div>
+    <div class="phase later"><h3><svg class="i"><use href="#ban"/></svg>Phase 3 · Closed platforms</h3><span class="status">Decide later</span><p>Instagram, Facebook, TikTok and LinkedIn can't be built in-house. If we need them, we buy a vendor and run Claude analysis on top.</p></div>
+  </div>
+
+  <h2><svg class="i"><use href="#users"/></svg>How we work</h2>
+  <div class="grid">
+    <div class="tile how"><h3><svg class="i"><use href="#issue"/></svg>Issues for tasks</h3><p>Every piece of work starts as a GitHub issue, so everyone can see what's in progress and who owns it.</p></div>
+    <div class="tile how"><h3><svg class="i"><use href="#branch"/></svg>Pull requests for changes</h3><p>Work on a branch and open a pull request. One teammate reviews before it merges into main.</p></div>
+    <div class="tile how"><h3><svg class="i"><use href="#globe"/></svg>This site updates itself</h3><p>Anything merged into the <code>docs/</code> folder on main is published here within a minute or two.</p></div>
+  </div>
+
+  <h2><svg class="i"><use href="#shield"/></svg>Ground rules: this repository is public</h2>
+  <div class="grid">
+    <div class="tile rule"><h3><svg class="i"><use href="#key"/></svg>No secrets</h3><p>API keys and tokens go in GitHub Actions secrets or a local <code>.env</code> file, never in commits.</p></div>
+    <div class="tile rule"><h3><svg class="i"><use href="#db"/></svg>No personal data</h3><p>No collected posts, author names or raw mentions. Only code and aggregated results.</p></div>
+    <div class="tile rule"><h3><svg class="i"><use href="#lock"/></svg>No confidential material</h3><p>No customer names, internal figures or anything you wouldn't post publicly.</p></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">SBS Watch · Maintained by the SBS marketing team · Built with Claude Code</div>
+</footer>
+
+</body>
+</html>

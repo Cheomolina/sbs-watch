@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Listening Feasibility</title>
+<style>
+  @page { size: A4; margin: 14mm 13mm 16mm 13mm;
+    @bottom-left { content: "SBS Watch · Social listening feasibility map"; font: 7.5pt "Segoe UI", sans-serif; color: #8a94a6; }
+    @bottom-right { content: "Page " counter(page) " / " counter(pages); font: 7.5pt "Segoe UI", sans-serif; color: #8a94a6; }
+  }
+  :root {
+    --ink: #1b2333; --muted: #5b6577; --line: #e3e7ee; --soft: #f5f7fa;
+    --navy: #14213d; --accent: #3b5bdb;
+    --ok: #2b8a3e; --ok-bg: #e6f4ea; --best: #0b7285; --best-bg: #dff3f6;
+    --warn: #b35c00; --warn-bg: #fff1dc; --no: #c92a2a; --no-bg: #fde8e8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; }
+  body { font: 9pt/1.42 "Segoe UI", system-ui, sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  svg.i { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  /* Cover */
+  .cover { background: linear-gradient(135deg, #14213d 0%, #23397a 100%); color: #fff; border-radius: 10px; padding: 22px 24px 20px; position: relative; overflow: hidden; }
+  .cover::after { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; border-radius: 50%; border: 28px solid rgba(255,255,255,.06); }
+  .eyebrow { font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: #9fb4ff; font-weight: 600; }
+  .cover h1 { font-size: 22pt; line-height: 1.15; margin: 6px 0 6px; font-weight: 700; }
+  .cover p { margin: 0; color: #d3dcf5; font-size: 10pt; max-width: 150mm; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 16px; }
+  .kpi { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.14); border-radius: 8px; padding: 9px 10px; }
+  .kpi b { display: block; font-size: 17pt; line-height: 1.1; }
+  .kpi span { font-size: 7.8pt; color: #c9d4f2; }
+  .kpi.g b { color: #8ce99a; } .kpi.a b { color: #ffd43b; } .kpi.r b { color: #ffa8a8; } .kpi.b b { color: #99e9f2; }
+
+  .lede { margin: 12px 0 0; padding: 10px 12px; background: var(--soft); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 9.2pt; }
+
+  h2 { font-size: 14pt; margin: 18px 0 8px; display: flex; align-items: center; gap: 8px; color: var(--navy); break-after: avoid; }
+  h2 .num { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: var(--navy); color: #fff; font-size: 10.5pt; }
+  h2.no .num { background: var(--no); }
+  h3 { font-size: 10.5pt; margin: 14px 0 6px; display: flex; align-items: center; gap: 7px; color: var(--navy); break-after: avoid; }
+  h3 .chip { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #e7ecff; color: var(--accent); }
+  h3 .chip svg.i { width: 13px; height: 13px; }
+  h3 small { font-weight: 400; color: var(--muted); font-size: 8.3pt; margin-left: 2px; }
+
+  /* At a glance chart */
+  .glance { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px 10px; margin-top: 12px; break-inside: avoid; }
+  .glance-title { font-weight: 600; font-size: 9.5pt; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: baseline; }
+  .legend { display: flex; gap: 12px; font-weight: 400; font-size: 7.8pt; color: var(--muted); }
+  .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+  .bar-row { display: grid; grid-template-columns: 44mm 1fr 18mm; align-items: center; gap: 10px; margin: 5px 0; }
+  .bar-label { display: flex; align-items: center; gap: 6px; font-size: 8.6pt; }
+  .bar-label svg.i { color: var(--accent); }
+  .bar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; background: var(--soft); }
+  .bar div { height: 100%; display: grid; place-items: center; color: #fff; font-size: 7pt; font-weight: 600; }
+  .seg-ok { background: var(--ok); } .seg-warn { background: #e8890c; } .seg-no { background: var(--no); }
+  .bar-note { font-size: 7.6pt; color: var(--muted); text-align: right; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 2px 0 6px; }
+  thead th { background: var(--navy); color: #fff; text-align: left; font-size: 7.8pt; text-transform: uppercase; letter-spacing: .06em; padding: 6px 8px; font-weight: 600; }
+  tbody td { padding: 6px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafbfd; }
+  tr { break-inside: avoid; }
+  .name { display: block; position: relative; padding-left: 27px; min-height: 20px; font-weight: 600; }
+  .name .ic { position: absolute; left: 0; top: -1px; display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 5px; background: #eef1f7; color: var(--navy); }
+  .name .ic svg.i { width: 12px; height: 12px; }
+  .name small { display: block; font-weight: 400; color: var(--muted); font-size: 7.6pt; }
+  td.v { width: 33mm; }
+  .pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px 2px 5px; border-radius: 99px; font-weight: 700; font-size: 7.6pt; white-space: nowrap; }
+  .pill svg.i { width: 11px; height: 11px; stroke-width: 2.6; }
+  .pill.ok { background: var(--ok-bg); color: var(--ok); }
+  .pill.best { background: var(--best-bg); color: var(--best); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn); }
+  .pill.no { background: var(--no-bg); color: var(--no); }
+  .vnote { display: block; color: var(--muted); font-size: 7.6pt; margin-top: 3px; }
+  .feat { color: var(--muted); font-weight: 400; font-size: 7.6pt; }
+
+  .callout { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border-radius: 8px; margin: 8px 0; break-inside: avoid; }
+  .callout svg.i { width: 18px; height: 18px; margin-top: 1px; }
+  .callout.best { background: var(--best-bg); color: #0b4f5c; }
+  .callout.best svg.i { color: var(--best); }
+
+  /* Caveat cards */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; break-inside: avoid; background: #fff; }
+  .card h4 { margin: 0 0 4px; font-size: 9.3pt; display: flex; gap: 7px; align-items: center; color: var(--navy); }
+  .card h4 .ic { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: var(--warn-bg); color: var(--warn); }
+  .card p { margin: 0; color: #364152; }
+
+  /* Not possible */
+  .closed { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 6px 0 10px; break-inside: avoid; }
+  .closed div { border: 1px solid #f3c4c4; background: var(--no-bg); border-radius: 8px; padding: 9px 8px; text-align: center; color: var(--no); font-weight: 700; font-size: 8.8pt; position: relative; }
+  .closed div svg.i { width: 22px; height: 22px; display: block; margin: 0 auto 4px; }
+  .closed div em { display: block; font-style: normal; font-weight: 400; color: #8f3a3a; font-size: 7.4pt; margin-top: 2px; }
+  .closed .lockbadge { position: absolute; top: 5px; right: 5px; width: 12px; height: 12px; }
+  .closed .lockbadge svg.i { width: 12px; height: 12px; margin: 0; }
+  td.b24 { width: 36mm; }
+
+  /* Tiers */
+  .tiers { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 4px; break-inside: avoid; }
+  .tier { border-radius: 10px; padding: 12px 12px 11px; border: 1px solid var(--line); position: relative; }
+  .tier .tnum { font-size: 7.4pt; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+  .tier h4 { margin: 4px 0 6px; font-size: 11pt; display: flex; align-items: center; gap: 7px; }
+  .tier h4 svg.i { width: 18px; height: 18px; }
+  .tier p { margin: 0 0 8px; font-size: 8.6pt; color: #364152; }
+  .tier .verdict { font-size: 8.2pt; font-weight: 600; border-top: 1px dashed currentColor; padding-top: 7px; }
+  .t1 { background: var(--best-bg); border-color: #a5dfe8; } .t1 .tnum, .t1 h4, .t1 .verdict { color: var(--best); }
+  .t2 { background: var(--ok-bg); border-color: #b2dfbe; } .t2 .tnum, .t2 h4, .t2 .verdict { color: var(--ok); }
+  .t3 { background: var(--no-bg); border-color: #f3c4c4; } .t3 .tnum, .t3 h4, .t3 .verdict { color: var(--no); }
+  .pb { break-before: page; }
+  .src { margin-top: 14px; font-size: 7.4pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
+
+  /* Screen view (the print layout above stays unchanged) */
+  .topnav { display: none; }
+  @media screen {
+    html { background: #eef1f6; }
+    body { max-width: 210mm; margin: 0 auto; padding: 16px 16px 40px; background: #fff; min-height: 100vh; }
+    .topnav { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 0 14px; font-size: 9.5pt; }
+    .topnav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .topnav a:hover { text-decoration: underline; }
+    .pb { break-before: auto; }
+  }
+  @media screen and (max-width: 720px) {
+    body { font-size: 10pt; }
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .grid4, .tiers { grid-template-columns: 1fr; }
+    .closed { grid-template-columns: 1fr 1fr; }
+    .bar-row { grid-template-columns: 1fr; gap: 3px; }
+    .bar-note { text-align: left; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></symbol>
+    <symbol id="rss" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+    <symbol id="code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="xlogo" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+    <symbol id="at" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></symbol>
+    <symbol id="send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    <symbol id="mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 10.5l-6.1 1.7L12 18l-1.9-5.8L4 10.5l6.1-1.7z"/><path d="M19 3v4M17 5h4"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+    <symbol id="trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54z"/></symbol>
+    <symbol id="plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="warn" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2"/></symbol>
+    <symbol id="lang" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></symbol>
+    <symbol id="building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></symbol>
+    <symbol id="tag" viewBox="0 0 24 24"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+    <symbol id="camera" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="fb" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15 8h-2a2 2 0 0 0-2 2v11M9 13h5"/></symbol>
+    <symbol id="video" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4z"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+    <symbol id="bot" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></symbol>
+    <symbol id="gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="dash" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></symbol>
+    <symbol id="book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+    <symbol id="zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+    <symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+    <symbol id="smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></symbol>
+    <symbol id="shapes" viewBox="0 0 24 24"><circle cx="7" cy="7" r="4"/><rect x="13" y="13" width="8" height="8" rx="1"/><path d="m17 3 4 7h-8z"/></symbol>
+    <symbol id="lines" viewBox="0 0 24 24"><path d="M4 7h10M4 12h16M4 17h7"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </defs>
+</svg>
+
+<nav class="topnav"><a href="./">&larr; SBS Watch home</a><a href="assets/Feasibility-Map.pdf">Download PDF</a></nav>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="eyebrow">Feasibility map · October 2026</div>
+  <h1>Building social listening with Claude Code</h1>
+  <p>What you can build, whether it's worth building, and what you can't build at all, layer by layer.</p>
+  <div class="kpis">
+    <div class="kpi g"><b>29 / 33</b><span>features fully buildable</span></div>
+    <div class="kpi a"><b>4</b><span>features only partly buildable</span></div>
+    <div class="kpi b"><b>~30–50%</b><span>of a commercial tool's source coverage, realistically</span></div>
+    <div class="kpi r"><b>4</b><span>major platforms closed: Instagram, Facebook, TikTok, LinkedIn</span></div>
+  </div>
+</section>
+
+<div class="lede"><b>The short version.</b> Claude Code can write almost every feature of a commercial social-listening tool. Those vendors' real advantage is their data: years of crawler infrastructure and licensed data deals. You can get your own access to news, blogs, Reddit, YouTube and reviews. In practice you can't get Meta, TikTok or LinkedIn.</div>
+
+<div class="glance">
+  <div class="glance-title">Feasibility by layer
+    <span class="legend"><span><i style="background:var(--ok)"></i>Possible</span><span><i style="background:#e8890c"></i>Possible with conditions</span><span><i style="background:var(--no)"></i>Not possible</span></span>
+  </div>
+  <div class="bar-row"><div class="bar-label"><svg class="i"><use href="#file"/></svg>Reporting &amp; integrations</div><div class="bar"><div class="seg-ok" style="width:100%">7</div></div><div class="bar-note">all easy</div></div>
+  <div class="bar-row"><div class="bar-label"><svg class="i"><use href="#sparkle"/></svg>AI analysis</div><div class="bar"><div class="seg-ok" style="width:100%">9</div></div><div class="bar-note">no real limits</div></div>
+  <div class="bar-row"><div class="bar-label"><svg class="i"><use href="#eye"/></svg>AI visibility</div><div class="bar"><div class="seg-ok" style="width:80%">4</div><div class="seg-no" style="width:20%">1</div></div><div class="bar-note">best ROI</div></div>
+  <div class="bar-row"><div class="bar-label"><svg class="i"><use href="#chart"/></svg>Metrics &amp; analytics</div><div class="bar"><div class="seg-ok" style="width:50%">3</div><div class="seg-warn" style="width:50%">3</div></div><div class="bar-note">limited by data</div></div>
+  <div class="bar-row"><div class="bar-label"><svg class="i"><use href="#db"/></svg>Data collection</div><div class="bar"><div class="seg-ok" style="width:44%">8</div><div class="seg-warn" style="width:33%">6</div><div class="seg-no" style="width:23%">4</div></div><div class="bar-note">the hard layer</div></div>
+</div>
+
+<!-- PART 1 -->
+<h2><span class="num">1</span>What's possible</h2>
+
+<h3><span class="chip"><svg class="i"><use href="#db"/></svg></span>A. Data collection <small>· the hard layer</small></h3>
+<table>
+  <thead><tr><th style="width:30mm">Source</th><th style="width:38mm">How</th><th>Caveats</th><th>Worth it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#news"/></svg></span>News sites</div></td><td>Google News RSS, GDELT (free, global), paid news APIs</td><td>Google News RSS is unofficial and can break. GDELT is noisy. Paywalled articles give only headline and snippet. Commercial news APIs cost real money.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Core source, cheap, high PR value</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#rss"/></svg></span>Blogs &amp; websites</div></td><td>RSS feeds, a web search API (e.g. Brave), your own crawler for a curated list</td><td>You won't match a huge crawled index. A curated list of 200–2,000 sites is realistic. Bing's search API was retired in 2025.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">If you curate the list for your niche</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#chat"/></svg></span>Reddit</div></td><td>Official API</td><td>Free tier is non-commercial with rate limits. Commercial use needs Reddit's terms or a paid agreement. Deleted content must be removed from your data.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">High-signal for B2B and tech. Check licensing first.</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#play"/></svg></span>YouTube</div></td><td>YouTube Data API v3</td><td>10,000 units/day by default and a search costs 100, so about 100 searches/day. You get titles, descriptions and comments, but not what's said in the video without transcripts.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Titles and comments. Spoken content only for a short list.</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#code"/></svg></span>Hacker News</div></td><td>Algolia HN API (free)</td><td>Developer audience only</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">If tech or dev audiences matter</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#cloud"/></svg></span>Bluesky</div></td><td>Open firehose and search API</td><td>Smaller audience, but fully open</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Cheap to add, moderate value</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#users"/></svg></span>Mastodon</div></td><td>Per-server public APIs</td><td>Fragmented, with no global search</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Maybe</span><span class="vnote">Only if your niche is there</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#xlogo"/></svg></span>X / Twitter</div></td><td>Paid API</td><td>Pricing has ranged from about $200/mo to $5,000+/mo and keeps changing. Lower tiers have tight read caps and a short search lookback.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>With budget</span><span class="vnote">Useful volume is expensive</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#at"/></svg></span>Threads</div></td><td>Official API</td><td>Some public keyword search has opened up, with tight rate limits. Check the current terms.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Test it</span><span class="vnote">Maybe the one usable Meta-owned source</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#send"/></svg></span>Telegram</div></td><td>Telegram's own API, public channels only</td><td>Needs a user account. No global search, so you monitor channels you pick.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Niche</span><span class="vnote">Crypto, Eastern Europe, some news</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#phone"/></svg></span>App store reviews</div></td><td>Apple's public review RSS per app. Google Play through scraping libraries.</td><td>Apple returns only recent reviews. Google Play has no official API for other companies' apps, so scraping is grey under its terms.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">If you or competitors have apps</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#star"/></svg></span>Review sites<small>G2, Capterra, Trustpilot, TripAdvisor</small></div></td><td>Their own APIs cover your own listings only. Competitors require scraping.</td><td>Scraping breaks their terms and they actively block it</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Own only</span><span class="vnote">Your own reviews yes. Competitors' reviews, mostly no.</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#mic"/></svg></span>Podcasts</div></td><td>RSS feed, then speech-to-text, then keyword search</td><td>Transcription costs grow with hours of audio</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Curated</span><span class="vnote">10–30 shows: yes. Broad coverage: no.</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#user"/></svg></span>Your own social accounts<small>IG, FB, LinkedIn page</small></div></td><td>Official APIs for accounts you own</td><td>You see @mentions and comments on your posts only, not wider conversations</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Engagement tracking, not listening</span></td></tr>
+  </tbody>
+</table>
+
+<h3><span class="chip"><svg class="i"><use href="#sparkle"/></svg></span>B. AI analysis <small>· the easy layer, with no real limits</small></h3>
+<table>
+  <thead><tr><th style="width:34mm">Feature</th><th style="width:44mm">How</th><th>Caveats</th><th>Worth it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#smile"/></svg></span>Sentiment <span class="feat">#6</span></div></td><td>Claude classifies each mention, Haiku-class for cost</td><td>Handles sarcasm better than older models but not perfectly. Spot-check about 50 items per month.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Likely better than most vendors'</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#help"/></svg></span>Intent <span class="feat">#14</span></div></td><td>Claude classifies into question, complaint, purchase intent, comparison, promo, etc.</td><td>You define the categories, which is a plus for B2B</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Very high value for sales leads</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#shapes"/></svg></span>Topic analysis <span class="feat">#13</span></div></td><td>Embeddings, clustering, then Claude names each cluster</td><td>Clusters drift between runs, so fix the topic list once it settles</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#search"/></svg></span>Semantic search <span class="feat">#15</span></div></td><td>Embeddings in a vector store (pgvector or SQLite-vec)</td><td>None worth mentioning</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#lines"/></svg></span>Context &amp; word cloud <span class="feat">#9, #29</span></div></td><td>Counts of terms that appear together, or Claude-extracted themes</td><td>None</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Cheap</span><span class="vnote">Mostly useful as a visual</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#file"/></svg></span>AI Insights briefing <span class="feat">#11</span></div></td><td>A scheduled Claude job writes a weekly summary</td><td>Only as good as your data coverage</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">What managers actually read</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#bot"/></svg></span>AI Brand Assistant <span class="feat">#10</span></div></td><td>Claude plus an MCP server over your mentions database</td><td>None. Very natural to build with Claude.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#zap"/></svg></span>Spike detection <span class="feat">#12</span></div></td><td>Rolling z-score or seasonal decomposition on daily counts, then Claude explains the spike</td><td>Needs about 4–8 weeks of history before it's reliable</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#copy"/></svg></span>Dedup &amp; relevance filtering</div></td><td>Embedding similarity plus a Claude relevance check</td><td>Essential because keyword matching is noisy. Commercial tools have the same problem.</td><td class="v"><span class="pill best"><svg class="i"><use href="#check"/></svg>Required</span><span class="vnote">Not optional</span></td></tr>
+  </tbody>
+</table>
+
+<h3><span class="chip"><svg class="i"><use href="#eye"/></svg></span>C. AI visibility <small>· fully possible, and arguably the best place to start</small></h3>
+<table>
+  <thead><tr><th style="width:34mm">Feature</th><th style="width:44mm">How</th><th>Caveats</th><th>Worth it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#eye"/></svg></span>LLM brand monitoring <span class="feat">#16</span></div></td><td>Send a set of prompts to the OpenAI, Perplexity, Gemini and Claude APIs on a schedule, then parse mentions, rank and sentiment</td><td>API answers can differ from the consumer apps (personalization, memory, different search). Answers vary run to run, so sample each prompt 3–5 times and average.</td><td class="v"><span class="pill best"><svg class="i"><use href="#check"/></svg>Best ROI</span><span class="vnote">No data access problem</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#target"/></svg></span>Prompt &amp; competitor gaps <span class="feat">#17</span></div></td><td>Same data, compared across competitors</td><td>Choosing the prompts is the real work. Base them on Semrush keywords and personas.</td><td class="v"><span class="pill best"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Feeds straight into content planning</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#link"/></svg></span>Cited sources tracking</div></td><td>Parse the citations in Perplexity and Gemini answers</td><td>Not every model returns citations</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Shows which sites to get coverage on</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#search"/></svg></span>Google AI Overviews</div></td><td>Search-results APIs (SerpApi, DataForSEO)</td><td>Paid per query</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">At a modest budget</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#bot"/></svg></span>Copilot &amp; consumer ChatGPT app</div></td><td>Only by scraping the web UI</td><td>Breaks their terms and is fragile</td><td class="v"><span class="pill no"><svg class="i"><use href="#ban"/></svg>Skip</span><span class="vnote">Use the APIs as a proxy</span></td></tr>
+  </tbody>
+</table>
+
+<div class="callout best"><svg class="i"><use href="#target"/></svg><div><b>Why start here:</b> AI visibility has no data access problem, costs little to run, is the newest part of commercial listening tools (often sold as an add-on), and plugs straight into keyword and content work you already do.</div></div>
+
+<h3><span class="chip"><svg class="i"><use href="#chart"/></svg></span>D. Metrics &amp; analytics</h3>
+<table>
+  <thead><tr><th style="width:44mm">Feature</th><th>Caveats</th><th>Worth it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#trend"/></svg></span>Volume, trends, share of voice <span class="feat">#5, #7</span></div></td><td>Only as complete as your sources. Share of voice is relative, so gaps affect all brands similarly.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#gauge"/></svg></span>Reach estimate</div></td><td>You invent the formula: followers, views and upvotes for social, site traffic for news (your Semrush connector can provide traffic). It won't be comparable with vendors' numbers.</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Keep it simple and documented</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#users"/></svg></span>Influence Score &amp; influencers <span class="feat">#8, #26</span></div></td><td>Only for authors on sources you collect. No Instagram or TikTok influencers.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>B2B only</span><span class="vnote">Fine for Reddit, YouTube, blogs, journalists. Weak for consumer brands.</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#hash"/></svg></span>Hashtag tracking <span class="feat">#4</span></div></td><td>Works on Bluesky, Mastodon, YouTube, and X if you pay. Not on Instagram or TikTok, where hashtags matter most.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Low value</span><span class="vnote">Without those platforms</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#pin"/></svg></span>Geolocation <span class="feat">#25</span></div></td><td>Very little source data. Mostly inferred from language or the publication's country.</td><td class="v"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Approximate</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#lang"/></svg></span>Language filter <span class="feat">#24</span></div></td><td>Easy to detect</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+  </tbody>
+</table>
+
+<h3><span class="chip"><svg class="i"><use href="#plug"/></svg></span>E. Reporting, alerts &amp; integrations <small>· all easy</small></h3>
+<table>
+  <thead><tr><th style="width:52mm">Feature</th><th>Caveats</th><th>Worth it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#bell"/></svg></span>Slack / Teams alerts <span class="feat">#3, #30, #31</span></div></td><td>Tune the thresholds or people start ignoring the alerts</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#mail"/></svg></span>Scheduled email reports <span class="feat">#20</span></div></td><td>Needs an email-sending service</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#file"/></svg></span>PDF / Excel / PPT exports <span class="feat">#18, #19, #21</span></div></td><td>Can be branded with your SBS brand skill</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">You already have these skills</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#dash"/></svg></span>Dashboard</div></td><td>Streamlit or Next.js, or an Artifact dashboard for internal use</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#filter"/></svg></span>Filters, Boolean, tags, saved filters <span class="feat">#22, #23, #27, #28</span></div></td><td>Standard app work</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#plug"/></svg></span>Own API &amp; MCP server <span class="feat">#32, #33</span></div></td><td>Lets you query everything from Claude</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Costs very little extra</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#book"/></svg></span>Notion export</div></td><td>Fits your existing workflows</td><td class="v"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Natural fit for you</span></td></tr>
+  </tbody>
+</table>
+
+<h3><span class="chip"><svg class="i"><use href="#layers"/></svg></span>F. Cross-cutting caveats</h3>
+<div class="grid4">
+  <div class="card"><h4><span class="ic"><svg class="i"><use href="#shield"/></svg></span>GDPR</h4><p>Storing posts and author names counts as processing personal data. You need a legitimate-interest basis, a retention policy and a way to handle deletion requests. Get this signed off internally if it's for SBS.</p></div>
+  <div class="card"><h4><span class="ic"><svg class="i"><use href="#clock"/></svg></span>No backfill</h4><p>Your history starts the day you switch it on. Most APIs only look back days or weeks.</p></div>
+  <div class="card"><h4><span class="ic"><svg class="i"><use href="#wrench"/></svg></span>Maintenance</h4><p>APIs change, scrapers break and quotas move. Expect a few hours a month of upkeep. Claude Code makes the fixes fast, but someone has to notice the breakage.</p></div>
+  <div class="card"><h4><span class="ic"><svg class="i"><use href="#coins"/></svg></span>Running costs</h4><p>LLM classification is cheap per mention with small models. Paid APIs (X, news, search results) are the real cost. Many sources still cost nothing.</p></div>
+</div>
+
+<!-- PART 2 -->
+<h2 class="no pb"><span class="num">2</span>What's not possible, and why</h2>
+
+<div class="closed">
+  <div><span class="lockbadge"><svg class="i"><use href="#lock"/></svg></span><svg class="i"><use href="#camera"/></svg>Instagram<em>Own account &amp; capped hashtags only</em></div>
+  <div><span class="lockbadge"><svg class="i"><use href="#lock"/></svg></span><svg class="i"><use href="#fb"/></svg>Facebook<em>CrowdTangle shut down in 2024</em></div>
+  <div><span class="lockbadge"><svg class="i"><use href="#lock"/></svg></span><svg class="i"><use href="#music"/></svg>TikTok<em>Research API for academics only</em></div>
+  <div><span class="lockbadge"><svg class="i"><use href="#lock"/></svg></span><svg class="i"><use href="#brief"/></svg>LinkedIn<em>No post-search API, sues scrapers</em></div>
+</div>
+
+<table>
+  <thead><tr><th style="width:46mm">What</th><th>Why not</th><th>Can vendors do it?</th></tr></thead>
+  <tbody>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#camera"/></svg></span>Instagram listening<small>public posts mentioning you</small></div></td><td>Meta's API only shows your own account, @mentions of you, and a capped hashtag search (about 30 hashtags/week). It has no keyword search, and scraping breaks Meta's terms, which Meta enforces.</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Partly</span><span class="vnote">Through licensed data partners</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#fb"/></svg></span>Facebook listening</div></td><td>Public page content access is restricted. CrowdTangle was shut down in 2024, and Meta's Content Library is for approved researchers only.</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Partly</span><span class="vnote">Licensed</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#music"/></svg></span>TikTok listening</div></td><td>The Research API is limited to academic and non-profit researchers. No commercial access to search public posts.</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Partly</span><span class="vnote">Licensed</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#brief"/></svg></span>LinkedIn listening</div></td><td>No public post-search API. LinkedIn sues scrapers (it won against hiQ in 2022).</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Very limited</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#lock"/></svg></span>Private spaces<small>FB groups, private accounts, Discord, WhatsApp, Slack communities, closed forums</small></div></td><td>No legal access</td><td class="b24"><span class="pill no"><svg class="i"><use href="#ban"/></svg>No</span><span class="vnote">Vendors can't either</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#building"/></svg></span>A vendor-scale source index<small>tens of millions of sources</small></div></td><td>The code isn't the obstacle. It takes years of crawler infrastructure, data licensing contracts and operations. Claude Code writes software; it doesn't sign data deals.</td><td class="b24"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">That's their business</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#xlogo"/></svg></span>Full, affordable X coverage</div></td><td>Possible in principle but cost-prohibitive. Large volumes need enterprise contracts.</td><td class="b24"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Through a commercial agreement</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#clock"/></svg></span>Historical data before you start</div></td><td>APIs don't offer deep history, so you can't backfill a year</td><td class="b24"><span class="pill ok"><svg class="i"><use href="#check"/></svg>Yes</span><span class="vnote">Years of archives</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#gauge"/></svg></span>Vendor-compatible numbers<small>reach, proprietary scores, benchmarks</small></div></td><td>Their models are proprietary and calibrated on their own data. You can build equivalents, not exact copies.</td><td class="b24"><span class="vnote" style="margin:0">n/a</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#video"/></svg></span>Spoken content at scale<small>all podcasts, video audio, Reels</small></div></td><td>Transcription cost at that volume, and no access to TikTok or IG media</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Partial</span><span class="vnote">For them too</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#bot"/></svg></span>Exact consumer-app AI answers<small>ChatGPT with memory, Copilot</small></div></td><td>The only route is scraping the web UI, which breaks their terms and gives personalized results</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Approximate</span><span class="vnote">They approximate as well</span></td></tr>
+    <tr><td><div class="name"><span class="ic"><svg class="i"><use href="#star"/></svg></span>Competitor reviews at scale<small>G2, Capterra, Trustpilot</small></div></td><td>Their APIs cover your own listings only. Scraping breaks terms and is blocked.</td><td class="b24"><span class="pill warn"><svg class="i"><use href="#warn"/></svg>Partly</span></td></tr>
+  </tbody>
+</table>
+
+<!-- BOTTOM LINE -->
+<h2><span class="num"><svg class="i" style="width:13px;height:13px"><use href="#target"/></svg></span>Bottom line</h2>
+<div class="tiers">
+  <div class="tier t1"><div class="tnum">Tier 1 · Build first</div><h4><svg class="i"><use href="#eye"/></svg>AI visibility tracker</h4><p>Use Semrush keywords to choose the prompts. Track ChatGPT, Perplexity, Gemini, Claude and AI Overviews.</p><div class="verdict">Clearly worth it: fully possible, cheap, close to your content and SEO work.</div></div>
+  <div class="tier t2"><div class="tnum">Tier 2 · Build next</div><h4><svg class="i"><use href="#news"/></svg>Focused listening</h4><p>News, blogs, Reddit, YouTube, HN and reviews, with Claude sentiment, intent and topics, a weekly briefing and Slack alerts.</p><div class="verdict">Worth it for B2B. Covers most of the conversations that matter in your market.</div></div>
+  <div class="tier t3"><div class="tnum">Tier 3 · Don't build</div><h4><svg class="i"><use href="#ban"/></svg>Closed platforms</h4><p>Instagram, TikTok, LinkedIn and Facebook listening, or vendor-scale crawling.</p><div class="verdict">Pay a vendor if you need these. If it offers an MCP server or API, run Claude analysis on top.</div></div>
+</div>
+
+<div class="src">Feature numbers (#1–#33) refer to our inventory of standard social-listening features. API pricing, quotas and platform access terms change often; check the current terms before committing budget. Prepared October 2026.</div>
+
+</body>
+</html>
