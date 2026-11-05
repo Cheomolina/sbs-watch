@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T13:31:23Z",
+ "updated": "2026-11-05T13:51:36Z",
  "brands": [
   "SBS",
   "Temenos",
@@ -17,7 +17,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiswFBVV95cUxNSG1RSVFLQzZmb1FONXFneVhVblZGd01oSlRGSUdvU200V1hJdUZSYWEwNWlkdEJ0LTY3bU5ua2VxV0pYTV9HZkhyMGR4aDA4cjFtNHJHN2ZNMkZKN19VWnVKTW1sX1FuR2JkREdXa2dPazNRQ1R5VXJNenotdXhGclZ1SHZfYUxHbFY4dS1sYmJJTTNvQmFKdThCa3ZqbWl6RnFBU1dyZjgxUkQybXBFUzdYdw",
@@ -29,7 +31,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiugFBVV95cUxNUVdSdkI0T21ZSGtndmttaGdpWE1SeUcyXzhMOUlia2tLaG5PSjRqTTVTcURvVzdseExRZ1lTSnR6clNuMGhSSVNWOUVucllYY3ZvamRrZEFpVzJPWnpJMno5aW4yLVZPUER3LXJERGxYZ0F0ZlpLYXpLUHR6QURwMkVzVEhTNElrQ0RWbVNUQ2JZWl9vZUtDLXdoMWliWk0zd3puWlhHRUxEQkEtYjBmY0hZS1dYWDU1Nnc",
@@ -41,7 +45,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqwFBVV95cUxNamtOSm9oQVZNdmsyOUNLcDhTOGtuVnA3SmREUDlVTFBXS3FYM1E1dnRWalJQWWtYRmJCMGZubzNLMmtOaGRCS1FKbDZWTjJ6REtpd2xPUG5IWWFMSWFSOVBjYUZXN0NGazloRzBTTTlpUUNlRFdsMm9ZQlkzcG9BTExJbm1VVU84VnVVaEUySU8yZ1dGSnAzNUxYMWdJNjVRc3B5aTJVdlNwbHc",
@@ -53,7 +59,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "Libya"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMiowFBVV95cUxOWkxkQVc4Zy1fbzhmUTYyMjN2akNZRUFmNTlnaWcxQWF0eDZzMFd2MXpPUkhMR1h5WHBneUlDV2p6R1NFOTZrSDNTcURqUDFzUTBFY3VIYnJBVDc1bklPM0RmZV94dWQycTI0M0M0YUZZaHI4RnNWNmhWVVYzT005MnN0MkJzZS0xRHZQTkhLTnlmVVZmMnNCWGhRQmViS0tlOWRV",
@@ -65,7 +77,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "Libya"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMiREFVX3lxTE9VNmhxRDR3WktpbXQ4a0w0QWJ0TXFGcEk4WHBoemN2amVrclRrTXVfU1VCRTdZdHBnLTl1amhBdXFNdHZa",
@@ -77,7 +95,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "Libya"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMi3wFBVV95cUxQNlRrdnlOX2xfd3g3S29aZWE3TXFrRXhZSEI4cHp4ak41anhiUWpPT2paQVJKc0hLN3Z6QTU0R0VMUEVkaEp3aTVwN0w4c2tRZEVIQ2pfdHM3M3BvMGx4VWZ5S3RQODVfZWdDZUYxb1FjcDhseDlZX2E2Qk84aTdmZzZWeEhlM1pjVzc0OWxiVE1FZlBfSDQwWDhKMnp4RUNPSXJCaGpIUlJaNG95anRaVTlWTFFKNzNKTnprMTdtenotTklxa05mbTMyOGRxZG5reVRwVlR6MVNnUHZ5V0NV",
@@ -89,7 +113,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "Libya"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMi9AFBVV95cUxOb01rdUcwbFZSMGQyY0Zla0poSkJKVm5qU050Y0FoZWkzSXNoLUJtNzZrZWpZZFJsU0RnMzBfMjBvNVZ6MG5qal9VbmVnZnlHd3RjVUJCLW1PcW93Z21LTEVzOTlrcE9DdVVocFh1Rk9Wbk44ZC10aTdVTFRpZ1hGMk1FY2E4Y3RkejRJSlBrckFDWlpiRkFhR1JIbERja3VnNnRkN0FYVDRIYWZ5ZkthR29NQ0ZZRXB4dHo2WHJsYmRabi1qTktwTTZOaHV0eGJ2T3NRYUFBb2phVXlqYTRWa1AwV1RGcndOMnA4eVJQMExHVDdK",
@@ -101,7 +131,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Latin America & Caribbean"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMiygFBVV95cUxNbEZhak9kV2hfMTg4UTdYSUpvZUN3ellFdXNSQXpVMGhYcFM4Z1NDOXl5OHlGX2ZjXzRWR2pCWGtaaXV6N3lVUEtiSXpweUFESG1CQ3djM1Bsc2paZHpleklBV1pJeXJmUGxHSGZlVUhQS1prRmRTa3FOZWFzaEp1dTFqUTN5WU56SVVTaGdqdnByS2JDYjhaYTZqamo3VE5qc0U4SDJ0M3RiNTM2ZTlpMm1RdWdPRjFKeU1xNjVUYVhCSXVqWk5pLWZn0gHPAUFVX3lxTE5LYXFJdjllX01GakVSNnBCelNKd1RhVFF2RnR3d2VtZ2lYYS1jYjVUanZhLTBVZk45NUpPREtCUGV5YzQyTVFFeGI3ZDliUmVEWFhuUlVrQzFHUlR5MDFBSllacFZzdXZGb2R2VUJfc2dGMmxSNk5odVlocFNjckE5WUduakVDNTl6Y0Q3TFh1Z3VWSy1NQkRwUER1X1BuVWFtLTRpYlNBUGEwNlE4WVNpSUgzYjNnS2VoMm83cWVYVmtWRHpfWDJ5c1JkRC14bw",
@@ -113,7 +149,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMivwFBVV95cUxOX1N5bGxOUXFFdjR1Y2RXVEhJZ3hPUGtyQWRMT1IzVWVRbXZ0SGNWaTVIX3F2cmZILVNHb2E1ZzIyV3huaGJFd1JTQi1tbGtJQjBVUzZHX1BuT1BQVFNPZEozZURKc01RTmdVdGxiMWFMZW90VDE5V0wzTTJ3cmZ3a0Nkdjd2YUpXemRkSGwzQTJxMWVwV1FnTHgxNmpXZzlFV2NpYVg1ZUFXbDBlVktGOEc1MmRQXzVvTlRKREY0QQ",
@@ -125,7 +163,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMioAFBVV95cUxPamREM3V4c3cxQkFreG44LWxySkJHcGZrUUFVbW43enZOcDdHVncxWE5tX3NJZjlyZFNwb25TNkNKNC1mWXZVb3Jvb0VKckQ2TTBobkE0SmFKLUpVelNXQ1NFLTgxVVhac3UtbVFjTWd4YkdzY3hhUFQ1MTNDQlJIUThKeERlRTFuZ0t1bm5hMFZ1aEFCUTYzZ25IWXAwZm8t",
@@ -137,7 +177,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMivgFBVV95cUxPUmFKYlVvVFp4NkxPY0diemZYd1ZUZ0ZaeGFRZnREWVdOU0h6RUlBNzM3ZmN1clhMLXpTbmdJcFhfbl9MWnJCYU5qSkR2VkxfWmUyY1V6VHpwX2V6eTc0WHVRV1VfMXVhai1lODBvV0lCenkzczNYaVFadW5qc1hjeUJDN2RseDBMZGZOUzdMWDdMUnFLNk5mSDByb09TNkV6dEJCTzNXQUVaanBnU29xazB2dm1FYVdibVZsSnNn",
@@ -149,7 +191,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiggJBVV95cUxQeW1VNEJETHNfazdJS3FoU1dsVUdRV29oV0o2YlZJZWczYkN5YUhvOWg4akEyVGpqV2N0Tkd0cFRFZjl3QVlLNnEyMHd2cmhzdm1BMUlMTzJGTlBKVExrOGNvVldHSU1aTVhZdHVkeGp0Ujh4NFprUENDOWxuX0Roc1Eza1lPMzB5MmQzNGJIZVkyY0VfTTFGWk9yLWlUNXZGdi01dnkyS2lVcjRnZkh1YV84VnB1Z0R3TGZ1UFNvdjZRV3libHJqTkxNS3hlYk85UGhwallsT0NjeXZRdlgtZ2sxSDBaMjVhMk4waFYycFpfRjhWUDZpZUlsR3IwS0x1MGc",
@@ -161,7 +205,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMilwFBVV95cUxOeWRENmR2d1dHdFpMc0YxNFNmVURYZ3htZW03M2h6TXVrM1VxdTQzVWZhSzNZOGE0c1pCckdpSFl0VVV4S2sxc1F3b2xwRXJHRmxVVWRSZmtsY2JOcEhGZXhzQUpuNXZ5dng4cERKZG51QXNId1MwUHo2U1I4X1hBdXMxM0xoSHByQ1NpeldRMURfSHc0VWNN",
@@ -173,7 +219,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiywFBVV95cUxNQjRKSE1QM3k1ZlJ1YUxSVWUzcXJuVnlBZ1FaNlE0VG54S1RNSjFBX3dBZmdzUzNYZURHTWZqSmFJTmdJeEM2WmFla3JqM0pTdzdKcDlfT0JJWHNFR0VOUXNDcTBjY0JfZk52MmxwZmdCUy1QVGIzYndZU1B6U1BfMUFZY3lqVmhoQ1ItWDBPUVhsYjVrNWRGamVwdTFmeGFaWHN3bzFRd0lsN0VDZVpGWHQwQnVnMGZqdU1CVjVMeUVHcmlnR3FaczM5NA",
@@ -185,7 +233,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi5AFBVV95cUxQMFJUMlVZaEtwRGszUlJHX3I0RmZsSWNoRk56MzBHVzZBM1g2QnVWV1FBYnViZWxpN0J3VWJsMlVmZTE3bklSVklITEIwTGpEbVJnNlQ1bUphUExxOHJNdnNPN29xWVRuRkx3QWFHSlpOb0tyR1pkRVlJclVUTnJjRFM1NmEwZzJiOGQxZ1V1Tjd5eEx5YXRGeTNxd3hCTE5rMWpDZTQ0Qk9iRjVnX1ZMNzYxR3M1b2YwWVY5eHZFMHloM2dLbm5fNk5pc1hkalJoYlVkSlY0RVIxWU9FZy1yZGpCYnI",
@@ -197,7 +247,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMixAFBVV95cUxQc0JEamd6RUllU3gwQlNXa3c0WkVjb1JqZVlRdkxtZ0oxWTQ2a3lUYU5GNlg2U2ctRUVtMzB0cDZFX3liS1BHSDJBcERWcG4wU2d0U1Rlb0lZei05QW5ESm5DNDAtREVveDdZMVczZmlIbjV1VDJLNEozYjhfS0hWbGlxRlQtSlROclMtblZqWkNPX3NzVGJSU2NQX1JOdmxHR0F3V0hXT1QtTjRFOHpjcjdnVzFTWTlESncwX25jd2dEVkZK",
@@ -209,7 +261,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiyAFBVV95cUxObm41RXhKYnhFS2dDc3hGdzJxaldqMWkybWozdG5SYjNLUFhQSTNrclNXZjN6SWFRenc2RTBibm5BVVlnMFRZaFVpVVF0aWVrSkZnQXMwYjl5Wk9VS2ZzTHZMZ1JJUjhZbC1ya29MU3ZBMlhDN2VWQkhyWW1JYmc2T3RmX1BzVWtPRFphR0UxMFJPM0hETWZScDZpbWd0elkxSU5YT1psZ2xscVVsUnlNc1FxQ0JKSUNzc3ZpeGVfb2UtaWZLeTFabQ",
@@ -221,7 +275,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "France"
+   ],
+   "regions": [
+    "Europe"
+   ]
   },
   {
    "id": "CBMiggJBVV95cUxNbWRoQUxmX2ktTkxnRkZXbk55NUJCZmtFZG4wcTJ2N09paHlLampYOERPbG5meF9WajVyV1NwNy12RmpOU1VreUZDcDFFRXM4U2F2WGlNaEt5dGJLNl9DSnVRTENvQWY2WllBX0tRQWJ2VkNQUEl5QnA0NUxKNmFmRm1fQ0Nud0VwYThMcEY1YUJrTW9kZjY1RXlIMTNxMkdCRHQxNUdlYWd6Tm9lSWdwMGdWTUx5TDhZNFlNVG15WklaYzJpQ1ZBNHJPSHNpZFEzNFBZeFBoaEhGVnlpOHVEanVIQzJyT1dZU1A2Y2ZvUGdMYm5iVEZCWEVlWUEtVVFsMEE",
@@ -233,7 +293,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi-gFBVV95cUxPWEo1Z2ZsZHVlbXB0S05za0lXaEozdnJOS0RUWldkN3hrSkJTS3JndE90QXI3d1B6cFo5MjVHNmJwYWU0QnpCVkhOQmFZWGkxaWRQOEkzVUdhb1dMdncxdlAzZlRXSE5qOXVTNXNudjdnc3ZNc3dEVGNmeF95dWtIcjBpMjZ3ZXBfcWFtSEpqQUdvSHNFZGtTaVVsc2d4WDNHU0xaNGhfY181NmNLeklTWnBQUGVLYkRZZzVEWTd3QjJxQ3FoaWN5OGxNZ1Eyb3RPeE90NzhnQnRMaDVKbTJuajdXdnpnbDd4SVNfUmszelRfMGNsVTlKUVJR",
@@ -245,7 +307,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi1wFBVV95cUxQbnRKazdiMS1nYlJJX3RSRm81MXoyMDRlM0pEbVhLMjlUSlNSZ0lFWWlMMTlxTC1Wd05UNm5HWjhUcWdYeGNOcmVlX2lhVktvcUVveE9zOFNBdmdzb2lIWHlnVWpRZUNuMWlSUXV6bUZnZ1BtRmVPNnE0SVBiMFdKOV9BTkxSV2pOUzlfLUo3c2FXYmM4S2VBREhuV2wyRVBVcnQzdG00dV9GMnUyT1ljZWlnenB3em1vMUt3dHZRSV9PMmh6d3Y5a09WeEx3Mk96M3hpandOTQ",
@@ -257,7 +321,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi4AFBVV95cUxNWXRJQXBmeERZaHRaTkx2Q0tpbnNicktzTWNLTXNqS0EyOXktSGNsOFRrYzNERnpUeEM5SkpXNWR1R3NYOF9fSFRIMTE4dU1oN1lOeW1SbGZ2N201TWFtZzZKM2pPTGR2aF9SX3FiYkJoeGt5T0ZkeE96ZC16bjlEUzZQS3pjUjA2RDhHWmpDYnhwX0NfN1puTlNyM3E2aDZfUU1nR1FWdjNxRG50bFZqX21HM3VwZ21Cd0JBRDNhNFFRMjRXSVhMRm5xbkNtaThBNnpQVldmdFV3V2hVN21hZw",
@@ -269,7 +335,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiowFBVV95cUxQQWIwRnY1M3dWYmpjT3FaZ0s4T29tMUFRbEViOXRCbkNFN2twZGdvU252X1FOZk9GSE9vdnhkUjhoMkVvU2p4eS1ONU9GamQ4V01wY25vNXUxRm5OZWxmR3E4R3A1TzVabDFIY19jVndtRTA5bnBDV2JmNXJQdUJZb1hvYzUtNlNBdmJuNk9BUHlnc2E5VUo4SWpDVmZsNkhlLWt3",
@@ -281,7 +349,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiowFBVV95cUxNeVppaGE1aF9GM2E0NmpUeGtUQXFqdDVJMjlnNkZWbDRqUW40aGtvZC1HSTRfX0ZyRmRxVDNyNEgzeEprR0NTLVpBYmJjbjBldUU3VzF5SGJYMl9zNkQzd096TTJXc1BCcHV4d0xROTQ1eGpCR0pXMmc1QTdxOThPVjB3RXJ4bjJMYU5MdGxkcUpiY2ZQa2M2dnVNYzA0YVBwaDk0",
@@ -293,7 +363,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiygFBVV95cUxQUTJwZExjS1dKNUgzTHhhVV9FaFdmTkRFRDk5WkROVUdDT2tHS0NuOFl5cmhvcUpUd3BpWHJTT0tDbVczR0lsWURCZndKcGJ6M2QxdG1CZ0pVTXBwdlRyeVZvNl9RUWdLN1pGUW53MlBjQkx4ZGlUbm1jY25uZHJnYXpoNnNHc2p6ZzdBQkM2aGozTFFEeHVQS2RPZmdfMWkwLXhOelR1alhnSXV0bm9jSGkxaHgyQnB3MFVjSXE1ZXE1MDh0aEJYU1NR0gHPAUFVX3lxTFAxZGZmT2JtajlqcFBXNl9weXhkYTFBT19PQkJfNGxGOVVmUHNQRXdVLXZkVS1IMVNzUGpuM1VRU2U5NzFxYkcyMUcwSkdqOU1lWnlXTzV5d0JZbkRWRWw1NWM4dFl1cW5JTzhNQlhOdVZTZEZLVld1V2pWbWt1MnhRLTlSSm1MZHR1Vy1NZFNYWEJWd2I3OGNwalhiVWVPZ0FfOUhJX2tCajFIT1FZLUNtTGpmam04a3hEeWNOM2MxQ0ZxcF9ubVBmSTc5UTF4UQ",
@@ -305,7 +377,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi7gFBVV95cUxOQ05teF9vYUR0Q1Jpc0tldVd6MEVOZUNJLVVMOGhNdVFRdk5yWS1XU2dtX1FkNTViRGlZcFRiVHhkZks3Z1lMRkZRLUc2X3dVOWFneGZjVkhkVHQ0NUVxZ3lyNTF1WmRVQmE4NnVobXE1akhLQkNVR19md2xEeFlrYm02cjNZNmtTUHZmd0dBNUsxZnBOWXA2MmRsanNOa0trczNqSF92eEtKVFZnX0FPYUdDR0ItNjdfUGp1Tmw0RVZkWUZ0clBiZ2tsMzFNOF9JVS1Nek1oVVZLZEZMV0g4QjVPSWlPcnQzcE9aMlhB",
@@ -317,7 +391,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiwAFBVV95cUxQVWw1UFVIWTdPSExHTUt6TmNtM3lSY3diRE11SGR6WGtWZjNRa18yWW5zNGhrcFgyQUMzTmN0cUpwRGpURHplZ0ZjZmk2czBWTlBKTEVEN0dfVEhxRzZMcXVNWGtYV2hpR3JiZXEySjlDaWkwa2czd19laEpOelBvMGVVY1FaeUgwWGVtcUxoaXhMeDZCUVNKUUlIUEpnMmFVeC1jSU5TNVprUnRDU1RMb05yNGJtdndLMFdrQWY4Ujk",
@@ -329,7 +405,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Europe (regional)"
+   ],
+   "regions": [
+    "Europe"
+   ]
   },
   {
    "id": "CBMid0FVX3lxTE9fNjFPTmU1MGR6YTZSWDFQQUhTbXlvdFo2NVhwRnduMFUtbG9KVWlVNHZTSU5YQVdjb0NtUVJBVDJuQzRFM3FpZlhFZ3ZpQnlpZmVLX2JuRW93bUdTeXlPbVRYd3d1WHV2QWlvOWJBb2FhQkpCRnNJ",
@@ -341,7 +423,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Europe (regional)"
+   ],
+   "regions": [
+    "Europe"
+   ]
   },
   {
    "id": "CBMikwFBVV95cUxPa0xMNnBSRWs0cUV3OGtRV3dvb3lNUmJza0FCeS1MZC1tTHR4WTE1clhnN1owdTRqMFVNejlQREZrbWlvODJWT2JfdWs4dWI4VFJkYWthUVVzMDZtNkg1T3JENS1CWDR2TllXbHlkTG1ZQ0VJMFpNVnQ2Z2tiSWF6WE1KMTkzVVFFRnRKNlR3NUhWY1E",
@@ -353,7 +441,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi0wFBVV95cUxPbjdUQ1E1ZkIwaVNEVjFwc0hQUmFmZFhDX09zNUFOdDhSTXQ0N05XMlA1Vi16Z1M5TmhqTDJ5MWhTc2o3NkltZ1J3dlVlMXI1ZkdfYjJXX3hRaDlQR3FzRFdmbHB2SjNHN28ybHgzZGhlbWc3NUlGSkZFLTJ5RklVUTJoVmhvcjJCUGRQaWtDT00yRFBScnl2SS1GZHhRNF85ZU5jM0tXMzNDOFVucDBVMTAwZ0p5LVYzWkRpSFVCaWlrazJOUGl3N0JRdm5fZjZkOUg4",
@@ -365,7 +455,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi0gFBVV95cUxQczB1UFBlQ2p5RzZjYVZIS2FMQ2tEUTl0ZkpMR0ZMZmNpbEo2Mi1iZDAyS3RManRSSGcwU3FGWGFTWEotXzVmWkFfb2FhZTdMRXZSUTJmLU10SUZHTHNuZDQwZlVfcW0wNXo2Qmwya0tfRUhyVTJFMEo4RnlHTVdhbTgxMnlxWkVPaDg3em1Xd3dfY3JIcUFHWXlWOTFYMGJpMWJNLWU0dVN4ckxaY1JST1B6U3BHS1loVVlhWGlfcVJuZnpBSTNSR3AxTDkyeHZIUFE",
@@ -377,7 +469,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:21:52Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiuwFBVV95cUxQZUk3N0xTc3FZVkVLcDc2SGlnWWNYZEd4WTJObzctUE5MWW1CQXk3UEZBYXpXTDBUMzduNGVhNE9CMThvclhyVDdfYV81Sko2TjZvUUJDZGx6bUZabERPWlo4bGZMUTNJRVhybVJndWJsNGJ5M2Q1TU1hZXpDLXJhZWxpbXFvbWFHN01ycE1RQXhTX1IxT3FBWWExbGRSVWo4aGdFSUI1LTZiU01ycEpndG5HaGxjLW9lTzJz",
@@ -389,7 +483,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMilAFBVV95cUxPMngwVm5iY3FQX3JMdnI3ajdIbTk3NERJeWRfOFVOYU0wSXc3X01rX3o4QlVpdHFzU0tYMXk4M2h4a0phcWxRY2pOX2dOcWltdmVDbC1MR0loVjRKRFo4T0UxSzBhNVM0OXhzWUlBTkVjbjB4dGp5VGc4ZUVSWkhoenpONG4xQU5vOWFIQmFveTd3amM1",
@@ -401,7 +497,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqgFBVV95cUxPNmJ4Mk1SbTBwam9NRFpjcWYwRnB2NFBfNi15dzBoRXFjY2VNRVEwRG5LYXkxUGZYVkl3cHVTMldMN2htcE4wMGtvRjhYQlVKWGhYT3RtbGV3bllxUTJfdUc4MTJRZGFfN1JtZTQ1ZE9ycnByRGdUVENYUFVrUVRXVW9PbTRwclI4eXZ4UDVxZ0s3Uy1ZSU1TTmt2YW5HMmZWV2V6V2s3VnFYQQ",
@@ -413,7 +511,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi8gFBVV95cUxQRVZBaFZQa19POTZNZy1hX2tENFFucDExeXprei15RG0wNXJqM0c0YThVVDFqQUx3b3BkVnBabHotUllBdlVNWVBwUlZSVTlQekwydi12RnBfRjIyUm4tN1BkWjhzTTl2Ql9Bc0tPdTN1by13a3lZa3A5Nl8xc0tqUVpOc2VpaXJjWUFzTWhSUDJwS1RSWFhxTDhkYUtWemFfU1l6VXF0TWdJdWlKOVdYV0M5YXh0dkNtV0d1YzF1MTRVM01rSE5xZ05nT1NZQ1Rhc0xETlNNSjBIdWt4bkIzV3ZqZENoWFJWcVdVZ3FkcTRUdw",
@@ -425,7 +525,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMitAFBVV95cUxNZDNmNEJaRFNMQWF5Yk1EWGdVRWlTZjBrLUE2aDAtTS1QSXFjYkI2WWtxb3kyMWt5WEw1OWRzZUVqMGlObUZOcFJ0d0RGNVFVd3NrYkZWM3lrYXZoWnl2NnV6UG5ENE1ZTjZsVnlxX0RCVTNYQzIwTXdrMlFSZUtoem9iR0VLZmRVdXlicHN5ZVdiV051cTFiZWE4ZFNkT3ZoZFZWUVdkb2FVS3prRmNPRGo2d3U",
@@ -437,7 +539,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi7AFBVV95cUxQaGZLeVQxekhIckdtWU9wNGo1WWIyRlFLOEpIcVVWN1plZlFXUzAyRnhvOTJlTk5RcHhhNjVqbXlKbDF6anpzVWlETGRWazE4aDIwN3dWVll0Q1VfeGE2MkR6ekhJZVVKM00zUFZxS0FVWWhFNjVNb2dmZmd0cV9BQkVVVmlZaXJYMVcyQ0x6Z09lNGlZTVItZlg0c245UmVWNEp3RU82WFVRMVg4WEwxclZUdF9zY0NIenVTQmtrQUUwbDRGaWdGa3hjOEROYTJlYVZOeHVCbVA1aWQ5LVZMeE5WMDBxbnhEVzV4Nw",
@@ -449,7 +553,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMihgFBVV95cUxOYXVJZm5RLVF3UWhReDJUM0Uya3UzQ0JfSXJGX2NwYmhwMktjaWg2TnQ1bG9kak1JWFFJZzFnOEpTN0tWV2Q2NGI2N1Jaek80SkF2ZlFiaHUtMzRxRzQ1WWpDWER2SzNSVGR4QXJ3WWdBZ0tQQVNqZ3ZCbE1wdjBHQ0FIc2s0QQ",
@@ -461,7 +567,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMivgFBVV95cUxOY0hCSGNabThZaTMtZDBKbllIX1pOUVh2OVR2TV9rQWJDclN1dk1sdUZJNVpEYWVjY1gyQ3N6bGVPa3c1WTRPd202U3ZHd0dsNHlDdVQzWGlLdWJaenkzcGxRcDZCSDJJTWlESjdHaW9Mc09YQkNLMkxOeHMyNjV2Y0lrVk03QWpQMWJnU3lUcHY0ckgzUXlWc0VPcVdOOVJ6OTdxRFoydk9Ld0FCclRWWk1XU2RTNldPSmxISUhn",
@@ -473,7 +581,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMieEFVX3lxTE1TbWplM1lHZmpEYVZhVHhLbEY0dWZzNjJGZWxlX2hONXBDY2NfWU1LS0VkQXpOM0Z0S2tqLVozTFdRTC1nWGw5YkZHR0daRFdMUHNibU1fNHcwaGN4TWpYTFNZUlpGcGdWanBBSmdDYWJiMUdyOHd4UA",
@@ -485,7 +595,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:21:52Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimAFBVV95cUxQTWlMNTJVNDBlRl9Xc1lNSDB5S2ZJX1p2N19jRy0wUzc2SjR1TThiS3RiWHpVdGxTa2kxS1BsbXB3NDktVmpZZU9uWDlPeWhxSVFZTGQ2WEhnbW9QNWtyOEFzbEJ3TFRoQkFLaWwwbVJNeUZpakVPWXdQaXN5WEhmZGdvMVltRUhmQ2VOdUJ6OF8tWjZpeUVLbQ",
@@ -497,7 +609,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA",
@@ -509,7 +623,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimgFBVV95cUxPOXRhcnBtTFRGMjJkUFk1a05lendfUEprVlR0WEQ5dmNaa0h4M2pla0ViUkloOTdwRmVqRjh2cmpicEgwdUtSSmtJZndRRlZRRGNfMDgxcEpHRDFEc2ZTa2xuQUlwRWZqcE41aWE0cElCTFYyM2wzdEZQV1lEQzg4WXdiakRZX0puSDd2Q3pDOFJCclI4NkhyNUl3",
@@ -521,7 +637,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMitgFBVV95cUxQUVprUjgxekVrSE5aRXEzLUVqWkpjYzAzQ1lZX3ZYWjNMOGNlS1pXZDBBNHpJc0taTlFsZk1nWENVVW1xWWFrRkZyTnhPSHB2ZEVzN2R6Zmd2Zm51M0FRSHRJU1M2RjNzT1VaRlp3RHhKZmRxd0V3eHBON01rTWlGTlBfZmRqd2x4QVJFTjlsNG4yekRLMDdnNjAzQXQ2UGdkUDZsYjUyc0tjMVgzS1VQa0lrVTdpUQ",
@@ -533,7 +651,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMigwFBVV95cUxOVGs4N0NRbTNOZXNkOGJsTlhtajhic1hFZi1kSTV1Qko2YWpLVmdhQlljUEFwdDdOX3ZmcmRqSml3Ujk1OXZFSmRLWXQ2UVFrRHY5WTdDeWtURWNLV041d29RX012SlcwLTF1bVNNWkk2clRPRmNoNjNnaG9YZDYxcVNFOA",
@@ -545,7 +665,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMijAFBVV95cUxNWDgxS2lCOTR4WnBVRmEwM3p5bnlfQ1FxSDVIbE5GaHVQSWEzQUxUdTU4UC16bHgyOGFsMXBmajBfOHNiUloybzlueklOckJJeDJYTU56a3Y2MTlqUGtkQ0lZUHprYlpaNVowTUxIZ0loY2luakZ6WUNyYi1GdFA5b3BVMGF1ZlBBbjFMRA",
@@ -557,7 +679,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimwFBVV95cUxONE9LSjgzdFM1Y2tSc2JFNDdGWmpwTFM5aHIya0d1M2N0eHJacV8ydGdlVHE0OEhBM1lYal9STUpkY2xLUUJVTnNGY1VNQVFOT2hVNmtpNTlOLWNxSmoyTFFoZkVjUE1KaUF4NWVXNUFER0VMUnVDX0VTbVZ1S2dia3pjbmpEQk1jVHV5R29aQjh6Xzd0YnlUclFHQQ",
@@ -569,7 +693,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Canada"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMimAFBVV95cUxPSHZ3MUgzT2JQVkVBdzNxaHdWbFNVN2pUSWpiMVljdkIwWWxYZHNFcDl5a21JQ1gzbW9QWW4zS3Q0dlpoR3FadVdaQjE3RXlrcFlVTlNMeHpMSGNDWDNBR2g3X3JIVGRsalVNeG9pRG9rRjNxTFFSbURHemJOTDB6VkxQVF94S0xMN3NJNjdMaXprNWg5bUZvbQ",
@@ -581,7 +711,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMizAFBVV95cUxNdFBNS1VqZU9CTk5hM2otd1JaZFEyNC1Ca2pMai0yclA1Y1dLYW4xRk5mMEdsNUtLeFd0N3VwU282Xy1uVmJRRzVxLUdTQXhyRVpWTzd5VEVaNngwLVZ3VDllM1h4NzNacTRidUc2YXgxVThqcmdjR01uei1XWHZlV0tVb2RKWVZsdXZVMVU5TXk2RjZrbFJlMXY5UDVwZmtPbEpMcmRiVEF1Tk1RcTBrb2cyMXR4bmdLSFprd2ROZFdHdm1NUzM4VXhsUGk",
@@ -593,7 +725,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMizgFBVV95cUxObURYTHljOUNlU2RIOUNHeEU0cEdZSXYteVFsOG1GMnZUY1dhM3BIbm5VdWp3ejlvMHNSd2hwT2stMDN0MzAzNnBEUHB2eXo4UDkyNGVDak16SkphbklHalJJeTBKckZQSGdiTnNEeENIQUNRMmpsVk1iX1lKd0RicU85Z2FXTi1VWkVGcnlfd0pjamJTaHQ3Ty1CMEZ5TVRXRHBleF9yYTFOdGJjVkIzdGxxNWNQVmJDbE5GMDRHc2NOd0ljOUdqcGJXOXBKUQ",
@@ -605,7 +739,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMirgFBVV95cUxNUnRtcE5HT0x2Z0NnYU9nU1RoM25HSmZUVG1GbGpQQWp2YUZyVXJ1TExmNzdVeTYwcGFra052bUVGLWhaNlpIZ0M0dHhCUXJfS19ESEZvWHFsSVhMTnhYOHI0bExza1o5SjRDYWJad0ZuanBfNG5FanAxWjdFRzA1RWFNclhCME41XzVBaGhyX2FCeU9NeDhzZ1VfbnBBWWJSckExbEJjc1BzclB6NWc",
@@ -617,7 +753,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiygFBVV95cUxNdndXMWNBd1VXUDZfOTc0TUdIMjVybFVOVW95bVdNbGxxdnd6Z2ppUm0xX1pRVGxuU25BZjRlRklNNW1QbnRHMUZnRkpSRkF1ZmdCQ3pXcUxYcXVYakh1aDRaY2hiakZ0d0J2S0NSWHBUNjJPSURZTGM5R3RxN2QzeElHV201V2RCSFdCTjNnSkJEb2RZNHpVMWFhblJWUThEM0taLTFLZEtQOGJsYUdJeFJ2dVJvUW9IN3ZWZ0NvYlBVekVSSlZ1VS1B0gHPAUFVX3lxTE9pVVhOTGlmWHp5RktNQ0d0Nng4NkYzd2R4Tm4wUk5uX3hjQURrNUVDay1uMWtSN1k4TEI5ang2NnAzSDg5STRkcGYwOWRoZDd6cGdzMDkyVGxJeV9FUjZCUnk3M3M0RjUxbmxERVJQTldWN25IWEtNOFdUZHBZbF9CdkRQVTRKcDB6ZFRjZkxxM2RXVjQwNzVfSjdJZ3pGckpCM3FWa0dpTV9tTUJ6X2pmbVVRNjA1UDU0aGRPandmTGY2anVQdEhDODNkbU9HNA",
@@ -629,7 +767,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiiwFBVV95cUxOZERoLTVyQm4yaVNKN2RBc2tjMnZ3LTNFNnY2REo1c2o1UXpXeEI5MEk1aktiMGxmTDg1bFVVVWpZQklXNVhwY1dEYTFlSkhNTzg3WTVtN1lKWFExOFh1dXVKQ2RUUWNyXzV3c3poRl9VTGk0VDBkUHhJUlhqSGdSS0dEenNldmhmQkVV",
@@ -641,7 +781,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiygFBVV95cUxQWEpiZkltLXRHcDlhRWxiN0l0MVJ6RGVaUVBjUkFjUlNTNm04aTdUZ2dtbGh2SVZtQVVwd0ltV3VaYUlPaDdVZVN5QWVaZUpJVUstWFJZaW83QzJjeUNibE51WGVOV2NXNEk4bmI5SzAzQ2xhYUdmTjFVWXdsM2Z3bmtXZm5wNGktd0FaS3BZRVUxaDdkdERLYVgtTXFPaU1KZ0ZwbzlsTy11UExFT29hcU4waHFPaU1zZ1R1cXZPTVhmYXV1UERiUG5n0gHPAUFVX3lxTE1kMmg4WFQyd1JETzAzZnRkUVFkdTNyQXFqZWtEOFF5S3paUk43WkVScG9xV3hjbURNRGFLY3lmU3N6YmxuRHdIZWJSVXlpNDYwem82eFg2RUZRbEFBSzhyODJOelBGTXFDWlNLRXNUWTFVd2tUSHloRGhWOFZJQzNGUjh6OWlpQkkwT0pfZXNzUzEzdmF5VlljY05PNU9BS3FTSXJ6ZEsxYmstczNEMzBYU0hCUGQ3cXBnbHJSZVF5QjZyZkVCQVNWRWVvYlJxTQ",
@@ -653,7 +795,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqgFBVV95cUxOeldPbGtUWjlKTkZtREZ6YWlqM0VmRE9Gb1FsODljOVlGOURMMXBXRm9PYXhaTlFoWnIydGpiQVJBdTZhUWVueHNVSmZiLTROaUFOVzB3dGFENWt2S0Iydjd5WWJNVEtjNGUweUJyZHhTNjZNZEY2amJxVk9LbmdDRnhmeTZyanNxeElFV3ZaNlQ0WWJ6ZDdfWDhGOW1Qdnl3X2Y4cWxQYXZBd9IBqgFBVV95cUxOeldPbGtUWjlKTkZtREZ6YWlqM0VmRE9Gb1FsODljOVlGOURMMXBXRm9PYXhaTlFoWnIydGpiQVJBdTZhUWVueHNVSmZiLTROaUFOVzB3dGFENWt2S0Iydjd5WWJNVEtjNGUweUJyZHhTNjZNZEY2amJxVk9LbmdDRnhmeTZyanNxeElFV3ZaNlQ0WWJ6ZDdfWDhGOW1Qdnl3X2Y4cWxQYXZBdw",
@@ -665,7 +809,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqAFBVV95cUxQNndmMVhQLUFvZG5VUW9Yd1ZuUThqUjhnckFRcUZoTXFmSE8xeVpTNU9fcmVRTkNlZ3lsT2JkM3VWaUFYeFhLcmlMcmp1M090cFdZZkppTUxLdW1HeE1LUW4weXlSTFJqTEZFVzlaZmoyMm5LV1hCMHppeGhuSllFTWUycHFfR251YUxWRVZJMm12RHVDWkt2Mi1idHdqZmpyU3lqRWpIUG4",
@@ -677,7 +823,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:21:52Z",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMiwwFBVV95cUxQV1FybzZobC0xeXZFWFA0ODFoZW5FTjJHMUhBYWRpN3NaQzVzTkxxcGhNWVlLNzNkdG9tYmRzRnEyZ1BGX0RmZUNoMi1jdEh6dmdpaTFYc1AtUk5DbEJ0dUlVc0Q1c0JfaFFpMU5iMkh6QlpJc0Zkd1FfdlNoOWZtZWE5cURZUzAxZzRRZjY4aFNRZmJEZkFrWHhfVWlhX3VxLWRkeC0xTHhydzcxS3JDUDBGVC11WmlHV3Bhai1Fd1dVd2s",
@@ -689,7 +841,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMickFVX3lxTFBrRXloM0Z4N1pmNEhmMnNPWmJOckx4UWx4WG1WOEpJdmJ3eEhTR1RhZ0xfR1Z4T282UmtNZG5iTUlSZFJDdjVlcW5TclBObHlZNjZyS0psOEpEdUxzcmFEZmVETHAxdmhuUXdJOW9EWTFiZw",
@@ -701,7 +855,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimAFBVV95cUxPelc0SEFGY0lsM0dIREVzdUdfb3Q1Sml6SGIybTYzb2RqS3JtWXBZeWF2QkR2TG5raVhYMS1aQmJDSlFhSjhaNUs4bUVzTTFPTm0tSGVOQm5WcWhfLXI4TDRJd09BQm1tZmhzV2drZEl0aXlCVHN5am1uWnR3VzVkUjZnUFZOYVFSSW5wNlg3cTU1M0RzTWU3NQ",
@@ -713,7 +869,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikgFBVV95cUxNaXh2dU5ka1Q3UzJkQTgzXzNxRHUyWUFTTk1uSk0xaDBrU1VZakU1SFF1b3lndElacWgyTVlDOG1IN3U3c0Q5RVFvUVVmWmlHbVZwSUZDN0tLTEJPU1hTZTdiamZkMEFZbXBTRDFlbEdVRWZXdTlKMG5vd1VBeGFLdXVDdkhCNEN2NTlTSUwtOFU2QQ",
@@ -725,7 +883,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMivgFBVV95cUxOc2lWUk5ZQ0xvamNLQWxmYUNDZFlfY3hsdmV0TWltdkRLNXM4ZUZ3d1VFQzFfWk1rVm1fYTE2SFV0WWp4TXd2UG9RVFJNTTRtOHA4SzNFdV9QbURVeVFCa0Y3eWJwMG5uaVhQRVRVN2hhS3FWenNBeS1qemhGYUR2Q0czd0NxTkhDUUhiVkx5aEZoZWpsQXlseHdWSm56UnlpbVJWdXVfeUZQcmVzOEJTRnlleW0wQ2p4eXNpTTVR",
@@ -737,7 +901,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiogFBVV95cUxQSDl2V0hYZ0JrUzdCcHBnMG9WLU9aNVRod3YxSEJLLXREMEp1alV1Z0hHY1NRNzlOSHpUeW16Z2tvc1JJOVVqSnR4aEVxN1NVZnlZX1hZTmtRa0FITHJFNjlSVWt5OTROOHkxMUpkcWlOclRSZ1V1bUtJalRUSTZUdjNPTGpic2p0LUczQWU1cjVfRmJTRjZxUWw5WVNJb3RkSVE",
@@ -749,7 +915,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMimgFBVV95cUxQUWxaeU9OT2NWSTd6eUhZMlBUa2FWUU5SelFRb24wTVp5TEN1NlFBNEo2TlpJdXdVN3VrbEltV2VEM0dqUGV6R3NxRVdVUzB1b2dFZlc5VWVuaHY1M1dSSTZuTTJrQXdtM1EzaFlXeUUzbWZzdWhwTl9BRXNhN3B6VkNoLWRCblNxcG1iT1V6VlpTQmpNZGl1dUhR",
@@ -761,7 +933,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikwFBVV95cUxNZVlVTGhiWGhRVFhPQ0pJbUE5ZjJqSm5RN01kVk9MaWhMcVdMYm50Q3RhZU5rNXN0aU80elU5cDBHbGxQcVAxTmpwTlpKVEY4NHg3VExneDlZVEhYSXhKaTN3ZzdHNVIyQVNjdFdKV3RLNFZ3V2Z5aDEwSjhEMXA3a3B1cDNHQmlkWWdEckNxSjN4THc",
@@ -773,7 +947,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiswFBVV95cUxQZ3pPbm5xZlN4MndTR2tRcjlQcXkzZTJuV2RCLXF4bXJYU1hNLU5nd2ZrN05uTFUyX21MSVUzZmtoSDFnWlI5djc2Qk9DZlhQQTdJcHJ2LWpCQlNvYm05T0pIVTFaQlhEXzRoN3Z6b0o2cGF2bFlMbTIySTE3ME1PVlBGY2R6MnAzUGpmUTQ4RXRwYThZd0hHUjV1d2RBM0w5YXgyWVNnNmtrYVFuUFNRdmRpTQ",
@@ -785,7 +961,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMisAFBVV95cUxQdGZKYUpqUlM1bXFTQjVLNWJwdGFHX2lTWTV6N0psbzJLUWJHckNIenZPeEpBTEpqRXRvMUZLZFEwdEt4SjNkR1ZqbFdXdENGT1owN2ZYTm1hbEpjczdfZlM1ZXdZRkRWd250UlZNd1RJb1NCczVLLXBNdUtRWGRjcmVsUHU1blFtNWgzb3l0bnF1SlJqc3ZydmdFSjhnV1VPRDFkODF1LWd0U2NZUHMzQw",
@@ -797,7 +975,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi1wFBVV95cUxOMmR4enpteHc2NmVCb3BnOS1XTGtaTmxVOU1aMy04Wk1nZkc4V1ZPSmVaZ05EZ1hFNkNvdTk3SHBRWFo4M2xibW1PaktjMlV6ZTd0QjgtaGQ2Y3NpNzVveVI0R3lLQmtQMjlJTVF5SFVwYTJ6YjJFVnVfZHZqaS1CZXRpTVVBUmpGLTVDQmh3cXpEaGd1ZFh6SkMxNDBYc0NyMDV6S1lGZHN1eElLOUZUYUxET1VHeHEwMjFxemM5TTRCcGVpU3Ewa2czcHVjT1NnMEZ1Z255MNIB3AFBVV95cUxONFhNMTRSYUlsRU5iazRyN21OemhwVGczN01qYjhsY1BvV1ZaZFdlVnMxUmc1MzhGWHp5dzk4WWVLeFN0VmZWYkgzT29VVGlnZEsyU3NIb1lXWnZ1blhaVnRvNmdKZWx3d18tcHRfQ204eWxQSEdSQVBweXc2eTN2QTNhWFE2VDV1RVB2azRnS3VyY1FuS2F0SGlJXzFVYlk3VS01Wk9TTXBYbktQNEYzSmJKcXgzTHV5UHh0bUNRX1Q3U2tERmpEdlNBRWUtREhEMkRZR0FHeUNkdEo4",
@@ -809,7 +989,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiiAFBVV95cUxPeEFCYmxSYnJWRWZJR29OYUl2TW9KdGpQRklMSldRNU1ZRmxEaXNNSHNSNHlrLU95Q3d1d3JIcF9zc0JNTTV2Z2pFSWd6QmlTalZVd25aS0s0bnFQYWdjS3EybHBGY2EwMnB5eklKT1UtM2lnNmhESWRFVGhJRmNKcmc4LUwwaDZx0gGQAUFVX3lxTE5CbGRYaFhVNXY1Q1Z1SHlmRHVsQVdxU3FzekVHU2ZGS1NpbkNraUlRbmpOalhWQm9OSXhORGJ5RVdIOEYwOUY4UjZxVWF5MEtTbGN2dU9YcmhFejdpLVlBVmlqVUVZZ294eC02TlhJNFFxQUtmQUhfcS1qUFJuQkxZTUpPanJuZnVtUlBaU25wOA",
@@ -821,7 +1003,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi1wFBVV95cUxNVHJsVWlqWV9BYlliMG1Lc2xCVkdyd2xOMlpHVWFIUnBPSEMtMDZOTnduaDNLeDZTZDRzUWJ0OU43OXNlbkxHT2oyYm9Da0VuZXpkaWltY0dzc2xQN2h0X3p6UnJTU3NBcWJUXzJsQ3lycWUxM0dvRy14N0FGalZlX2h0djhqUV9OdzVWdUxyOGZia2ItRWtHQ3VtT2NmUlRNaUE5YXg2T2g4R0ZBaXJFbnBOTmJ4dHpRcVl2djg1c1RDUS1PNEZ4alhrRldzVW1EUDd0VEJzMA",
@@ -833,7 +1017,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMingFBVV95cUxOWUNpZVJVVmpnOG80OW5TUWplTUhJc1NNbUUxYnA4ZnFIeDV5a1VWbjJEZDhaejlXaHZOOWRkMVd0Zzg1MHMtNklrWGJtWGRsODR4cEtBR3NWc18yS3NOS2VEaXhaa1ZwZW92SzZJSzhES3FFcGVzNUFRN2o3QmxoM3hZZGE4a3BHeXV5RllPb2VDbmREWEVfdUphTXNSUQ",
@@ -845,7 +1031,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "DR Congo"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMi6AFBVV95cUxQcFdkODIzWFY3LWF3bmpfUXc5Q2tzMDZYZDhoNXcxNGdKRmlsOThTUDVEWmZndWY4ZFBpc1dRUXlCUXQ1RlZ0S2FtaXN5UFd6enNobjZvWEpRRlNoM1dYQ0d3T25PYVdZTzc3V0xDT1c0bG8zZF9TeEsxNWV0c0gtNUtQRFpWcnJObms4XzhGOFU2enNZNDhLa2ZUQ0FPU3VSVFFDaThnbTNBWi15X1dZenVYLVJlcG9YdFdDZ1RLOVJTR1VSMmhaWHhxc3FPVHdRY2JFUmlpUG95VjNEa0V4UEU4Rzd0eXN0",
@@ -857,7 +1049,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqgFBVV95cUxONTItR3AwYXB3NVVaLWVvUmc5b0lrREg0S0ZzNEUydnhfWWZzODJjQ3VlaXBoMnVqd2pyeEFtbU51RTlQNUk0S3RXNjVGZGN1akhNcVlRT0tYempaSXBUYzUzejdCR2pYdWkzUXhBcTVxSzRMekdjZXJrSVF0czhVeFEyQ19BREkxendxajlTckFpdmxsVE1MR3Y5V2ZJZURVYlprQUVwYTQ0QQ",
@@ -869,7 +1063,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiowFBVV95cUxOeUtISkFiMWtSeGtIMVNCUmFpcnN1QTgwakJYQmY4Zk8wbldEYnFPbTNCZDY5UXA1RmM3NVkzU0c4YzVESHdiQm9adk10QTFhZDNQS1lqMjREa2dBRFNFR1JJWml2c29ySVJCcVpWcVRJOGVaSHA3cGxkMUxyTVA5WXYyeGV2ekRFOVJFWUl1aXk1Q2RxbzlPenc2VHg5SVgzeDgw",
@@ -881,7 +1077,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United States"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMitgFBVV95cUxNQXlnQkRQdEZfRmFXN2U0QzZxZWM0UWUxVXFQY3NmUm5kaV9oaGVDSDdTQXU2VjJsZXp2MWk3UXI5d2pjYktXam4tT1dzRE8tdW92OUNUT1hfYXMxTWdzcHgyQThTb24wMHNCcW16SVRYSDdIdFRNNTJJNTZLVFFRNjR4VnNiaV95WDJTUjlzR05KbDlwOUtTeEdTSkE0dXJaR25LTko1SXI0SUp2T1RvcWRFS0lGQQ",
@@ -893,7 +1095,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "DR Congo"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMizgFBVV95cUxNVG1WaWY2dnVfd3VCTmI0TGJTYU1fWC1rb0YzUXB3RjU5TXh5RXJjVi01d1lGaDhra3JCajJQYU9sdXZ2bmh4WE9kUU1rbk1ZWmRabmtvVjZxRkVQX2x2SzJYWU9tYkpMalc3OS15bHNCVzliOEh0Z09RY3cyRWJmRXpPbTV6aXJSNWJHT2dRazM4bXk2RzdFQ3BaMzZFMi1zYUxWejVHNE5FMkljSUtOTDdkS2FlTjctdkg0dWhxc3RKZzRWN2FTRlpYeTlQZw",
@@ -905,7 +1113,13 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United Kingdom"
+   ],
+   "regions": [
+    "Europe"
+   ]
   },
   {
    "id": "CBMirAFBVV95cUxOa0tSc1ZwbVd5UjNNazFwSk5YSThVSzRUS0dtRURkdFFPSTlKOF9NcnRxdDNteXI3UThFckoyRTVBN2J0YUZZd3ZVU2o1VTZpa2phejlhS2Y3V1EtX0VPTWNmOWFGY1FzRWlvLUZoekQ0RlpfTXAySl9hRWhBdWhidDlFSlhySk9hbVJSN2t2Z1RDcVp2QVZaUnR5U3JxYjFZVTdBQ0tseGhNNTU1",
@@ -917,7 +1131,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipgFBVV95cUxQS2VYT2ZFU2NLYnd1LXE2ZGlMSFhsQnR4X0xRVHZaZDBOOXdCY014OFZNWWlnQXBzeVNCREZzUDBzRHZuVjJ4Z0dHQ3JvT0FlcFF2ODZGYnNZRVdKNmRKQXl3Z0l4bWlaazhtQlY5cHpLUnlpb3pwZVBwdFg0MFBTWEhPejlOUjhlLV9IMVAwY1ktcFNQR1ppVGFvMTByVTNWN0dLajl3",
@@ -929,7 +1145,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMi6AFBVV95cUxNLUM3bVV0dkxaX0pSY2FRRUFydk90dlU2SmRvNEpXWlY0Ti1UZXEyQVVvaGJSWktJa0JNaGxOUVVvekdOSFJ5Tl9aYjAtR3NzX1NpaFZmcUU2amRLRDZWaGFYeERQU1JQa3BVNVkyT2NHVktpcm9Gb2JSRkdXUzdmV2pOQnEyRnVza0VDM0xrTDYwakxvb0FENHJNMUxZR19oNkc1RG10R0pEcHh3di1wY2Y3UmNRelZlT3hpTHlIOC1Fc1M5akNGZ2dfcUdMdHpfQTVibkp6b1dNRVZZR2tDZ0Z4V24zZ3lI",
@@ -941,7 +1159,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipgFBVV95cUxPanluaUlHTXVXUGM2QVR4XzlzZzhDbWNlcVFuYmlrQkZQYkM1Z0hQa0s1YUU2MGxvdzE3d1R3Yms2Vy1HWkROWHI5YnhFOHV2WFppU01ORWVCNjhWdnpNc2E4ZG9DSlpES0pOSi1hSEJXbXhoTmtBRXB3aVl5aFcxdlBCWWJ5dWppTlJZS09YZHpwck9CLURrc1RQdkh1ZjlDZGhET29n",
@@ -953,7 +1173,13 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United States"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMijwFBVV95cUxNSjhMQm5CaXM4dUkzelBUYWhfaGhyY3UyUjlxc3Q2SFJFR21nYmswNmc4YndDcEZNOEVab0VlYzRyN1B1UU1IRnlGT1JKRVVqUzN6RTM1MWpTZHZiV1lUMi0xYnRnOWFNWlhIa3BySTRPSWZ4STJBUW0zNl83MndUeDYyd1E4dVlSdFFyejJ1bw",
@@ -965,7 +1191,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqAFBVV95cUxQVzBSU2U1eHZyb3hfV2c2NVNUc1BtNjlPMWItWUtWU2JoSm5ESXptWjd0Vl9yMGhKVFJVUW5fc0kzRmNoNzVsMDVHeDZiVnN1Qm1UX3E3MkQtWU1ZOUZ1X3FuOVJJejM4aWZsb2UyZFpoRXVBZE5IaDl0cnhlY0RRWWJ2dkRFQ0dpNTN6TFlkRFMtbVl4Y3JVczRtQnB4X2ZBWFpBZDdvcjc",
@@ -977,7 +1205,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipgFBVV95cUxNZjhkZE13bHZGeUZINHRVXzdLT2E5S3g5UERtUzFQaTZ5NDRlOFlPV1ZTVlNvY1doc3NwUFN2WkkxNkNYRjZEWlBmbFVOQ21aeGVEbHJJbXo5M2x4RXlEcDdNd1drWS00TTJKcGlGUEQwdWtVSHFzOExCSDY5UlVCSlBZMm1zWmM0aTRwWDJGelN5M3JJdnBraTc4V00yVHZ5TjkyNmtR",
@@ -989,7 +1219,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "DR Congo"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMijwFBVV95cUxQUVVOMHo5OFdBWm02QjVrN3M1UXBuMHFkR1lrYVZHdWc2dzMwVzcxVG9uNTdWMlh0OXl5blB1aWdQUzhHNEkwNjJFc1pyRjF3NzEzYWZDNXE2SE5fOFBYaU1JYlJHdmFRdDlOeXFoLU9sTGlsd1J5b053VERIUEhieVozSHlGQjhGTHdtTUhTVQ",
@@ -1001,7 +1237,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "DR Congo"
+   ],
+   "regions": [
+    "Middle East & Africa"
+   ]
   },
   {
    "id": "CBMitwFBVV95cUxNbkgxdk5iblF2dXVrTE9Ec2lGOHU1TW10U3VRWlZ3dDZFRy0ycHZ1bEJTX2Q5Y21fbUd0SWVGajM2eW94NW01ZUhrQllZeGo1VTV4WmxqeC1tSWNVWWFYY1B5NWExOXVvSXY0VjV3UlFMejI4akRRMFhBb0xNUVhUWnpnYVd1V3BCUjNkT0tFY2dIM0UwdnMtN2hrc2hXclBnREw2aTljV0dpY1RIVHNWOVUzV1pEVXc",
@@ -1013,7 +1255,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqwFBVV95cUxOQUttLWRxWjJCYUVfeUE3ZERjWHNYV1V6elFXZXNJZlE4anMwNVU5VVJOb21VZFlrWkxHMHVqZjd6T2JnYzdxNjhQZUtlRDU4bVN4eUo1TVRVUDdoYmtIRjdJMV93LUhVb0dZMGFGVUJrTWNfcGgtT284TWtRVGpuRUN4b2pVRTBvWnBpMjIyV0xpeU5yY0hJQVJYcGh2MWlaQ3BBeWlkUmpvWEk",
@@ -1025,7 +1269,13 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United States"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMiswFBVV95cUxNenQwSlpjSi0walRmNGZSZ2UyVFQwRnM3NmNxdm9oUHBpZk1PbUp4dHM2WWM3Tmt3aS13TWIzNU8yMm11c0lFT21CMzJvZ095TUpwakwtdkg3emZkUTh3d2tGUlNaTk5nMnZzeEFkY251VEd0YmgyODRHSWNSbDZmLXVhYk56U2d4b0l6ejJSZ0ZDVFFjN0d0cHVhYnlpRVp0NWd2YjlGc256cllMOWRkZXlDWQ",
@@ -1037,7 +1287,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikwFBVV95cUxPcnl0MDF6UUhtUkJZRDNYV0tma3ZlZlN1aDhoNWJ5YVF1MmNlaEtSYS13ckRVc3Y5dllWYm4takNFMy1hSHdCd2RFbjBSSV9PVV9xQ1h3MkJpNjRwT0ZyN0ItUzVWdkNoalExMnl1S1JZOV9udWw1dVFzdGJYTTlvbVU0T0cyTGVQSGk4c3d4c29EVTA",
@@ -1049,7 +1301,13 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United States"
+   ],
+   "regions": [
+    "Americas"
+   ]
   },
   {
    "id": "CBMixwFBVV95cUxOQkZZSzhJOERZOEZoa05yMXJjb0xBN0FaU1dHLTRKWkZ3MjM3dG5lb0FMSkU4NkFOcms2dWoxeWc3ZmNrSXg3eE94ODFhS01pMFBDTmNiZ1FHbmFURWtaMWJsZzg4RWxweXF2MkdrUmFxRGk4TU1lZkl6S254RGwxLU1ZMmM1amYzWnRJV194VElwSE12Njg0Q295ZlJQR2VYSXRpUjFQZlByZGFwaUpWZ0VYZWdpNldFLWJVV2NfbG5Nbnh6cmE4",
@@ -1061,7 +1319,13 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "United Kingdom"
+   ],
+   "regions": [
+    "Europe"
+   ]
   },
   {
    "id": "CBMimAFBVV95cUxQSW85dW1GdXFmREhiZUFHMkVBSVVoUy1vTXpteEMtTVotUXp6cHRkOVFRY0R1aXpEa1VsNG5sU0FIMUJOR1JnaS1EclpXS0tzZlVxbEIwczlvWFp2dENsQjlBRWtyc3dYLVF0UTd6QXZ2R3hsdXM4cE1abHFIX3RwM0IzMjVaSW0wSUpYX05xVHgwQkNNS2gwWQ",
@@ -1073,7 +1337,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipAFBVV95cUxONVRNYzV1d0JNczZJRlRjdnVCcHByUGJIT0tFR0tEblVaVTVORU5pNEJ2TFhTNVZxQno3SnM3djUteFJXTWFocE9ZMDd5bExzRklOQkU4ZFY5VWtsT00zTTVBVTR1ZlQ3RjN4X0RqM2dYNXdpb3dGSmlQVHF5QjJGMVNOODhHQ2JRVzNGT2JRU21iT1dCVnNRR0Mxci1PdDYyVmFhSA",
@@ -1085,7 +1351,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "APAC (regional)"
+   ],
+   "regions": [
+    "Asia-Pacific"
+   ]
   },
   {
    "id": "CBMirwFBVV95cUxQUTZqRzZtS0VpS0gtazgydUtCX2RqdTNHcVI4RFFWRUNmVjVHUUQtTzJYdTNOazJyOWRVcGRJYjItU2pvTHU3UDZ1SEh1Z3o3NlNPOG5Yems4ZW5NaEJ2T3d4S213VTJzd0RKTEJ0a29rZ3h3Vm1UaVJXaWZSQ2ZHM2xMS1lIYWtqSWx4bklNYWdmYlczQVNuYmhQcWR5T1dwNUpwTkV6VUNPOWtCUE44",
@@ -1097,7 +1369,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMitAFBVV95cUxOX254RjhzU2JLZlhoTlBzMDJuSlJtWWQxd25WWC1OMzJOaVZDVWtMZXRhbmZrenN3RTFKdVUyN2J6NWVOV3BpT2JzUUdBLTRFRUhtdTFTUEtJSDJ5Z3RXM19qbjd5OWM5TlNjT0lyVV8zajFPeThxM3c2ZGUyV0ZUT29HR3hHMlRpOFdiVjNjNF9wYlIydlhqR1hMdlpmRnZ2OHVjZkVQYVhieFYyaVFWRnYtU1c",
@@ -1109,7 +1383,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipwFBVV95cUxNMndScldWVzNlTWUzSktPY0xVNkpWZERWZTBDaXdHQTZSeHRnTVJvRGVETmpFam14bGFmeXlmbVNBTnQ1WDd6aXlmaUNPTGQxZVNVSHpzYTJxalo5amN3XzF5bmhpc1BJeUx5dk1IR2QwLUlQX3NKeVhGUmZhWmFMWTNkT3ZhS052N1dSUFJsMHpyNU5wNmhtX3djQlF4U2Y4VWJ0bjZxcw",
@@ -1121,7 +1397,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMipgFBVV95cUxQc1c5TDIxWUZ4MV9HYmZtWTJJYmZKeVJ6azhxdGt5LXpTMzBfblB1TE9Da2x4cjE4U1pjS0ZnaVluWGRmcE1aWkg5bm5xQlc0VTFuQVA5OXE5ekRLejltQUEyX0pGVXFsUGJ6Q2g1MHJCeG9hNWduSmZrZWVlVERwbTNrQTBYTmlQZFdJV0JDYUJKeTlBemFJbDcxYVIxVXVlVzZnZ3RB",
@@ -1133,7 +1411,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikwFBVV95cUxQUUVLTDNOYzJORnQ5NXZlTjhHNURZaUhNeS1PWDJCN0ZoamZTYjlkUHNpYzJVM2Zia2hmcHlERGZfZlJVMDNJVEhxYnJPdGt4U2NIYlZaZGpoMmNpeEZGOC1YWVR3UXByajRzbFZWaGtvVHFGbzdXVW9CMzRRWFM4dzV6SmpkLWphSXlJbFVsUGN0U3M",
@@ -1145,7 +1425,13 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [
+    "APAC (regional)"
+   ],
+   "regions": [
+    "Asia-Pacific"
+   ]
   },
   {
    "id": "CBMixAFBVV95cUxOb015WFRQZzZmMUVLZnhac0FScHAtZ2piY044Y2gyYVBRRW9lLVZJTXNYMnVCdUZKWW1OWldDX01xNXhER09xdkFjN1hCTWpUaVBSSHlnVk1XSTF6T1Q5SXY0cFRpaFNCa2hjOWN5X3BhZWplTkxOeHpVeDZ6UWpoS0dESHVDTFlsV0FmZ2NVZGNuWHVRdWlOM0lDLW5xYlY4OGpnanRfNHJ1Tm5NX2Z2d1VhOXcybHpoWi1tel92Nzk3Q0ww",
@@ -1157,7 +1443,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMinwFBVV95cUxOdlU1cVBuaDJXZmpIaGdYaE90NWppUDYzZTRFQW9RM2o2QWtxRHhaenhJZlI4RXlsSkRacUZxOHZmdi1vWFlYZmdjZUxueFdPdElNdUZYcHY2VVIydENrbmVJVkhfWGVhbGplMTZLQkpmNWtRSThPdjhxaVFFbEhubHhNa3I4dVVlQWc2UTFVaUpORTY4QmNITUlzc2x0Zzg",
@@ -1169,7 +1457,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMilwFBVV95cUxPVmNqMGZNaEg2OGdybkxGSkNSZVRIQlptdXJoLUc2bUlhbU5yVm83ZHJTN1hWbzBmd2ozMXpmZmNoaGgwMTAzR1o5ZVlJSFl5eXBRQnpVRHh1Sjg4Y3ZsY2ZZemhRZVp4OHVOS0t1MkJHT203T3ltU3VIY3lIakVGaFlyUzVVOUtzRzAxWHVuSkUtamNjazU0",
@@ -1181,7 +1471,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiT0FVX3lxTFBobW9tMkw1SkdSeXo1ZWRIcWw4RGZWemVGaE93RHFSQ0gwQW5tR1BHN1VWMmVrZUJTN1J5ZTVBS0RxUUhBTXRISG93ZzVRb00",
@@ -1193,7 +1485,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMixwFBVV95cUxNcjk4WlF2NlJpbl9VQWU1MUw5ZE54TkFzblB0OW9PbmJCbFJvb2Z6OVBULWVmd0xja1RzVF9TZlZ0bG9SWk9PUHJ0WXBnYnJZVUkwbGszWDd6MzZEbkZ1M21DMFJxd3hhSTVFSF9ubmFqWUt6NDVDNU1RdHlOQ3dFUVN3bUlNcTUxZmQyelg5bW1WRlVoTHhMSWpnOTlETVdDOE9GWGxVOF85ekNsbjZkclFsaW5wa3UwLVd1NG1HVFNtRWV2amd3",
@@ -1205,7 +1499,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikgFBVV95cUxPZ2RDQThYMGg2cEE4UU9FS1lpSFYzdVdxUVFKTV9RZDJiTkhSRHYySTFaNmE1QWVhZ1BOV19hV2lGMm9tcHZIdTlGcGwyZklvbTQzMFVGWVNndUplZkd1Q2pJaUdxWW5qN0h3bHg1VmZtYnB6Z0ZySmM0WVdHNmp5TWNNcHNKUzFqY1ZnSmlWN0lCQQ",
@@ -1217,7 +1513,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiiwFBVV95cUxQNVdKY2M4SW8wZnZyY1JQX1V6cmtwTXJYNTNKUmo0cUtRcm9zcVIyc2ppdllFSVFkUHE3Y3hfcTlUdnJJbWE2dC1fRnhzcWpwdzg3NWRyTm5WbXVyME5ZSG1YUU41YWZMUDZLTVowNFpsd2dmbTBjNHFCZF9uQzcxOGlVTVA2dFYyQThz",
@@ -1229,7 +1527,9 @@
    "brands": [
     "SBS"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiowFBVV95cUxQQjBwSlc1QXA4Wml6Y05pYy1iSHNGYzE4SHpEMTh2cmlhSnBpSG4yOVl5Ty1mLWNIRVVBMHBWdGNYY205WnZ6cm1NUUJtMnNZQW56SDlHQWJiRFZxWFZ3d3NXbTE2Q296NXd5Szc1UGRZbUc1TDN2cWdyYVk3TjdFeThQZXgzV1NrS2tfTlVDWmNXcUdQNFdyTDVabXZ6MEMtMG5F",
@@ -1241,7 +1541,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiogFBVV95cUxOa2hUQmRtSVFJNm1tbFAtTWFZY2J2aVZXX0g2LWRjbWZLbzcwbzIxektJVnhHTGg5MFV4STJaZHRRNGFXeVBoTFZuMV9yaG1ja1E2aWxRYWVoMWR1S29QRGNNN1hEZTRWbXIxeHRCcmNaTGs0MDFVcHhMT3JfT1hycFVsaGU5SG5XeEhKbldnVmpZVFlqVlFTWmt5cUVJVXBNWnc",
@@ -1253,7 +1555,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:21:52Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMilwFBVV95cUxNTmtUZlI3WWdUVndWY0RBZWgyNHcyVk8walRSUm15Vk56Y3lQSWhTNVBsVDY2dE9Ma3p2bE5ZODNkMllfOU9CYkNCbmMwTHY3LU1ydFRQLVlmb000MUJ3aXBKZlBCUXlRNEFoS1NZZEdmdFB1NXUwYVppaXR4ZWRtdzkwVHpYTXYyNUM4Tlc4VnVmOEJZdVVn",
@@ -1265,7 +1569,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikAFBVV95cUxNTWZibmViVDZ3Y2tnNFVocENWNTYwaEE3MzFEU25WZ19ZaGRKQ2J2N1l3WGhjaTFYY3dxY25GMExabE8xUUNSVEt0YWhteTNlOHpSOEFVcGZIdm9IMHRMY095U2hBZWNtamJSWGJxVS1saE8yTlBsZThxekYySVRQcGp1ckg3RlROelRoU2pJa0s",
@@ -1277,7 +1583,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimAFBVV95cUxNajlDS3lSeDhHWFpUUnlHc0hyd3hlWkxkeTlzUFpkdE5kT3BXWjBOa0Zzb1ptekFwdEFXUmFELXExS1hHREtLaHE4aUZ6d0tldjl2dkJGR19Udld1VWRxOGxsWTlYbnhUMzJ1NW1MRHYtaU1UUkt1U1FTQlk0V1BHVlpxV1J3cVRvUkJsUXJ5eFE4S1p0dlBmbQ",
@@ -1289,7 +1597,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiggFBVV95cUxNSFloazhyTFpzY25SclVZbzRxa085cFJWLVJnd1c5SFVsSkMzUV9EOXJBd2JoYWtSSFhzMjY5V18yNDJ4QW8tUl9KX21NbWZQellUcXVyVTF0YXRGUDFfVkNBdTBCcFJYazNUczAxZjRIWEhXamlNdU5nMlZsQnhnN2Nn",
@@ -1301,7 +1611,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiuwFBVV95cUxNMHNfMGRrN1I2MFZES3R6SUxWUXRJWkgySUUtUjNjZkx2ZnlmdDhUWXhUTzdJMXloZDJJSlJzWGlhUHdQeGI2N1RwZUZXMWZTdFJGZ0JKVkYwcURpMFVqVDVlUDlEREZ3SGtqanlvSEg3RkdNeUdrdWFZbnUzZVpNM0pOT1dBblN5VVIzclo5aVRlVFZmT1J3bTlzWl9BTkxKX2E4WDNhNEFrQ21Ic1k4V2FBazdBNE0tbFc40gHAAUFVX3lxTE9kOWdtbFJEelhaMF80RG9FN3lyYjc0SjdYem5LcDcxeFRtd1NwQUJ2Vy1xOWpxTHF5cWUta1I5MnlTU2ZrVUgtVDk1Z2N0bzNsTGZibHVFMDE2MExxdXMzcksxY3FHNzFHMlZscG40UlNKMkVBYVdXeElHaHlNaWpTRnRZX1lTVG5Ec1hHLWItYk5ORGpmUjZzbWxWMWI4a0NuMTdGWElDaXp1M2xUWjU5Y0tNVFZTdmNHcDlUbUtJaA",
@@ -1313,7 +1625,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimgFBVV95cUxPaE5XX3ptbWFQMUJMYXBIQ2d0T3BXeGs4Y3dlTnZhdURMa0hBV1ZGSWVJSHVsZk14M2ZVWE5VeTg1NGdGa2JaZzdBLTY4ZFEwNEg3NXZ0N29Iem4tR3Rad1gwd3ZuSEZpT19zaEtxZ2VyRWtDUE05NElualVGZ1pTVzAwR00tYVVRaHlNUFUzQThjSjlQVVVuMzlB",
@@ -1325,7 +1639,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimwFBVV95cUxQVXplTUl6NjFkSkJwWEk3RzVuV01EWHFRWTN1Q29YRWU2c1ViZmpSZ2hLdzJ3cncxZW9IS2g3V1ZKWUt6dXAwQjdzWDdIWlBXOWRfa3d1TllPd1NYMkdwcm9XMXAwb3JrV09iaEdUcDhXS1E1emh2M2R6M0NTeVJBbFVyVi1HSXpodGZrRnhOUkJTOF9ZUWNhZFZZUQ",
@@ -1337,7 +1653,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiswFBVV95cUxNMXFZckd4U2t6UU5RZV95OXY1d2tZX0VYSDhBX25sdEZWYi05Q2FFNllNeEdtQ0pvdnZsRXlwOUpURjdEOFpwby1RaTZjSTNBRnZxaGE0RkpGYUl0ejY1Qk1ndExsbVFwcVhWeFBOT3pIei1DelpoSmROVmZRUV9ZY3RoaTdUX2M0M1JxQnI1MEI3ODdXYnpSVEJiMl9SejM2cnJ4R20wQkhBbmwwY05sb1pRcw",
@@ -1349,7 +1667,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMiqAFBVV95cUxQbUlrWkRRNnNFZ0tnRXFMZGZrTzhRdXdDOVJpOXBNcXhjN204YlliaFBwTENIU09tZEtvSzdrV3lYUWpzdFl4RXl6TmZkQlZRVW41U3BkTFFmeW02MURRMnV6R3VpUGxLVE1KWjRWOUhFbzl4WE1QdUdiMXFZS2lNSWVvSGI3ZDhwZFFjSmtKcEVOZnVPREEyQnUwaXQ5TjlOa0xJQVpMTWvSAa4BQVVfeXFMTllCUTVpbU9jSEJEQU0xTjlLZ1EybnBmcjRua0VwUldGcDhmVnAySGNkRlEwTml6QkxERkJDdEJsYlZyMDF0RzNRTnhIYzhnMlBMWlluSmtfUUJwMEd1cXZQLUFWUVJNS2lmcmo4d24xZDBIaDd0Ui1HUGl5V1JJYlpuUE1lMGhNbklvZlhIV3pJZWl2SnUtVmw1Z2FjRlB2bVVlY1dicWZnbDVidzln",
@@ -1361,7 +1681,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMigAFBVV95cUxQTUxqYWs2V1pTTjA0RlBTdjFnYS1zc1Q1TWE4d0FyeEdsTEF4SWdnMjhHNkdubjdkRzktYzdGcWNfbmFCcUpqTTFXVmNkQkNTQlQ4WC1zZE1YcHdKc3lsR2VJb0lSSm9UcUxkSTg2bWN3SUdMZnk1cDVzdWpjcWI0dg",
@@ -1373,7 +1695,9 @@
    "brands": [
     "Backbase"
    ],
-   "first_seen": "2026-11-05T13:31:23Z"
+   "first_seen": "2026-11-05T13:31:23Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMivgFBVV95cUxPRkc3eXh4Vm1FWGJWQW9IeVF5dnFVendFOS0wYkJGNFVIVERiS21mWlVZX1oybEIwd2pMR01PZnFnWk1MTlQ0QUU3V1ZyMEYxRjktQ1JEZzVldV9idXljdVk5TFFFTlAtMVZndi1IU1ZaWUZXdEtGcmxTYl9sdDlBQ2ZGcG5iNnpvbXRQbWFPUW5vcjI2V3ZLbWFtOWdXX2VxYjcxV2lwOEpFbG1aT0FIZ3hkM0dOQlh2SzgtQ2pn",
@@ -1385,7 +1709,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikgFBVV95cUxNRFBJa3I0Tk1YQnVhQVVoNEtJSGFxeDBWYndxTWNrSnhEeTR1bUgzVU5ITGhtcVgtSWIzdHpCSDhxbF9GLTQwNlVMbklQUFFaR1FXT3hpZVhCWXBDZHFvV2VtWi1ncW90TjZKSXdTQ2FRd1ZCVnQ5YXZzbk5GYml6ZG5BaFBmc1J0VnRRaG1HajNTUQ",
@@ -1397,7 +1723,9 @@
    "brands": [
     "Temenos"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikwFBVV95cUxNWnVoWFNsdTZKUW4zbmJvR1U4c1pBWnpUSTVSMzFnMlFETGxIS3MyZzNXbXY1SkdjZ1JlUHJOM190YV9YMldUNmNhTUdqZmhHTVJXMHA5cTR1MEk4WlFOU0RMZ1FVbW9zVUdreHNsSmhWOEVLQ2VGVFYzeHBpS3RWNi1xQy1jNkdSQTdtSHI3SF9nRDQ",
@@ -1409,7 +1737,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMihgFBVV95cUxPMk1VWDkwRlFpam8wdVlDYVZhQ0FkeHVrdDY0d0lCY3FPVjIxX3luaDJ4RThMLVdRT01EVk9KcVBGYjVDTHNheGstY2RoZ2oyZS1yRjAxeE91NThWUG13SEtNVEZSYXRqYU5RY19ub1I1WDQ2dmFsNTJySVZYckRmdEgwWU1Idw",
@@ -1421,7 +1751,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMimgFBVV95cUxPZHZxZWhTSVRwN0RENThjaThUMzlzSjk0NjlnTGdEanZQSkZHUWF5VEhrSjFDR0lBcDc0eDdJSmRxbDNTbzVxV19hM3NMaUFOeWtGUGJ2VWpKRU9ZRmoxbVRpWEdRaVZtSDFINGROUFpsbkdWYV9yaUFmbndSX1dLQmZTbEdBaS1vWFJ3T1pwclhsSE9IbldXWEhB",
@@ -1433,7 +1765,13 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Southeast Asia"
+   ],
+   "regions": [
+    "Asia-Pacific"
+   ]
   },
   {
    "id": "CBMiwwFBVV95cUxObUtUb2VGZHdZWk9ZSEp0N20wREI2M3RrUHpSalJQYmtaNlJ1VVRMdVRkOG9CZXZxVk8tRDRZb2NGVkVhVEo5a19PRlNQWGwtRWx0SzVtV1dlV3hzOFBRUmlrTE11a0ZvUjEtdGZmZEZzVzBPWm5QeFBOR08xaVo1dk1mTFJ1YkxlR254bkxIbGdoWW1vUXZsb2xzRURlYmRPeG5yM1ZTbmRnUW1Id0Y1b2ZsZEFIVjh5RExfRkRKVWlBVkE",
@@ -1445,7 +1783,13 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [
+    "Southeast Asia"
+   ],
+   "regions": [
+    "Asia-Pacific"
+   ]
   },
   {
    "id": "CBMioAFBVV95cUxQNW9OZ0NCWHFxdGFaWldTZFRRSDgybHVqOEt4NC1uX1h0S0FqeWtXN21nUDdfaWdLLWE0bE5hYjJNUFlUcDBzQ21lZ0QtRHg5bXlLX3JYRlZ5QlVsRzZmcnhyLWprWEZOanpIV21rX183QnZMX3NmQVE0WXlwTWttRC1sME5icFlGeW8yYkJHckVEbnZnV0dsbno0NUZKODhR",
@@ -1457,7 +1801,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:14:14Z",
+   "countries": [],
+   "regions": []
   },
   {
    "id": "CBMikAFBVV95cUxORkRMMzB0ZFVqRWRfWjRQTTdXdzFQbjFmUFNKZWQ5T2RNOXlYcHNkMFNrRnNkUWJWZmZNMkd3cDNUdGlwUGdfUi1ZdDR3ZE10TlM5SXBtcXB0MU5OVkJaVENsNXpNTUNWTXByTW1iWEY0U3FSeU9XN21SQnhSNTJMMy1zZmxsTFZxazRJeXYtUG8",
@@ -1469,7 +1815,9 @@
    "brands": [
     "Finastra"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:21:52Z",
+   "countries": [],
+   "regions": []
   }
  ]
 }

@@ -1,0 +1,46 @@
+{
+  "_comment": "Detects which country a headline is about. Each country has a regex (case-insensitive; (?-i:...) marks case-sensitive parts such as acronyms). Headlines naming no country fall into 'Not specified'. Region-wide words (Europe, Africa, GCC, APAC...) are listed as pseudo-countries so they still count for their region.",
+  "regions": {
+    "Europe": {
+      "United Kingdom": "(?-i:\\bUK\\b)|United Kingdom|\\bBritain|\\bBritish|\\bEngland|\\bScotland|\\bScottish|\\bWales\\b|\\bWelsh|\\bLondon|Royaume-Uni|britannique",
+      "Ireland": "\\bIreland|\\bIrish|\\bDublin|Irlande",
+      "France": "\\bFrance\\b|\\bFrench\\b|\\bParis\\b|français|française",
+      "Germany": "\\bGermany|\\bGerman\\b|\\bFrankfurt|\\bBerlin|Allemagne|allemand",
+      "Switzerland": "\\bSwitzerland|\\bSwiss\\b|\\bZurich|\\bGeneva|\\bGenève|\\bSuisse",
+      "Benelux": "\\bBelgium|\\bBelgian|\\bBelgique|\\bNetherlands|\\bDutch\\b|\\bAmsterdam|Pays-Bas|\\bLuxembourg",
+      "Southern Europe": "\\bSpain|\\bSpanish|\\bEspagne|\\bItaly|\\bItalian|\\bItalie|\\bPortugal|\\bGreece|\\bGreek\\b|\\bGrèce",
+      "Nordics": "\\bSweden|\\bSwedish|\\bNorway|\\bNorwegian|\\bDenmark|\\bDanish|\\bFinland|\\bFinnish|\\bNordic",
+      "Central & Eastern Europe": "\\bPoland|\\bPolish\\b|\\bAustria|\\bRomania|\\bCzech|\\bHungary|\\bUkraine|\\bArmenia|\\bSerbia|\\bCroatia|\\bBulgaria|\\bPologne|\\bAutriche|\\bRoumanie",
+      "Europe (regional)": "\\bEurope\\b|\\bEuropean\\b|\\bEuropéen|\\beuropéenne|(?-i:\\bEU\\b)|\\bECB\\b|\\bBCE\\b|\\bPSD3\\b|\\bFiDA\\b"
+    },
+    "Middle East & Africa": {
+      "DR Congo": "(?-i:\\bDRC\\b)|\\bCongo|\\bKinshasa|(?-i:\\bRDC\\b)",
+      "Nigeria": "\\bNigeria|\\bLagos",
+      "Kenya": "\\bKenya|\\bNairobi",
+      "South Africa": "South Africa|Afrique du Sud|\\bJohannesburg",
+      "Morocco": "\\bMorocco|\\bMoroccan|\\bMaroc|\\bCasablanca",
+      "Senegal": "\\bSenegal|\\bSénégal|\\bDakar",
+      "Côte d'Ivoire": "Ivory Coast|Côte d.Ivoire|\\bAbidjan",
+      "Libya": "\\bLibya|\\bLibye",
+      "Other Africa": "\\bEgypt|\\bÉgypte|\\bGhana|\\bTanzania|\\bUganda|\\bRwanda|\\bCameroon|\\bCameroun|\\bEthiopia|\\bTunisia|\\bTunisie|\\bAlgeria|\\bAlgérie|\\bZambia|\\bAngola|\\bMozambique|\\bBotswana|\\bNamibia|\\bMauritius|\\bMaurice\\b|\\bEswatini",
+      "Saudi Arabia": "\\bSaudi|(?-i:\\bKSA\\b)|\\bRiyadh|Arabie saoudite",
+      "UAE": "(?-i:\\bUAE\\b)|\\bEmirates|\\bDubai|\\bAbu Dhabi|\\bÉmirats",
+      "Other Middle East": "\\bQatar|\\bDoha|\\bKuwait|\\bBahrain|\\bOman\\b|\\bJordan\\b|\\bLebanon|\\bLiban|\\bIsrael|\\bTurkey|\\bTürkiye|\\bTurquie|\\bIraq|\\bPakistan",
+      "MEA (regional)": "\\bAfrica\\b|\\bAfrican\\b|\\bAfrique|\\bafricain|Middle East|Moyen-Orient|(?-i:\\bMENA\\b)|(?-i:\\bGCC\\b)|\\bGulf\\b|\\bGolfe\\b"
+    },
+    "Americas": {
+      "United States": "(?-i:\\bUS\\b)|(?-i:\\bU\\.S\\.)|(?-i:\\bUSA\\b)|United States|\\bAmerican\\b|États-Unis|\\bNew York|\\bWall Street|américain",
+      "Canada": "\\bCanada|\\bCanadian|\\bCanadien|\\bToronto|\\bMontreal|\\bMontréal|\\bVancouver",
+      "Latin America & Caribbean": "\\bMexico|\\bMexique|\\bBrazil|\\bBrésil|\\bColombia|\\bChile\\b|\\bArgentina|\\bPeru\\b|\\bJamaica|\\bTrinidad|\\bCaribbean|\\bCaraïbes|Latin America|\\bLatAm|Amérique latine"
+    },
+    "Asia-Pacific": {
+      "India": "\\bIndia\\b|\\bIndian\\b|\\bMumbai|\\bBengaluru|\\bBangalore|\\bInde\\b",
+      "Singapore": "\\bSingapore|\\bSingapour",
+      "Australia & NZ": "\\bAustralia|\\bAustralian|\\bAustralie|\\bSydney|\\bMelbourne|New Zealand|Nouvelle-Zélande",
+      "Southeast Asia": "\\bIndonesia|\\bMalaysia|\\bPhilippines|\\bVietnam|\\bThailand|\\bThaïlande",
+      "East Asia": "\\bJapan|\\bJapon|\\bChina\\b|\\bChinese|\\bChine\\b|Hong Kong|\\bKorea|\\bCorée|\\bTaiwan",
+      "Other Asia": "\\bBangladesh|Sri Lanka|\\bKazakhstan|\\bUzbekistan|\\bNepal",
+      "APAC (regional)": "(?-i:\\bAPAC\\b)|Asia-Pacific|Asia Pacific|\\bAsia\\b|\\bAsian\\b|\\bAsie\\b|Asie-Pacifique"
+    }
+  }
+}

@@ -27,6 +27,8 @@ The collector searches Google News (English and French) for each brand, keeps he
 - **Run it locally:** `python collector/collect_news.py`
 - **Run it on GitHub:** Actions tab → "Collect data" → "Run workflow"
 - **Track a new brand or fix noisy results:** edit `collector/brands.json`. Each brand has search `queries`, a `match` regex the headline must contain, and an optional `exclude` regex. There's also a global `exclude` for noise. The rules are re-applied to stored headlines on every run, so tightening them cleans old data too.
+- **Regions:** each headline is tagged with the countries and regions it names (for example "Rawbank … in the DRC" → DR Congo, Middle East & Africa), using the place-name rules in `collector/regions.json`. Headlines that name no place are "Not specified". Google News country editions return nearly the same global articles, so the edition isn't a usable signal for geography.
+- **Download report:** the button on the dashboard prints exactly what's on screen, with the active filters listed at the top. Choose "Save as PDF" in the print dialog to get a file.
 
 ### YouTube
 

@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "collector" / "brands.json"
+REGIONS = ROOT / "collector" / "regions.json"
 OUTPUT = ROOT / "docs" / "data" / "news.json"
 USER_AGENT = "Mozilla/5.0 (compatible; sbs-watch news collector)"
 
@@ -76,9 +77,24 @@ def relevance_rules(config):
     return rules
 
 
+def geography_rules():
+    """Return [(region, country, regex)] from regions.json."""
+    regions = json.loads(REGIONS.read_text(encoding="utf-8"))["regions"]
+    return [(region, country, re.compile(pattern, re.IGNORECASE))
+            for region, countries in regions.items() for country, pattern in countries.items()]
+
+
+def geography(title, rules):
+    """Countries and regions a headline is about, detected from the place names it contains."""
+    countries = [country for _, country, pattern in rules if pattern.search(title)]
+    regions = list(dict.fromkeys(region for region, country, _ in rules if country in countries))
+    return countries, regions
+
+
 def main():
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     rules = relevance_rules(config)
+    geo_rules = geography_rules()
     existing = {}
     if OUTPUT.exists():
         existing = {a["id"]: a for a in json.loads(OUTPUT.read_text(encoding="utf-8"))["articles"]}
@@ -117,6 +133,7 @@ def main():
     # Re-apply the current rules and languages to everything stored, so config changes clean old data too
     for article in existing.values():
         article["brands"] = [b for b in article["brands"] if b in rules and rules[b](article["title"])]
+        article["countries"], article["regions"] = geography(article["title"], geo_rules)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=config["retention_days"])).strftime("%Y-%m-%dT%H:%M:%SZ")
     languages = {e["lang"] for e in config["editions"]}
