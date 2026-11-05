@@ -1,23 +1,23 @@
 {
- "updated": "2026-11-05T13:29:16Z",
+ "updated": "2026-11-05T13:31:23Z",
  "brands": [
   "SBS",
   "Temenos",
-  "Finastra",
-  "Mambu"
+  "Backbase",
+  "Finastra"
  ],
  "articles": [
   {
-   "id": "CBMihgFBVV95cUxOTzNBMkZlNUZJZ0hzRkVjeGRRWmdhNWhkOUNPdlJQbHpHdFVyRTlka1NkT3QwNEJFVW9YS1ZZZy1GUm9NSUZQdWRHdG9ITVdfOHpzeDBGRE5QUmgwNnp3NFFxNTQ1dW1tY0ZnTUJDTXJfanVKcE43N3FjWWRpVkZQTEhWcWI0QQ",
-   "title": "GCash Mambu Partnership: Scaling Lending in APAC",
-   "source": "Fintech Singapore",
-   "published": "2026-11-05T03:00:30Z",
+   "id": "CBMiowFBVV95cUxPVEl6cldXelc1RDRwSnU2QUx1MHF3TUVqVVFUck11alBiRzQwbVZOcjdmMGNtY25seGNONFZDOGFpRlJFeFJaRVE0clNwN3hybmxDajYxYjNkMkZEdDloZ2pMNWFfRG9zVHEwUm5hYk9DdEtaR0JCVmMwN3ZVd2tKaXowb2psWHRtYUNZREpNMUhTQzFZbXhZWTc1TlhjYWFYMzZv",
+   "title": "Wahda Bank picks Backbase for digital banking",
+   "source": "The Paypers",
+   "published": "2026-11-05T11:20:06Z",
    "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOTzNBMkZlNUZJZ0hzRkVjeGRRWmdhNWhkOUNPdlJQbHpHdFVyRTlka1NkT3QwNEJFVW9YS1ZZZy1GUm9NSUZQdWRHdG9ITVdfOHpzeDBGRE5QUmgwNnp3NFFxNTQ1dW1tY0ZnTUJDTXJfanVKcE43N3FjWWRpVkZQTEhWcWI0QQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVEl6cldXelc1RDRwSnU2QUx1MHF3TUVqVVFUck11alBiRzQwbVZOcjdmMGNtY25seGNONFZDOGFpRlJFeFJaRVE0clNwN3hybmxDajYxYjNkMkZEdDloZ2pMNWFfRG9zVHEwUm5hYk9DdEtaR0JCVmMwN3ZVd2tKaXowb2psWHRtYUNZREpNMUhTQzFZbXhZWTc1TlhjYWFYMzZv?oc=5",
    "brands": [
-    "Mambu"
+    "Backbase"
    ],
-   "first_seen": "2026-11-05T13:14:14Z"
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMiswFBVV95cUxNSG1RSVFLQzZmb1FONXFneVhVblZGd01oSlRGSUdvU200V1hJdUZSYWEwNWlkdEJ0LTY3bU5ua2VxV0pYTV9HZkhyMGR4aDA4cjFtNHJHN2ZNMkZKN19VWnVKTW1sX1FuR2JkREdXa2dPazNRQ1R5VXJNenotdXhGclZ1SHZfYUxHbFY4dS1sYmJJTTNvQmFKdThCa3ZqbWl6RnFBU1dyZjgxUkQybXBFUzdYdw",
@@ -44,6 +44,54 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
+   "id": "CBMiqwFBVV95cUxNamtOSm9oQVZNdmsyOUNLcDhTOGtuVnA3SmREUDlVTFBXS3FYM1E1dnRWalJQWWtYRmJCMGZubzNLMmtOaGRCS1FKbDZWTjJ6REtpd2xPUG5IWWFMSWFSOVBjYUZXN0NGazloRzBTTTlpUUNlRFdsMm9ZQlkzcG9BTExJbm1VVU84VnVVaEUySU8yZ1dGSnAzNUxYMWdJNjVRc3B5aTJVdlNwbHc",
+   "title": "Wahda Bank partners with Backbase to launch digital banking in Libya",
+   "source": "IBS Intelligence",
+   "published": "2026-11-04T11:41:54Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNamtOSm9oQVZNdmsyOUNLcDhTOGtuVnA3SmREUDlVTFBXS3FYM1E1dnRWalJQWWtYRmJCMGZubzNLMmtOaGRCS1FKbDZWTjJ6REtpd2xPUG5IWWFMSWFSOVBjYUZXN0NGazloRzBTTTlpUUNlRFdsMm9ZQlkzcG9BTExJbm1VVU84VnVVaEUySU8yZ1dGSnAzNUxYMWdJNjVRc3B5aTJVdlNwbHc?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMiowFBVV95cUxOWkxkQVc4Zy1fbzhmUTYyMjN2akNZRUFmNTlnaWcxQWF0eDZzMFd2MXpPUkhMR1h5WHBneUlDV2p6R1NFOTZrSDNTcURqUDFzUTBFY3VIYnJBVDc1bklPM0RmZV94dWQycTI0M0M0YUZZaHI4RnNWNmhWVVYzT005MnN0MkJzZS0xRHZQTkhLTnlmVVZmMnNCWGhRQmViS0tlOWRV",
+   "title": "Wahda Bank Partners with Backbase to Launch AI-Native Banking OS Across Libya",
+   "source": "FF News",
+   "published": "2026-11-03T19:46:06Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWkxkQVc4Zy1fbzhmUTYyMjN2akNZRUFmNTlnaWcxQWF0eDZzMFd2MXpPUkhMR1h5WHBneUlDV2p6R1NFOTZrSDNTcURqUDFzUTBFY3VIYnJBVDc1bklPM0RmZV94dWQycTI0M0M0YUZZaHI4RnNWNmhWVVYzT005MnN0MkJzZS0xRHZQTkhLTnlmVVZmMnNCWGhRQmViS0tlOWRV?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMiREFVX3lxTE9VNmhxRDR3WktpbXQ4a0w0QWJ0TXFGcEk4WHBoemN2amVrclRrTXVfU1VCRTdZdHBnLTl1amhBdXFNdHZa",
+   "title": "Wahda Bank partners with Backbase to bring Banking OS to businesses and retail customers across Libya",
+   "source": "بوابة التكنولوجيا المالية",
+   "published": "2026-11-03T14:03:19Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9VNmhxRDR3WktpbXQ4a0w0QWJ0TXFGcEk4WHBoemN2amVrclRrTXVfU1VCRTdZdHBnLTl1amhBdXFNdHZa?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMi3wFBVV95cUxQNlRrdnlOX2xfd3g3S29aZWE3TXFrRXhZSEI4cHp4ak41anhiUWpPT2paQVJKc0hLN3Z6QTU0R0VMUEVkaEp3aTVwN0w4c2tRZEVIQ2pfdHM3M3BvMGx4VWZ5S3RQODVfZWdDZUYxb1FjcDhseDlZX2E2Qk84aTdmZzZWeEhlM1pjVzc0OWxiVE1FZlBfSDQwWDhKMnp4RUNPSXJCaGpIUlJaNG95anRaVTlWTFFKNzNKTnprMTdtenotTklxa05mbTMyOGRxZG5reVRwVlR6MVNnUHZ5V0NV",
+   "title": "Wahda Bank partners with Backbase to bring Banking OS to businesses and retail customers across Libya",
+   "source": "African Business",
+   "published": "2026-11-03T10:00:23Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQNlRrdnlOX2xfd3g3S29aZWE3TXFrRXhZSEI4cHp4ak41anhiUWpPT2paQVJKc0hLN3Z6QTU0R0VMUEVkaEp3aTVwN0w4c2tRZEVIQ2pfdHM3M3BvMGx4VWZ5S3RQODVfZWdDZUYxb1FjcDhseDlZX2E2Qk84aTdmZzZWeEhlM1pjVzc0OWxiVE1FZlBfSDQwWDhKMnp4RUNPSXJCaGpIUlJaNG95anRaVTlWTFFKNzNKTnprMTdtenotTklxa05mbTMyOGRxZG5reVRwVlR6MVNnUHZ5V0NV?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
    "id": "CBMi9AFBVV95cUxOb01rdUcwbFZSMGQyY0Zla0poSkJKVm5qU050Y0FoZWkzSXNoLUJtNzZrZWpZZFJsU0RnMzBfMjBvNVZ6MG5qal9VbmVnZnlHd3RjVUJCLW1PcW93Z21LTEVzOTlrcE9DdVVocFh1Rk9Wbk44ZC10aTdVTFRpZ1hGMk1FY2E4Y3RkejRJSlBrckFDWlpiRkFhR1JIbERja3VnNnRkN0FYVDRIYWZ5ZkthR29NQ0ZZRXB4dHo2WHJsYmRabi1qTktwTTZOaHV0eGJ2T3NRYUFBb2phVXlqYTRWa1AwV1RGcndOMnA4eVJQMExHVDdK",
    "title": "Leading Caribbean Bank Completes Phase 2 of Temenos Core Banking Transformation with Validata’s Agentic AI Platform",
    "source": "EIN Presswire",
@@ -52,18 +100,6 @@
    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOb01rdUcwbFZSMGQyY0Zla0poSkJKVm5qU050Y0FoZWkzSXNoLUJtNzZrZWpZZFJsU0RnMzBfMjBvNVZ6MG5qal9VbmVnZnlHd3RjVUJCLW1PcW93Z21LTEVzOTlrcE9DdVVocFh1Rk9Wbk44ZC10aTdVTFRpZ1hGMk1FY2E4Y3RkejRJSlBrckFDWlpiRkFhR1JIbERja3VnNnRkN0FYVDRIYWZ5ZkthR29NQ0ZZRXB4dHo2WHJsYmRabi1qTktwTTZOaHV0eGJ2T3NRYUFBb2phVXlqYTRWa1AwV1RGcndOMnA4eVJQMExHVDdK?oc=5",
    "brands": [
     "Temenos"
-   ],
-   "first_seen": "2026-11-05T13:14:14Z"
-  },
-  {
-   "id": "CBMiwwFBVV95cUxPUzNmbjFKZTM0NU5DMGhqT0hXbHZDWjN5ZGljVWxVdHdZRUxsUzNwcHk5aXdoQTNyUER0UkI3VUNGOTJnMDFYRU5zMXRobjRBV2EyNEtwT21XdzdDZkh4QUdFUEFMQmxuRDc3UE1rRzVQSTN5ZVoybnJfbGtJbC1hblNxUklJU0VIb0I0MmFCTkJVVFlyQmZocGI1eFYyc1MyTHVrMzZmYWRxY1VNNFRFVENqWnlYS1FQamJ6U3ZaUlJlN2M",
-   "title": "EXCLUSIVE: \"The Infrastructure Era\" - Victor Mithouard, Mambu…",
-   "source": "FF News",
-   "published": "2026-10-30T10:06:54Z",
-   "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUzNmbjFKZTM0NU5DMGhqT0hXbHZDWjN5ZGljVWxVdHdZRUxsUzNwcHk5aXdoQTNyUER0UkI3VUNGOTJnMDFYRU5zMXRobjRBV2EyNEtwT21XdzdDZkh4QUdFUEFMQmxuRDc3UE1rRzVQSTN5ZVoybnJfbGtJbC1hblNxUklJU0VIb0I0MmFCTkJVVFlyQmZocGI1eFYyc1MyTHVrMzZmYWRxY1VNNFRFVENqWnlYS1FQamJ6U3ZaUlJlN2M?oc=5",
-   "brands": [
-    "Mambu"
    ],
    "first_seen": "2026-11-05T13:14:14Z"
   },
@@ -272,18 +308,6 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
-   "id": "CBMiqwFBVV95cUxQUzlQYzdwc05GM2tJRml0NVFGay0xS3FPWW5UYWxSbHVqOEQyejd1ZHlZaWZaTS1WNTZhLU9XeUlZYXpDbEt5ZHRBMDJuSFQwdGpmV2lWM0N5YXNDakxQSHRwdHF4emJmWFpyOW1tM3RhSkEyVndzWi1tdWw4OEJRM3V2b1ZuWTNudjBxdGV0VGdJLXQtZWRsNmd3RWtfNG53b2hGWHJmc2tnWFU",
-   "title": "Mambu VP Warns Banks: ECB AI Cyber Deadline Must Not Be a Box-Ticking Exercise",
-   "source": "FF News",
-   "published": "2026-10-28T15:09:58Z",
-   "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUzlQYzdwc05GM2tJRml0NVFGay0xS3FPWW5UYWxSbHVqOEQyejd1ZHlZaWZaTS1WNTZhLU9XeUlZYXpDbEt5ZHRBMDJuSFQwdGpmV2lWM0N5YXNDakxQSHRwdHF4emJmWFpyOW1tM3RhSkEyVndzWi1tdWw4OEJRM3V2b1ZuWTNudjBxdGV0VGdJLXQtZWRsNmd3RWtfNG53b2hGWHJmc2tnWFU?oc=5",
-   "brands": [
-    "Mambu"
-   ],
-   "first_seen": "2026-11-05T13:14:14Z"
-  },
-  {
    "id": "CBMi7gFBVV95cUxOQ05teF9vYUR0Q1Jpc0tldVd6MEVOZUNJLVVMOGhNdVFRdk5yWS1XU2dtX1FkNTViRGlZcFRiVHhkZks3Z1lMRkZRLUc2X3dVOWFneGZjVkhkVHQ0NUVxZ3lyNTF1WmRVQmE4NnVobXE1akhLQkNVR19md2xEeFlrYm02cjNZNmtTUHZmd0dBNUsxZnBOWXA2MmRsanNOa0trczNqSF92eEtKVFZnX0FPYUdDR0ItNjdfUGp1Tmw0RVZkWUZ0clBiZ2tsMzFNOF9JVS1Nek1oVVZLZEZMV0g4QjVPSWlPcnQzcE9aMlhB",
    "title": "Temenos Earnings: Sales Execution Still Challenged but Higher Margins Look Maintainable",
    "source": "Morningstar",
@@ -440,18 +464,6 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
-   "id": "CBMiaEFVX3lxTFBRR2lUSVVHVnRnRXJTWVlIckpfVF9ZNW1RWkgzRWx5YmRZekRoZk9jWnlaOVRwQzhxS2JTTU5ESGxqUzB0Z1ByS2Fmei1RcVllS2tTYTNFUDFoZi1UMVpiUGxFaTlOb3Rp",
-   "title": "Matchs de Joiedy Mbonzo Mambu : stats match par match 2026-27",
-   "source": "BeBasket",
-   "published": "2026-10-27T15:00:00Z",
-   "lang": "fr",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRR2lUSVVHVnRnRXJTWVlIckpfVF9ZNW1RWkgzRWx5YmRZekRoZk9jWnlaOVRwQzhxS2JTTU5ESGxqUzB0Z1ByS2Fmei1RcVllS2tTYTNFUDFoZi1UMVpiUGxFaTlOb3Rp?oc=5",
-   "brands": [
-    "Mambu"
-   ],
-   "first_seen": "2026-11-05T13:14:14Z"
-  },
-  {
    "id": "CBMivgFBVV95cUxOY0hCSGNabThZaTMtZDBKbllIX1pOUVh2OVR2TV9rQWJDclN1dk1sdUZJNVpEYWVjY1gyQ3N6bGVPa3c1WTRPd202U3ZHd0dsNHlDdVQzWGlLdWJaenkzcGxRcDZCSDJJTWlESjdHaW9Mc09YQkNLMkxOeHMyNjV2Y0lrVk03QWpQMWJnU3lUcHY0ckgzUXlWc0VPcVdOOVJ6OTdxRFoydk9Ld0FCclRWWk1XU2RTNldPSmxISUhn",
    "title": "Finastra targets mid-sized lenders with SaaS tool for standby letters of credit",
    "source": "Trade Finance Global",
@@ -474,6 +486,18 @@
     "Temenos"
    ],
    "first_seen": "2026-11-05T13:21:52Z"
+  },
+  {
+   "id": "CBMimAFBVV95cUxQTWlMNTJVNDBlRl9Xc1lNSDB5S2ZJX1p2N19jRy0wUzc2SjR1TThiS3RiWHpVdGxTa2kxS1BsbXB3NDktVmpZZU9uWDlPeWhxSVFZTGQ2WEhnbW9QNWtyOEFzbEJ3TFRoQkFLaWwwbVJNeUZpakVPWXdQaXN5WEhmZGdvMVltRUhmQ2VOdUJ6OF8tWjZpeUVLbQ",
+   "title": "Backbase Delivery Factory Aims AI Agents at Bank Builds",
+   "source": "FinanceX Magazine",
+   "published": "2026-10-27T08:10:48Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTWlMNTJVNDBlRl9Xc1lNSDB5S2ZJX1p2N19jRy0wUzc2SjR1TThiS3RiWHpVdGxTa2kxS1BsbXB3NDktVmpZZU9uWDlPeWhxSVFZTGQ2WEhnbW9QNWtyOEFzbEJ3TFRoQkFLaWwwbVJNeUZpakVPWXdQaXN5WEhmZGdvMVltRUhmQ2VOdUJ6OF8tWjZpeUVLbQ?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA",
@@ -510,6 +534,18 @@
     "Temenos"
    ],
    "first_seen": "2026-11-05T13:14:14Z"
+  },
+  {
+   "id": "CBMigwFBVV95cUxOVGs4N0NRbTNOZXNkOGJsTlhtajhic1hFZi1kSTV1Qko2YWpLVmdhQlljUEFwdDdOX3ZmcmRqSml3Ujk1OXZFSmRLWXQ2UVFrRHY5WTdDeWtURWNLV041d29RX012SlcwLTF1bVNNWkk2clRPRmNoNjNnaG9YZDYxcVNFOA",
+   "title": "Backbase Launches Delivery Factory with AI Agents for Banks",
+   "source": "Fintech Singapore",
+   "published": "2026-10-27T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVGs4N0NRbTNOZXNkOGJsTlhtajhic1hFZi1kSTV1Qko2YWpLVmdhQlljUEFwdDdOX3ZmcmRqSml3Ujk1OXZFSmRLWXQ2UVFrRHY5WTdDeWtURWNLV041d29RX012SlcwLTF1bVNNWkk2clRPRmNoNjNnaG9YZDYxcVNFOA?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMijAFBVV95cUxNWDgxS2lCOTR4WnBVRmEwM3p5bnlfQ1FxSDVIbE5GaHVQSWEzQUxUdTU4UC16bHgyOGFsMXBmajBfOHNiUloybzlueklOckJJeDJYTU56a3Y2MTlqUGtkQ0lZUHprYlpaNVowTUxIZ0loY2luakZ6WUNyYi1GdFA5b3BVMGF1ZlBBbjFMRA",
@@ -812,6 +848,18 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
+   "id": "CBMi6AFBVV95cUxQcFdkODIzWFY3LWF3bmpfUXc5Q2tzMDZYZDhoNXcxNGdKRmlsOThTUDVEWmZndWY4ZFBpc1dRUXlCUXQ1RlZ0S2FtaXN5UFd6enNobjZvWEpRRlNoM1dYQ0d3T25PYVdZTzc3V0xDT1c0bG8zZF9TeEsxNWV0c0gtNUtQRFpWcnJObms4XzhGOFU2enNZNDhLa2ZUQ0FPU3VSVFFDaThnbTNBWi15X1dZenVYLVJlcG9YdFdDZ1RLOVJTR1VSMmhaWHhxc3FPVHdRY2JFUmlpUG95VjNEa0V4UEU4Rzd0eXN0",
+   "title": "Backbase Wins 2026 Impact Award in Wealth Management for Best Innovation for the Advisor Desktop",
+   "source": "Business Wire",
+   "published": "2026-10-22T14:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcFdkODIzWFY3LWF3bmpfUXc5Q2tzMDZYZDhoNXcxNGdKRmlsOThTUDVEWmZndWY4ZFBpc1dRUXlCUXQ1RlZ0S2FtaXN5UFd6enNobjZvWEpRRlNoM1dYQ0d3T25PYVdZTzc3V0xDT1c0bG8zZF9TeEsxNWV0c0gtNUtQRFpWcnJObms4XzhGOFU2enNZNDhLa2ZUQ0FPU3VSVFFDaThnbTNBWi15X1dZenVYLVJlcG9YdFdDZ1RLOVJTR1VSMmhaWHhxc3FPVHdRY2JFUmlpUG95VjNEa0V4UEU4Rzd0eXN0?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
    "id": "CBMiqgFBVV95cUxONTItR3AwYXB3NVVaLWVvUmc5b0lrREg0S0ZzNEUydnhfWWZzODJjQ3VlaXBoMnVqd2pyeEFtbU51RTlQNUk0S3RXNjVGZGN1akhNcVlRT0tYempaSXBUYzUzejdCR2pYdWkzUXhBcTVxSzRMekdjZXJrSVF0czhVeFEyQ19BREkxendxajlTckFpdmxsVE1MR3Y5V2ZJZURVYlprQUVwYTQ0QQ",
    "title": "Rawbank selects SBS Digital Banking Suite to expand digital banking",
    "source": "IBS Intelligence",
@@ -1028,6 +1076,18 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
+   "id": "CBMipAFBVV95cUxONVRNYzV1d0JNczZJRlRjdnVCcHByUGJIT0tFR0tEblVaVTVORU5pNEJ2TFhTNVZxQno3SnM3djUteFJXTWFocE9ZMDd5bExzRklOQkU4ZFY5VWtsT00zTTVBVTR1ZlQ3RjN4X0RqM2dYNXdpb3dGSmlQVHF5QjJGMVNOODhHQ2JRVzNGT2JRU21iT1dCVnNRR0Mxci1PdDYyVmFhSA",
+   "title": "Backbase Appoints Nikhil Gujral to Accelerate APAC Growth Strategy",
+   "source": "FF News",
+   "published": "2026-10-16T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONVRNYzV1d0JNczZJRlRjdnVCcHByUGJIT0tFR0tEblVaVTVORU5pNEJ2TFhTNVZxQno3SnM3djUteFJXTWFocE9ZMDd5bExzRklOQkU4ZFY5VWtsT00zTTVBVTR1ZlQ3RjN4X0RqM2dYNXdpb3dGSmlQVHF5QjJGMVNOODhHQ2JRVzNGT2JRU21iT1dCVnNRR0Mxci1PdDYyVmFhSA?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
    "id": "CBMirwFBVV95cUxQUTZqRzZtS0VpS0gtazgydUtCX2RqdTNHcVI4RFFWRUNmVjVHUUQtTzJYdTNOazJyOWRVcGRJYjItU2pvTHU3UDZ1SEh1Z3o3NlNPOG5Yems4ZW5NaEJ2T3d4S213VTJzd0RKTEJ0a29rZ3h3Vm1UaVJXaWZSQ2ZHM2xMS1lIYWtqSWx4bklNYWdmYlczQVNuYmhQcWR5T1dwNUpwTkV6VUNPOWtCUE44",
    "title": "SBS and NVIDIA Launch Sovereign AI Foundation for Secure Banking Operations",
    "source": "Konsulteer",
@@ -1074,6 +1134,18 @@
     "Finastra"
    ],
    "first_seen": "2026-11-05T13:14:14Z"
+  },
+  {
+   "id": "CBMikwFBVV95cUxQUUVLTDNOYzJORnQ5NXZlTjhHNURZaUhNeS1PWDJCN0ZoamZTYjlkUHNpYzJVM2Zia2hmcHlERGZfZlJVMDNJVEhxYnJPdGt4U2NIYlZaZGpoMmNpeEZGOC1YWVR3UXByajRzbFZWaGtvVHFGbzdXVW9CMzRRWFM4dzV6SmpkLWphSXlJbFVsUGN0U3M",
+   "title": "Backbase Appoints Nikhil Gujral to Lead APAC Sales",
+   "source": "Fintech Singapore",
+   "published": "2026-10-15T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUUVLTDNOYzJORnQ5NXZlTjhHNURZaUhNeS1PWDJCN0ZoamZTYjlkUHNpYzJVM2Zia2hmcHlERGZfZlJVMDNJVEhxYnJPdGt4U2NIYlZaZGpoMmNpeEZGOC1YWVR3UXByajRzbFZWaGtvVHFGbzdXVW9CMzRRWFM4dzV6SmpkLWphSXlJbFVsUGN0U3M?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMixAFBVV95cUxOb015WFRQZzZmMUVLZnhac0FScHAtZ2piY044Y2gyYVBRRW9lLVZJTXNYMnVCdUZKWW1OWldDX01xNXhER09xdkFjN1hCTWpUaVBSSHlnVk1XSTF6T1Q5SXY0cFRpaFNCa2hjOWN5X3BhZWplTkxOeHpVeDZ6UWpoS0dESHVDTFlsV0FmZ2NVZGNuWHVRdWlOM0lDLW5xYlY4OGpnanRfNHJ1Tm5NX2Z2d1VhOXcybHpoWi1tel92Nzk3Q0ww",
@@ -1160,6 +1232,18 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
+   "id": "CBMiowFBVV95cUxQQjBwSlc1QXA4Wml6Y05pYy1iSHNGYzE4SHpEMTh2cmlhSnBpSG4yOVl5Ty1mLWNIRVVBMHBWdGNYY205WnZ6cm1NUUJtMnNZQW56SDlHQWJiRFZxWFZ3d3NXbTE2Q296NXd5Szc1UGRZbUc1TDN2cWdyYVk3TjdFeThQZXgzV1NrS2tfTlVDWmNXcUdQNFdyTDVabXZ6MEMtMG5F",
+   "title": "Everest Group Names Backbase a Luminary in Innovation Watch: Agentic AI in Banking",
+   "source": "Yahoo Finance",
+   "published": "2026-10-13T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQjBwSlc1QXA4Wml6Y05pYy1iSHNGYzE4SHpEMTh2cmlhSnBpSG4yOVl5Ty1mLWNIRVVBMHBWdGNYY205WnZ6cm1NUUJtMnNZQW56SDlHQWJiRFZxWFZ3d3NXbTE2Q296NXd5Szc1UGRZbUc1TDN2cWdyYVk3TjdFeThQZXgzV1NrS2tfTlVDWmNXcUdQNFdyTDVabXZ6MEMtMG5F?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
    "id": "CBMiogFBVV95cUxOa2hUQmRtSVFJNm1tbFAtTWFZY2J2aVZXX0g2LWRjbWZLbzcwbzIxektJVnhHTGg5MFV4STJaZHRRNGFXeVBoTFZuMV9yaG1ja1E2aWxRYWVoMWR1S29QRGNNN1hEZTRWbXIxeHRCcmNaTGs0MDFVcHhMT3JfT1hycFVsaGU5SG5XeEhKbldnVmpZVFlqVlFTWmt5cUVJVXBNWnc",
    "title": "JP Morgan rehires former Temenos CTO Rohit Chauhan as consumer payments tech head",
    "source": "FinTech Futures",
@@ -1170,6 +1254,30 @@
     "Temenos"
    ],
    "first_seen": "2026-11-05T13:21:52Z"
+  },
+  {
+   "id": "CBMilwFBVV95cUxNTmtUZlI3WWdUVndWY0RBZWgyNHcyVk8walRSUm15Vk56Y3lQSWhTNVBsVDY2dE9Ma3p2bE5ZODNkMllfOU9CYkNCbmMwTHY3LU1ydFRQLVlmb000MUJ3aXBKZlBCUXlRNEFoS1NZZEdmdFB1NXUwYVppaXR4ZWRtdzkwVHpYTXYyNUM4Tlc4VnVmOEJZdVVn",
+   "title": "Backbase Moves Beyond Banking Chatbots with AI Agents That Take Action",
+   "source": "Finovate",
+   "published": "2026-10-09T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTmtUZlI3WWdUVndWY0RBZWgyNHcyVk8walRSUm15Vk56Y3lQSWhTNVBsVDY2dE9Ma3p2bE5ZODNkMllfOU9CYkNCbmMwTHY3LU1ydFRQLVlmb000MUJ3aXBKZlBCUXlRNEFoS1NZZEdmdFB1NXUwYVppaXR4ZWRtdzkwVHpYTXYyNUM4Tlc4VnVmOEJZdVVn?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMikAFBVV95cUxNTWZibmViVDZ3Y2tnNFVocENWNTYwaEE3MzFEU25WZ19ZaGRKQ2J2N1l3WGhjaTFYY3dxY25GMExabE8xUUNSVEt0YWhteTNlOHpSOEFVcGZIdm9IMHRMY095U2hBZWNtamJSWGJxVS1saE8yTlBsZThxekYySVRQcGp1ckg3RlROelRoU2pJa0s",
+   "title": "Backbase launches agentic AI chat tool that takes action",
+   "source": "FinAi News",
+   "published": "2026-10-08T23:47:54Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTWZibmViVDZ3Y2tnNFVocENWNTYwaEE3MzFEU25WZ19ZaGRKQ2J2N1l3WGhjaTFYY3dxY25GMExabE8xUUNSVEt0YWhteTNlOHpSOEFVcGZIdm9IMHRMY095U2hBZWNtamJSWGJxVS1saE8yTlBsZThxekYySVRQcGp1ckg3RlROelRoU2pJa0s?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMimAFBVV95cUxNajlDS3lSeDhHWFpUUnlHc0hyd3hlWkxkeTlzUFpkdE5kT3BXWjBOa0Zzb1ptekFwdEFXUmFELXExS1hHREtLaHE4aUZ6d0tldjl2dkJGR19Udld1VWRxOGxsWTlYbnhUMzJ1NW1MRHYtaU1UUkt1U1FTQlk0V1BHVlpxV1J3cVRvUkJsUXJ5eFE4S1p0dlBmbQ",
@@ -1206,6 +1314,66 @@
     "Finastra"
    ],
    "first_seen": "2026-11-05T13:14:14Z"
+  },
+  {
+   "id": "CBMimgFBVV95cUxPaE5XX3ptbWFQMUJMYXBIQ2d0T3BXeGs4Y3dlTnZhdURMa0hBV1ZGSWVJSHVsZk14M2ZVWE5VeTg1NGdGa2JaZzdBLTY4ZFEwNEg3NXZ0N29Iem4tR3Rad1gwd3ZuSEZpT19zaEtxZ2VyRWtDUE05NElualVGZ1pTVzAwR00tYVVRaHlNUFUzQThjSjlQVVVuMzlB",
+   "title": "Backbase bets agentic AI can rewrite bank service economics",
+   "source": "FinTech Global",
+   "published": "2026-10-08T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaE5XX3ptbWFQMUJMYXBIQ2d0T3BXeGs4Y3dlTnZhdURMa0hBV1ZGSWVJSHVsZk14M2ZVWE5VeTg1NGdGa2JaZzdBLTY4ZFEwNEg3NXZ0N29Iem4tR3Rad1gwd3ZuSEZpT19zaEtxZ2VyRWtDUE05NElualVGZ1pTVzAwR00tYVVRaHlNUFUzQThjSjlQVVVuMzlB?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMimwFBVV95cUxQVXplTUl6NjFkSkJwWEk3RzVuV01EWHFRWTN1Q29YRWU2c1ViZmpSZ2hLdzJ3cncxZW9IS2g3V1ZKWUt6dXAwQjdzWDdIWlBXOWRfa3d1TllPd1NYMkdwcm9XMXAwb3JrV09iaEdUcDhXS1E1emh2M2R6M0NTeVJBbFVyVi1HSXpodGZrRnhOUkJTOF9ZUWNhZFZZUQ",
+   "title": "Backbase Conversational Banking Goes Live Across 10+ Banks",
+   "source": "FinanceX Magazine",
+   "published": "2026-10-08T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVXplTUl6NjFkSkJwWEk3RzVuV01EWHFRWTN1Q29YRWU2c1ViZmpSZ2hLdzJ3cncxZW9IS2g3V1ZKWUt6dXAwQjdzWDdIWlBXOWRfa3d1TllPd1NYMkdwcm9XMXAwb3JrV09iaEdUcDhXS1E1emh2M2R6M0NTeVJBbFVyVi1HSXpodGZrRnhOUkJTOF9ZUWNhZFZZUQ?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMiswFBVV95cUxNMXFZckd4U2t6UU5RZV95OXY1d2tZX0VYSDhBX25sdEZWYi05Q2FFNllNeEdtQ0pvdnZsRXlwOUpURjdEOFpwby1RaTZjSTNBRnZxaGE0RkpGYUl0ejY1Qk1ndExsbVFwcVhWeFBOT3pIei1DelpoSmROVmZRUV9ZY3RoaTdUX2M0M1JxQnI1MEI3ODdXYnpSVEJiMl9SejM2cnJ4R20wQkhBbmwwY05sb1pRcw",
+   "title": "Backbase Launches Conversational Banking: Agentic AI with a Governance Audit Trail",
+   "source": "FF News",
+   "published": "2026-10-08T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMXFZckd4U2t6UU5RZV95OXY1d2tZX0VYSDhBX25sdEZWYi05Q2FFNllNeEdtQ0pvdnZsRXlwOUpURjdEOFpwby1RaTZjSTNBRnZxaGE0RkpGYUl0ejY1Qk1ndExsbVFwcVhWeFBOT3pIei1DelpoSmROVmZRUV9ZY3RoaTdUX2M0M1JxQnI1MEI3ODdXYnpSVEJiMl9SejM2cnJ4R20wQkhBbmwwY05sb1pRcw?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMiqAFBVV95cUxQbUlrWkRRNnNFZ0tnRXFMZGZrTzhRdXdDOVJpOXBNcXhjN204YlliaFBwTENIU09tZEtvSzdrV3lYUWpzdFl4RXl6TmZkQlZRVW41U3BkTFFmeW02MURRMnV6R3VpUGxLVE1KWjRWOUhFbzl4WE1QdUdiMXFZS2lNSWVvSGI3ZDhwZFFjSmtKcEVOZnVPREEyQnUwaXQ5TjlOa0xJQVpMTWvSAa4BQVVfeXFMTllCUTVpbU9jSEJEQU0xTjlLZ1EybnBmcjRua0VwUldGcDhmVnAySGNkRlEwTml6QkxERkJDdEJsYlZyMDF0RzNRTnhIYzhnMlBMWlluSmtfUUJwMEd1cXZQLUFWUVJNS2lmcmo4d24xZDBIaDd0Ui1HUGl5V1JJYlpuUE1lMGhNbklvZlhIV3pJZWl2SnUtVmw1Z2FjRlB2bVVlY1dicWZnbDVidzln",
+   "title": "Backbase Launches Conversational Banking To Bring Agentic AI To Bank Customer Service",
+   "source": "Pulse 2.0",
+   "published": "2026-10-08T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbUlrWkRRNnNFZ0tnRXFMZGZrTzhRdXdDOVJpOXBNcXhjN204YlliaFBwTENIU09tZEtvSzdrV3lYUWpzdFl4RXl6TmZkQlZRVW41U3BkTFFmeW02MURRMnV6R3VpUGxLVE1KWjRWOUhFbzl4WE1QdUdiMXFZS2lNSWVvSGI3ZDhwZFFjSmtKcEVOZnVPREEyQnUwaXQ5TjlOa0xJQVpMTWvSAa4BQVVfeXFMTllCUTVpbU9jSEJEQU0xTjlLZ1EybnBmcjRua0VwUldGcDhmVnAySGNkRlEwTml6QkxERkJDdEJsYlZyMDF0RzNRTnhIYzhnMlBMWlluSmtfUUJwMEd1cXZQLUFWUVJNS2lmcmo4d24xZDBIaDd0Ui1HUGl5V1JJYlpuUE1lMGhNbklvZlhIV3pJZWl2SnUtVmw1Z2FjRlB2bVVlY1dicWZnbDVidzln?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
+  },
+  {
+   "id": "CBMigAFBVV95cUxQTUxqYWs2V1pTTjA0RlBTdjFnYS1zc1Q1TWE4d0FyeEdsTEF4SWdnMjhHNkdubjdkRzktYzdGcWNfbmFCcUpqTTFXVmNkQkNTQlQ4WC1zZE1YcHdKc3lsR2VJb0lSSm9UcUxkSTg2bWN3SUdMZnk1cDVzdWpjcWI0dg",
+   "title": "Backbase Rolls Out Conversational Banking for Voice and Text Requests",
+   "source": "Fintech Singapore",
+   "published": "2026-10-08T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTUxqYWs2V1pTTjA0RlBTdjFnYS1zc1Q1TWE4d0FyeEdsTEF4SWdnMjhHNkdubjdkRzktYzdGcWNfbmFCcUpqTTFXVmNkQkNTQlQ4WC1zZE1YcHdKc3lsR2VJb0lSSm9UcUxkSTg2bWN3SUdMZnk1cDVzdWpjcWI0dg?oc=5",
+   "brands": [
+    "Backbase"
+   ],
+   "first_seen": "2026-11-05T13:31:23Z"
   },
   {
    "id": "CBMivgFBVV95cUxPRkc3eXh4Vm1FWGJWQW9IeVF5dnFVendFOS0wYkJGNFVIVERiS21mWlVZX1oybEIwd2pMR01PZnFnWk1MTlQ0QUU3V1ZyMEYxRjktQ1JEZzVldV9idXljdVk5TFFFTlAtMVZndi1IU1ZaWUZXdEtGcmxTYl9sdDlBQ2ZGcG5iNnpvbXRQbWFPUW5vcjI2V3ZLbWFtOWdXX2VxYjcxV2lwOEpFbG1aT0FIZ3hkM0dOQlh2SzgtQ2pn",

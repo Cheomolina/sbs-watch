@@ -19,18 +19,18 @@
       "match": "Temenos"
     },
     {
+      "name": "Backbase",
+      "queries": [
+        "\"Backbase\""
+      ],
+      "match": "Backbase"
+    },
+    {
       "name": "Finastra",
       "queries": [
         "\"Finastra\""
       ],
       "match": "Finastra"
-    },
-    {
-      "name": "Mambu",
-      "queries": [
-        "\"Mambu\""
-      ],
-      "match": "Mambu"
     }
   ],
   "exclude": "Aktie News|So viel (Gewinn|hätten)|Kurs, Aktie, Chart|stock price|Stock Price, News, Quote|seasonal returns|rendements saisonniers|share capital|voting rights|droits de vote|transactions in own shares|actions propres|Financial Calendar|Calendrier financier|Estimates [–-] |EURONEXT:",
