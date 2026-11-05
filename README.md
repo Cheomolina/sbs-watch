@@ -10,7 +10,7 @@ In-house brand monitoring and AI-visibility tracking, built with Claude Code.
 |---|---|
 | `docs/` | The team site, published with GitHub Pages |
 | `docs/feasibility.html` | Feasibility map: which social-listening features we can build ourselves, which are worth it, and which aren't possible |
-| `docs/news.html` | News monitor dashboard: share of voice, daily trend, top publishers and headlines |
+| `docs/news.html` | Google News Monitor dashboard: share of voice, daily trend, top publishers and headlines |
 | `docs/data/news.json` | Collected headlines (headline, publisher, date, link only), updated daily |
 | `docs/assets/` | Downloads, including the PDF version of the feasibility map |
 | `collector/` | The news collector script and `brands.json`, which sets the brands, search queries and relevance rules |
@@ -28,7 +28,7 @@ The collector searches Google News (English and French) for each brand, keeps he
 
 - [x] **Phase 0: feasibility and workspace.** Feasibility map, team site and repository.
 - [ ] **Phase 1: AI visibility tracker.** Scheduled buyer prompts against ChatGPT, Perplexity, Gemini and Claude. Tracks mentions, rank, share of voice and cited sources against competitors.
-- [ ] **Phase 2: focused listening.** *Started: daily news monitoring is live.* Next: blogs, Reddit, YouTube, Hacker News and reviews, with AI sentiment, intent and topics, a weekly briefing and alerts. Needs a GDPR review and a private dashboard first.
+- [ ] **Phase 2: focused listening.** *Started: the Google News Monitor is live.* Next: blogs, Reddit, YouTube, Hacker News and reviews, with AI sentiment, intent and topics, a weekly briefing and alerts. Needs a GDPR review and a private dashboard first.
 - [ ] **Phase 3: closed platforms.** Instagram, Facebook, TikTok and LinkedIn can't be built in-house. Decide whether to buy a vendor.
 
 ## How we work
