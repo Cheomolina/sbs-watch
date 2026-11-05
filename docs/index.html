@@ -79,6 +79,7 @@
     <symbol id="map" viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
     <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
     <symbol id="ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
     <symbol id="shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
     <symbol id="lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
@@ -98,6 +99,7 @@
     <p>In-house brand monitoring and AI-visibility tracking, built with Claude Code. We build the parts we can own, starting with the parts that pay off first.</p>
     <div class="btns">
       <a class="btn primary" href="news.html"><svg class="i"><use href="#news"/></svg>Google News Monitor</a>
+      <a class="btn primary" href="youtube.html"><svg class="i"><use href="#play"/></svg>YouTube Monitor</a>
       <a class="btn ghost" href="feasibility.html"><svg class="i"><use href="#file"/></svg>Feasibility map</a>
       <a class="btn ghost" href="assets/Feasibility-Map.pdf"><svg class="i"><use href="#down"/></svg>PDF version</a>
       <a class="btn ghost" href="https://github.com/Cheomolina/sbs-watch"><svg class="i"><use href="#branch"/></svg>Repository</a>
@@ -116,7 +118,7 @@
   <div class="phases">
     <div class="phase done"><h3><svg class="i"><use href="#check"/></svg>Phase 0 · Feasibility and workspace</h3><span class="status">Done</span><p>Feasibility map of 33 social-listening features, this site and the shared repository.</p></div>
     <div class="phase next"><h3><svg class="i"><use href="#target"/></svg>Phase 1 · AI visibility tracker</h3><span class="status">Up next</span><p>Run a set of buyer prompts against ChatGPT, Perplexity, Gemini and Claude on a schedule. Track mentions, rank, share of voice and cited sources against competitors. Prompts come from Semrush keywords and our personas.</p></div>
-    <div class="phase now"><h3><svg class="i"><use href="#news"/></svg>Phase 2 · Focused listening</h3><span class="status">Started</span><p><a href="news.html">Google News Monitor is live</a>: daily Google News headlines for SBS and competitors in English and French. Still to come: blogs, Reddit, YouTube, Hacker News and reviews, with Claude sentiment, intent and topics, a weekly briefing and Slack or Teams alerts. Sources with personal data (Reddit, reviews) need a GDPR review and a private dashboard first.</p></div>
+    <div class="phase now"><h3><svg class="i"><use href="#news"/></svg>Phase 2 · Focused listening</h3><span class="status">Started</span><p><a href="news.html">Google News Monitor</a> and <a href="youtube.html">YouTube Monitor</a>: daily headlines and videos about SBS and competitors in English and French. Still to come: blogs, Reddit, Hacker News and reviews, with Claude sentiment, intent and topics, a weekly briefing and Slack or Teams alerts. Sources with personal data (Reddit, reviews) need a GDPR review and a private dashboard first.</p></div>
     <div class="phase later"><h3><svg class="i"><use href="#ban"/></svg>Phase 3 · Closed platforms</h3><span class="status">Decide later</span><p>Instagram, Facebook, TikTok and LinkedIn can't be built in-house. If we need them, we buy a vendor and run Claude analysis on top.</p></div>
   </div>
 
@@ -130,7 +132,7 @@
   <h2><svg class="i"><use href="#shield"/></svg>Ground rules: this repository is public</h2>
   <div class="grid">
     <div class="tile rule"><h3><svg class="i"><use href="#key"/></svg>No secrets</h3><p>API keys and tokens go in GitHub Actions secrets or a local <code>.env</code> file, never in commits.</p></div>
-    <div class="tile rule"><h3><svg class="i"><use href="#db"/></svg>No personal data</h3><p>No collected posts, author names or raw mentions. Only code and aggregated results.</p></div>
+    <div class="tile rule"><h3><svg class="i"><use href="#db"/></svg>No personal data</h3><p>Only what publishers make public about their own content: titles, publisher or channel names, dates, links and public counts. No comments, commenters or posts by private individuals.</p></div>
     <div class="tile rule"><h3><svg class="i"><use href="#lock"/></svg>No confidential material</h3><p>No customer names, internal figures or anything you wouldn't post publicly.</p></div>
   </div>
 

@@ -49,5 +49,44 @@
     }
   ],
   "lookback": "30d",
-  "retention_days": 180
+  "retention_days": 180,
+  "youtube": {
+    "_comment": "YouTube search settings. Each search costs 100 of the 10,000 free daily API units. A video counts for a brand if its title or description matches the brand's regex below and neither the brand's exclude regex nor the global exclude above.",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "lookback_days": 30,
+    "retention_days": 365,
+    "brands": {
+      "SBS": {
+        "queries": [
+          "\"Sopra Banking\"",
+          "\"SBS\" \"core banking\"",
+          "\"SBS\" \"digital banking\"",
+          "\"74Software\""
+        ],
+        "match": "Sopra Banking|74Software|\\bSBS\\b[^\\n.]{0,60}\\b(core banking|digital banking|banking software|banking suite|banking platform|fintech|lending|NVIDIA)\\b|\\b(core banking|digital banking|banking software|banking suite|banking platform|fintech|lending|NVIDIA)\\b[^\\n.]{0,60}\\bSBS\\b",
+        "exclude": "SBS Bank\\b"
+      },
+      "Temenos": {
+        "queries": [
+          "\"Temenos\""
+        ],
+        "match": "Temenos"
+      },
+      "Backbase": {
+        "queries": [
+          "\"Backbase\""
+        ],
+        "match": "Backbase"
+      },
+      "Finastra": {
+        "queries": [
+          "\"Finastra\""
+        ],
+        "match": "Finastra"
+      }
+    }
+  }
 }

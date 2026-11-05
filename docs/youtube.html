@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube Monitor · SBS Watch</title>
+<meta name="description" content="YouTube videos about SBS and competitors, collected daily.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b5bdb' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='5' width='20' height='14' rx='4'/%3E%3Cpath d='m10 9 5 3-5 3z'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #1b2333; --muted: #5b6577; --faint: #898781; --line: #e3e7ee; --soft: #f5f7fa; --bg: #eef1f6; --card: #ffffff;
+    --grid: #e1e0d9; --axis: #c3c2b7; --accent: #3b5bdb; --navy: #14213d;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e4e8f0; --muted: #a3acbd; --faint: #898781; --line: #2c3445; --soft: #1b2232; --bg: #10151f; --card: #161c29;
+      --grid: #262d3b; --axis: #3a4254; --accent: #8da2ff;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14.5px/1.5 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+  svg.i { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  header { background: linear-gradient(135deg, #14213d 0%, #23397a 100%); color: #fff; padding: 18px 0 22px; }
+  header nav { font-size: 13.5px; margin-bottom: 10px; }
+  header nav a { color: #b9c8ff; text-decoration: none; font-weight: 600; }
+  header h1 { margin: 0; font-size: clamp(24px, 4.5vw, 32px); display: flex; align-items: center; gap: 10px; }
+  header h1 svg.i { width: 28px; height: 28px; color: #9fb4ff; }
+  header p { margin: 4px 0 0; color: #d3dcf5; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 14px 0 4px; }
+  .seg { display: inline-flex; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 2px; }
+  .seg button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 6px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+  .filters label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; }
+  .updated { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-top: 14px; }
+  .card h2 { margin: 0 0 4px; font-size: 16px; }
+  .card .sub { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 14px; }
+  .tile { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .tile .who { display: flex; align-items: center; gap: 7px; font-weight: 600; font-size: 13.5px; color: var(--muted); }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .tile .big { font-size: 30px; font-weight: 700; line-height: 1.15; margin-top: 2px; }
+  .tile .meta { font-size: 12.5px; color: var(--muted); }
+
+  .sov { display: flex; height: 30px; gap: 2px; border-radius: 6px; overflow: hidden; }
+  .sov div { min-width: 2px; display: flex; align-items: center; padding: 0 8px; color: #fff; font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+  .sov div.dark-text { color: #0b0b0b; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .chart { position: relative; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart .gridline { stroke: var(--grid); stroke-width: 1; }
+  .chart .baseline { stroke: var(--axis); stroke-width: 1; }
+  .chart text { fill: var(--faint); font-size: 11px; font-family: inherit; }
+  .chart .series { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .chart .cross { stroke: var(--axis); stroke-width: 1; }
+  .tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.12); padding: 8px 10px; font-size: 12.5px; min-width: 150px; display: none; z-index: 5; }
+  .tip b { display: block; margin-bottom: 4px; }
+  .tip .row { display: flex; align-items: center; gap: 6px; justify-content: space-between; }
+  .tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .two .card { margin-top: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 99px; padding: 4px 11px; font: inherit; font-size: 13px; cursor: pointer; }
+  .chip[aria-pressed="true"] { border-color: var(--ink); font-weight: 600; }
+  .search { flex: 1 1 200px; min-width: 160px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 13.5px; }
+  .list { list-style: none; margin: 0; padding: 0; }
+  .list li { display: grid; grid-template-columns: 84px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+  .list li:first-child { border-top: 0; }
+  .list .date { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+  .list a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .list a:hover { color: var(--accent); text-decoration: underline; }
+  .list .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; color: var(--ink); }
+  .lang { font-size: 11px; font-weight: 700; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; text-transform: uppercase; }
+  .more { margin-top: 10px; }
+  .more button { border: 1px solid var(--line); background: var(--soft); color: var(--ink); font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+  .empty { color: var(--muted); padding: 10px 0; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 18px 0 40px; }
+
+  @media (max-width: 760px) {
+    .two { grid-template-columns: 1fr; gap: 0; }
+    .updated { margin-left: 0; width: 100%; }
+    .list li { grid-template-columns: 1fr; gap: 2px; }
+  }
+  .vids { list-style: none; margin: 0; padding: 0; }
+  .vids li { display: grid; grid-template-columns: 160px 1fr auto; gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); align-items: start; }
+  .vids li:first-child { border-top: 0; }
+  .vids img { width: 160px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: var(--soft); display: block; }
+  .vids a.t { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .vids a.t:hover { color: var(--accent); text-decoration: underline; }
+  .vids .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .vids .views { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .vids .views b { display: block; font-size: 16px; }
+  .vids .views span { font-size: 12px; color: var(--muted); }
+  .setup { border-left: 4px solid var(--s4); }
+  .setup ol { margin: 8px 0 0; padding-left: 20px; }
+  @media (max-width: 760px) {
+    .vids li { grid-template-columns: 112px 1fr; }
+    .vids img { width: 112px; }
+    .vids .views { grid-column: 2; text-align: left; }
+    .vids .views b { display: inline; font-size: 14px; margin-right: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav><a href="./">&larr; SBS Watch home</a></nav>
+    <h1><svg class="i" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg>YouTube Monitor</h1>
+    <p>Videos naming SBS and competitors, collected daily from <b>YouTube</b> search in English and French, with view counts refreshed every day.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="filters">
+    <div><label>Published</label><span class="seg" id="period"><button data-v="30" aria-pressed="true">30 days</button><button data-v="90">90 days</button><button data-v="365">12 months</button></span></div>
+    <div><label>Language</label><span class="seg" id="lang"><button data-v="all" aria-pressed="true">All</button><button data-v="en">EN</button><button data-v="fr">FR</button></span></div>
+    <div class="updated" id="updated"></div>
+  </div>
+
+  <div id="content">
+    <div class="tiles" id="tiles"></div>
+
+    <section class="card">
+      <h2>Share of voice</h2>
+      <p class="sub" id="sov-sub">Share of videos in the period that name each brand.</p>
+      <div class="filters" style="padding:0 0 10px"><span class="seg" id="metric"><button data-v="videos" aria-pressed="true">By videos</button><button data-v="views">By views</button></span></div>
+      <div class="sov" id="sov"></div>
+      <div class="legend" id="sov-legend"></div>
+    </section>
+
+    <section class="card">
+      <h2>Videos per week</h2>
+      <p class="sub">By publication week. Hover for the counts.</p>
+      <div class="chart" id="trend"></div>
+      <div class="legend" id="trend-legend"></div>
+    </section>
+
+    <div class="two">
+      <section class="card">
+        <h2>Top channels</h2>
+        <p class="sub">Channels publishing about these brands in the period, by total views.</p>
+        <table id="channels"></table>
+      </section>
+      <section class="card">
+        <h2>Videos by language</h2>
+        <p class="sub">Video counts as a table.</p>
+        <table id="bylang"></table>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Videos</h2>
+      <div class="chips" id="brand-chips"></div>
+      <ul class="vids" id="list"></ul>
+      <div class="more" id="more"></div>
+    </section>
+  </div>
+
+  <p class="note">Source: YouTube Data API search, filtered to videos whose title or description names the brand. View, like and comment counts are refreshed on every daily run. Rules are in <a href="https://github.com/Cheomolina/sbs-watch/blob/main/collector/brands.json">collector/brands.json</a>.</p>
+</main>
+
+<script>
+const state = { period: 30, lang: "all", metric: "videos", brand: "all", query: "", sort: "views", shown: 20 };
+let DATA = null;
+const COLORS = ["--s1", "--s2", "--s3", "--s4", "--s5", "--s6"];
+const DARK_TEXT_SLOTS = new Set([3]);
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const color = brand => `var(${COLORS[DATA.brands.indexOf(brand) % COLORS.length]})`;
+const dot = brand => `<span class="dot" style="background:${color(brand)}"></span>`;
+const dayKey = d => d.toISOString().slice(0, 10);
+const fmtDay = key => new Date(key + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+const fmtNum = n => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : n >= 1e3 ? (n / 1e3).toFixed(1).replace(/\.0$/, "") + "k" : String(n);
+
+function inPeriod() {
+  const since = Date.now() - state.period * 86400000;
+  return DATA.videos.filter(v => Date.parse(v.published) >= since && (state.lang === "all" || v.lang === state.lang));
+}
+
+function sums(videos, field) {
+  const c = Object.fromEntries(DATA.brands.map(b => [b, 0]));
+  videos.forEach(v => v.brands.forEach(b => { if (b in c) c[b] += field ? v[field] : 1; }));
+  return c;
+}
+
+function renderTiles(vids) {
+  const n = sums(vids), views = sums(vids, "views");
+  const total = Object.values(n).reduce((s, x) => s + x, 0) || 1;
+  $("tiles").innerHTML = DATA.brands.map(b =>
+    `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${n[b]}</div><div class="meta">videos · ${Math.round(n[b] / total * 100)}% share<br>${fmtNum(views[b])} views</div></div>`).join("");
+}
+
+function renderSov(vids) {
+  const counts = sums(vids, state.metric === "views" ? "views" : null);
+  $("sov-sub").textContent = state.metric === "views" ? "Share of total views of videos in the period that name each brand." : "Share of videos in the period that name each brand.";
+  const total = Object.values(counts).reduce((s, n) => s + n, 0);
+  if (!total) { $("sov").innerHTML = `<div style="background:var(--soft);color:var(--muted);width:100%">No videos in this period</div>`; $("sov-legend").innerHTML = ""; return; }
+  $("sov").innerHTML = DATA.brands.filter(b => counts[b]).map(b => {
+    const pct = counts[b] / total * 100, slot = DATA.brands.indexOf(b) % COLORS.length;
+    return `<div class="${DARK_TEXT_SLOTS.has(slot) ? "dark-text" : ""}" style="flex:${counts[b]};background:${color(b)}" title="${esc(b)}: ${fmtNum(counts[b])} (${pct.toFixed(0)}%)">${pct >= 9 ? `${esc(b)} ${pct.toFixed(0)}%` : ""}</div>`;
+  }).join("");
+  $("sov-legend").innerHTML = DATA.brands.map(b => `<span>${dot(b)}${esc(b)} · ${fmtNum(counts[b])} (${(counts[b] / total * 100).toFixed(0)}%)</span>`).join("");
+}
+
+function renderTrend(vids) {
+  const today = new Date(); today.setUTCHours(0, 0, 0, 0);
+  const monday = new Date(today); monday.setUTCDate(today.getUTCDate() - ((today.getUTCDay() + 6) % 7));
+  const buckets = [];
+  for (let i = Math.ceil(state.period / 7) - 1; i >= 0; i--) { const d = new Date(monday); d.setUTCDate(monday.getUTCDate() - 7 * i); buckets.push(dayKey(d)); }
+  const series = Object.fromEntries(DATA.brands.map(b => [b, buckets.map(() => 0)]));
+  vids.forEach(v => {
+    const d = new Date(v.published); d.setUTCHours(0, 0, 0, 0); d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+    const i = buckets.indexOf(dayKey(d));
+    if (i >= 0) v.brands.forEach(b => { if (series[b]) series[b][i]++; });
+  });
+
+  const W = 1000, H = 240, L = 34, R = 12, T = 10, B = 26;
+  const max = Math.max(4, ...Object.values(series).flat());
+  const step = Math.ceil(max / 4), top = step * 4;
+  const x = i => L + (buckets.length === 1 ? (W - L - R) / 2 : i * (W - L - R) / (buckets.length - 1));
+  const y = v => T + (H - T - B) * (1 - v / top);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Videos per week per brand">`;
+  for (let v = 0; v <= top; v += step) svg += `<line class="${v ? "gridline" : "baseline"}" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const every = Math.ceil(buckets.length / 8), last = buckets.length - 1;
+  buckets.forEach((k, i) => { if ((i % every === 0 && last - i >= every / 2) || i === last) svg += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${fmtDay(k)}</text>`; });
+  DATA.brands.forEach(b => {
+    svg += `<polyline class="series" style="stroke:${color(b)}" points="${series[b].map((v, i) => `${x(i)},${y(v)}`).join(" ")}"/>`;
+    series[b].forEach((v, i) => { svg += `<circle cx="${x(i)}" cy="${y(v)}" r="3" fill="${color(b)}"/>`; });
+  });
+  svg += `<line class="cross" id="cross" x1="0" x2="0" y1="${T}" y2="${H - B}" style="display:none"/><g id="hover-dots"></g><rect id="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/></svg><div class="tip" id="tip"></div>`;
+  $("trend").innerHTML = svg;
+  $("trend-legend").innerHTML = DATA.brands.map(b => `<span>${dot(b)}${esc(b)}</span>`).join("");
+
+  const svgEl = $("trend").querySelector("svg"), tip = $("tip"), cross = $("cross"), dots = $("hover-dots");
+  const show = evt => {
+    const rect = svgEl.getBoundingClientRect();
+    const px = (evt.clientX - rect.left) * W / rect.width;
+    const i = Math.max(0, Math.min(last, Math.round((px - L) / ((W - L - R) / Math.max(1, last)))));
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.style.display = "";
+    dots.innerHTML = DATA.brands.map(b => `<circle cx="${x(i)}" cy="${y(series[b][i])}" r="5" fill="${color(b)}" stroke="var(--card)" stroke-width="2"/>`).join("");
+    tip.innerHTML = `<b>Week of ${fmtDay(buckets[i])}</b>` + DATA.brands.map(b => `<div class="row"><span>${dot(b)}${esc(b)}</span><span>${series[b][i]}</span></div>`).join("");
+    tip.style.display = "block";
+    const left = x(i) / W * rect.width;
+    tip.style.left = Math.min(rect.width - tip.offsetWidth, Math.max(0, left + (left > rect.width / 2 ? -tip.offsetWidth - 12 : 12))) + "px";
+    tip.style.top = "8px";
+  };
+  const hide = () => { tip.style.display = "none"; cross.style.display = "none"; dots.innerHTML = ""; };
+  const hit = $("hit");
+  hit.addEventListener("pointermove", show); hit.addEventListener("pointerdown", show); hit.addEventListener("pointerleave", hide);
+}
+
+function renderTables(vids) {
+  const chans = {};
+  vids.forEach(v => { const c = chans[v.channel_id] ||= { name: v.channel, n: 0, views: 0, brands: new Set() }; c.n++; c.views += v.views; v.brands.forEach(b => c.brands.add(b)); });
+  const top = Object.values(chans).sort((a, b) => b.views - a.views).slice(0, 10);
+  $("channels").innerHTML = top.length
+    ? `<tr><th>Channel</th><th>Brands</th><th class="n">Videos</th><th class="n">Views</th></tr>` + top.map(c => `<tr><td>${esc(c.name)}</td><td>${DATA.brands.filter(b => c.brands.has(b)).map(dot).join(" ")}</td><td class="n">${c.n}</td><td class="n">${fmtNum(c.views)}</td></tr>`).join("")
+    : `<tr><td class="empty">No videos in this period</td></tr>`;
+
+  const langs = ["en", "fr"];
+  const since = Date.now() - state.period * 86400000;
+  const all = DATA.videos.filter(v => Date.parse(v.published) >= since);
+  const cell = (b, l) => all.filter(v => v.lang === l && v.brands.includes(b)).length;
+  $("bylang").innerHTML = `<tr><th>Brand</th>${langs.map(l => `<th class="n">${l.toUpperCase()}</th>`).join("")}<th class="n">Total</th></tr>` +
+    DATA.brands.map(b => { const v = langs.map(l => cell(b, l)); return `<tr><td><span class="tag">${dot(b)}${esc(b)}</span></td>${v.map(n => `<td class="n">${n}</td>`).join("")}<td class="n"><b>${v.reduce((s, n) => s + n, 0)}</b></td></tr>`; }).join("");
+}
+
+function renderList(vids) {
+  const q = state.query.trim().toLowerCase();
+  const rows = vids
+    .filter(v => (state.brand === "all" || v.brands.includes(state.brand)) && (!q || (v.title + " " + v.channel).toLowerCase().includes(q)))
+    .sort((a, b) => state.sort === "views" ? b.views - a.views : b.published.localeCompare(a.published));
+  $("brand-chips").innerHTML = [["all", "All brands"], ...DATA.brands.map(b => [b, b])].map(([v, label]) =>
+    `<button class="chip" data-v="${esc(v)}" aria-pressed="${state.brand === v}">${v === "all" ? "" : dot(v)}${esc(label)}</button>`).join("") +
+    `<span class="seg" id="sort"><button data-v="views" aria-pressed="${state.sort === "views"}">Most viewed</button><button data-v="date" aria-pressed="${state.sort === "date"}">Newest</button></span>` +
+    `<input class="search" id="search" type="search" placeholder="Search titles or channels" value="${esc(state.query)}">`;
+  $("list").innerHTML = rows.slice(0, state.shown).map(v => `<li>
+      <a href="${esc(v.url)}" target="_blank" rel="noopener"><img src="${esc(v.thumbnail)}" alt="" loading="lazy"></a>
+      <div><a class="t" href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
+        <div class="meta">${v.brands.map(b => `<span class="tag">${dot(b)}${esc(b)}</span>`).join("")}<span>${esc(v.channel)}</span><span>${fmtDay(v.published.slice(0, 10))}</span><span class="lang">${esc(v.lang)}</span></div></div>
+      <div class="views"><b>${fmtNum(v.views)}</b><span>views · ${fmtNum(v.likes)} likes</span></div></li>`).join("") || `<li class="empty">No videos match.</li>`;
+  $("more").innerHTML = rows.length > state.shown ? `<button id="show-more">Show more (${rows.length - state.shown} left)</button>` : "";
+
+  $("brand-chips").querySelectorAll(".chip").forEach(btn => btn.onclick = () => { state.brand = btn.dataset.v; state.shown = 20; renderList(inPeriod()); });
+  $("sort").querySelectorAll("button").forEach(btn => btn.onclick = () => { state.sort = btn.dataset.v; renderList(inPeriod()); });
+  const search = $("search");
+  search.oninput = () => { state.query = search.value; state.shown = 20; renderList(inPeriod()); const s = $("search"); s.focus(); s.setSelectionRange(s.value.length, s.value.length); };
+  const more = $("show-more"); if (more) more.onclick = () => { state.shown += 20; renderList(inPeriod()); };
+}
+
+function render() {
+  const vids = inPeriod();
+  renderTiles(vids); renderSov(vids); renderTrend(vids); renderTables(vids); renderList(vids);
+}
+
+function bindSeg(id, key, parse, after) {
+  $(id).querySelectorAll("button").forEach(btn => btn.onclick = () => {
+    $(id).querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+    state[key] = parse(btn.dataset.v); state.shown = 20; (after || render)();
+  });
+}
+
+function showSetup() {
+  $("content").innerHTML = `<section class="card setup"><h2>Waiting for the first YouTube run</h2>
+    <p class="sub">The collector is installed but has no data yet. It needs a YouTube Data API key:</p>
+    <ol><li>Create a Google Cloud project and enable the <b>YouTube Data API v3</b>.</li>
+    <li>Create an API key and restrict it to that API.</li>
+    <li>Add it to the repository as an Actions secret named <code>YOUTUBE_API_KEY</code>.</li>
+    <li>Run the <b>Collect data</b> workflow from the Actions tab, or wait for the next daily run.</li></ol></section>`;
+}
+
+fetch("data/youtube.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => {
+  DATA = data;
+  $("updated").textContent = "Updated " + new Date(data.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  bindSeg("period", "period", Number); bindSeg("lang", "lang", String);
+  bindSeg("metric", "metric", String, () => renderSov(inPeriod()));
+  render();
+}).catch(showSetup);
+</script>
+</body>
+</html>
