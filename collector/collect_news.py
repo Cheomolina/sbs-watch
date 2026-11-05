@@ -114,12 +114,13 @@ def main():
             article["first_seen"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         existing[article_id] = article
 
-    # Re-apply the current rules to everything stored, so config changes clean old data too
+    # Re-apply the current rules and languages to everything stored, so config changes clean old data too
     for article in existing.values():
         article["brands"] = [b for b in article["brands"] if b in rules and rules[b](article["title"])]
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=config["retention_days"])).strftime("%Y-%m-%dT%H:%M:%SZ")
-    articles = sorted((a for a in existing.values() if a["brands"] and a["published"] >= cutoff),
+    languages = {e["lang"] for e in config["editions"]}
+    articles = sorted((a for a in existing.values() if a["brands"] and a["lang"] in languages and a["published"] >= cutoff),
                       key=lambda a: a["published"], reverse=True)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)

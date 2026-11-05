@@ -18,7 +18,7 @@ In-house brand monitoring and AI-visibility tracking, built with Claude Code.
 
 ## News collector
 
-The collector searches Google News (English, French and German) for each brand, keeps headlines that name the brand, drops stock-ticker and share-disclosure filler, and merges the results into `docs/data/news.json`. It uses only the Python standard library, so there's nothing to install.
+The collector searches Google News (English and French) for each brand, keeps headlines that name the brand, drops stock-ticker and share-disclosure filler, and merges the results into `docs/data/news.json`. It uses only the Python standard library, so there's nothing to install.
 
 - **Run it locally:** `python collector/collect_news.py`
 - **Run it on GitHub:** Actions tab → "Collect news" → "Run workflow"

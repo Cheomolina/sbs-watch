@@ -46,12 +46,6 @@
       "hl": "fr",
       "gl": "FR",
       "ceid": "FR:fr"
-    },
-    {
-      "lang": "de",
-      "hl": "de",
-      "gl": "DE",
-      "ceid": "DE:de"
     }
   ],
   "lookback": "30d",
