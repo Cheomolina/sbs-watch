@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T13:21:52Z",
+ "updated": "2026-11-05T13:22:59Z",
  "brands": [
   "SBS",
   "Temenos",
@@ -464,18 +464,6 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
-   "id": "CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA",
-   "title": "Temenos' Q3 Profit, Total Revenue Rise",
-   "source": "www.marketscreener.com",
-   "published": "2026-10-27T17:39:33Z",
-   "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA?oc=5",
-   "brands": [
-    "Temenos"
-   ],
-   "first_seen": "2026-11-05T13:14:14Z"
-  },
-  {
    "id": "CBMilAFBVV95cUxPMngwVm5iY3FQX3JMdnI3ajdIbTk3NERJeWRfOFVOYU0wSXc3X01rX3o4QlVpdHFzU0tYMXk4M2h4a0phcWxRY2pOX2dOcWltdmVDbC1MR0loVjRKRFo4T0UxSzBhNVM0OXhzWUlBTkVjbjB4dGp5VGc4ZUVSWkhoenpONG4xQU5vOWFIQmFveTd3amM1",
    "title": "Temenos AG R (TE8A.DU) Q3 FY2026 earnings call transcript",
    "source": "Yahoo Finance",
@@ -606,6 +594,18 @@
     "Temenos"
    ],
    "first_seen": "2026-11-05T13:21:52Z"
+  },
+  {
+   "id": "CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA",
+   "title": "Temenos' Q3 Profit, Total Revenue Rise",
+   "source": "www.marketscreener.com",
+   "published": "2026-10-27T07:00:00Z",
+   "lang": "en",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU2JZYWJaRURZTkdvaXVHMTlrYlBIZlkweWhZWTUxNHgtM21tOE4wbThKVEg5NXVqQy1nQWhuRk1HR21PWUUwU0NGTFdmN09oNTlaNjJhbUJhZmdFSWo2aUNHSTNnOG1JOHhlN1AxbFFnQ2tQYWMycXl3T244ZUh6VGk0VXZLbFo0VlNtaTBKamhYZjA?oc=5",
+   "brands": [
+    "Temenos"
+   ],
+   "first_seen": "2026-11-05T13:14:14Z"
   },
   {
    "id": "CBMimgFBVV95cUxPOXRhcnBtTFRGMjJkUFk1a05lendfUEprVlR0WEQ5dmNaa0h4M2pla0ViUkloOTdwRmVqRjh2cmpicEgwdUtSSmtJZndRRlZRRGNfMDgxcEpHRDFEc2ZTa2xuQUlwRWZqcE41aWE0cElCTFYyM2wzdEZQV1lEQzg4WXdiakRZX0puSDd2Q3pDOFJCclI4NkhyNUl3",
@@ -824,16 +824,16 @@
    "first_seen": "2026-11-05T13:14:14Z"
   },
   {
-   "id": "CBMie0FVX3lxTFB5N3BWSFMyVG1aWTZ2bnJOTmh3eG5VWlk0UnBwUm9ubUhrMHhGYXJmNHBZajR1d3M5QUpNOE1SU3NveXdkMzU2aVlnTUUtTGlmSmNFX29SVnlhc0xDNXh3V2J2RmhWR3gtMXQ3d0xieVFYR1M1dlVYY2tZRQ",
-   "title": "74Software Estimates – EURONEXT:74SW",
-   "source": "TradingView",
-   "published": "2026-10-23T12:55:44Z",
+   "id": "CBMimAFBVV95cUxPelc0SEFGY0lsM0dIREVzdUdfb3Q1Sml6SGIybTYzb2RqS3JtWXBZeWF2QkR2TG5raVhYMS1aQmJDSlFhSjhaNUs4bUVzTTFPTm0tSGVOQm5WcWhfLXI4TDRJd09BQm1tZmhzV2drZEl0aXlCVHN5am1uWnR3VzVkUjZnUFZOYVFSSW5wNlg3cTU1M0RzTWU3NQ",
+   "title": "Tech Mahindra acquires Finastra’s Cash Management suite",
+   "source": "IBS Intelligence",
+   "published": "2026-10-23T11:42:17Z",
    "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB5N3BWSFMyVG1aWTZ2bnJOTmh3eG5VWlk0UnBwUm9ubUhrMHhGYXJmNHBZajR1d3M5QUpNOE1SU3NveXdkMzU2aVlnTUUtTGlmSmNFX29SVnlhc0xDNXh3V2J2RmhWR3gtMXQ3d0xieVFYR1M1dlVYY2tZRQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPelc0SEFGY0lsM0dIREVzdUdfb3Q1Sml6SGIybTYzb2RqS3JtWXBZeWF2QkR2TG5raVhYMS1aQmJDSlFhSjhaNUs4bUVzTTFPTm0tSGVOQm5WcWhfLXI4TDRJd09BQm1tZmhzV2drZEl0aXlCVHN5am1uWnR3VzVkUjZnUFZOYVFSSW5wNlg3cTU1M0RzTWU3NQ?oc=5",
    "brands": [
-    "SBS"
+    "Finastra"
    ],
-   "first_seen": "2026-11-05T13:21:52Z"
+   "first_seen": "2026-11-05T13:14:14Z"
   },
   {
    "id": "CBMickFVX3lxTFBrRXloM0Z4N1pmNEhmMnNPWmJOckx4UWx4WG1WOEpJdmJ3eEhTR1RhZ0xfR1Z4T282UmtNZG5iTUlSZFJDdjVlcW5TclBObHlZNjZyS0psOEpEdUxzcmFEZmVETHAxdmhuUXdJOW9EWTFiZw",
@@ -844,18 +844,6 @@
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBrRXloM0Z4N1pmNEhmMnNPWmJOckx4UWx4WG1WOEpJdmJ3eEhTR1RhZ0xfR1Z4T282UmtNZG5iTUlSZFJDdjVlcW5TclBObHlZNjZyS0psOEpEdUxzcmFEZmVETHAxdmhuUXdJOW9EWTFiZw?oc=5",
    "brands": [
     "Temenos"
-   ],
-   "first_seen": "2026-11-05T13:14:14Z"
-  },
-  {
-   "id": "CBMimAFBVV95cUxPelc0SEFGY0lsM0dIREVzdUdfb3Q1Sml6SGIybTYzb2RqS3JtWXBZeWF2QkR2TG5raVhYMS1aQmJDSlFhSjhaNUs4bUVzTTFPTm0tSGVOQm5WcWhfLXI4TDRJd09BQm1tZmhzV2drZEl0aXlCVHN5am1uWnR3VzVkUjZnUFZOYVFSSW5wNlg3cTU1M0RzTWU3NQ",
-   "title": "Tech Mahindra acquires Finastra’s Cash Management suite",
-   "source": "IBS Intelligence",
-   "published": "2026-10-23T07:00:00Z",
-   "lang": "en",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPelc0SEFGY0lsM0dIREVzdUdfb3Q1Sml6SGIybTYzb2RqS3JtWXBZeWF2QkR2TG5raVhYMS1aQmJDSlFhSjhaNUs4bUVzTTFPTm0tSGVOQm5WcWhfLXI4TDRJd09BQm1tZmhzV2drZEl0aXlCVHN5am1uWnR3VzVkUjZnUFZOYVFSSW5wNlg3cTU1M0RzTWU3NQ?oc=5",
-   "brands": [
-    "Finastra"
    ],
    "first_seen": "2026-11-05T13:14:14Z"
   },
