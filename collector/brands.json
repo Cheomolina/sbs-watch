@@ -1,0 +1,59 @@
+{
+  "_comment": "Brands to track. 'queries' go to Google News search. A headline counts only if it matches the brand's 'match' regex and matches neither the brand's 'exclude' regex nor the global 'exclude' regex. Rules are re-applied to stored articles on every run, so tightening them also cleans old data.",
+  "brands": [
+    {
+      "name": "SBS",
+      "queries": [
+        "\"Sopra Banking\"",
+        "\"SBS\" banking",
+        "\"74Software\""
+      ],
+      "match": "\\bSBS\\b|Sopra Banking|74Software",
+      "exclude": "SBS Bank\\b|Southland|Eswatini|commercial banking licence"
+    },
+    {
+      "name": "Temenos",
+      "queries": [
+        "\"Temenos\""
+      ],
+      "match": "Temenos"
+    },
+    {
+      "name": "Finastra",
+      "queries": [
+        "\"Finastra\""
+      ],
+      "match": "Finastra"
+    },
+    {
+      "name": "Mambu",
+      "queries": [
+        "\"Mambu\""
+      ],
+      "match": "Mambu"
+    }
+  ],
+  "exclude": "Aktie News|So viel (Gewinn|hätten)|Kurs, Aktie, Chart|stock price|Stock Price, News, Quote|seasonal returns|rendements saisonniers|share capital|voting rights|droits de vote|transactions in own shares|actions propres|Financial Calendar|Calendrier financier",
+  "editions": [
+    {
+      "lang": "en",
+      "hl": "en-US",
+      "gl": "US",
+      "ceid": "US:en"
+    },
+    {
+      "lang": "fr",
+      "hl": "fr",
+      "gl": "FR",
+      "ceid": "FR:fr"
+    },
+    {
+      "lang": "de",
+      "hl": "de",
+      "gl": "DE",
+      "ceid": "DE:de"
+    }
+  ],
+  "lookback": "30d",
+  "retention_days": 180
+}

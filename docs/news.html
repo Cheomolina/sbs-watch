@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News Monitor · SBS Watch</title>
+<meta name="description" content="Daily news coverage of SBS and competitors, collected from Google News.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b5bdb' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2'/%3E%3Cpath d='M18 14h-8M15 18h-5M10 6h8v4h-8z'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #1b2333; --muted: #5b6577; --faint: #898781; --line: #e3e7ee; --soft: #f5f7fa; --bg: #eef1f6; --card: #ffffff;
+    --grid: #e1e0d9; --axis: #c3c2b7; --accent: #3b5bdb; --navy: #14213d;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e4e8f0; --muted: #a3acbd; --faint: #898781; --line: #2c3445; --soft: #1b2232; --bg: #10151f; --card: #161c29;
+      --grid: #262d3b; --axis: #3a4254; --accent: #8da2ff;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14.5px/1.5 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+  svg.i { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  header { background: linear-gradient(135deg, #14213d 0%, #23397a 100%); color: #fff; padding: 18px 0 22px; }
+  header nav { font-size: 13.5px; margin-bottom: 10px; }
+  header nav a { color: #b9c8ff; text-decoration: none; font-weight: 600; }
+  header h1 { margin: 0; font-size: clamp(24px, 4.5vw, 32px); display: flex; align-items: center; gap: 10px; }
+  header h1 svg.i { width: 28px; height: 28px; color: #9fb4ff; }
+  header p { margin: 4px 0 0; color: #d3dcf5; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 14px 0 4px; }
+  .seg { display: inline-flex; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 2px; }
+  .seg button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 6px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+  .filters label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; }
+  .updated { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-top: 14px; }
+  .card h2 { margin: 0 0 4px; font-size: 16px; }
+  .card .sub { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 14px; }
+  .tile { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .tile .who { display: flex; align-items: center; gap: 7px; font-weight: 600; font-size: 13.5px; color: var(--muted); }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .tile .big { font-size: 30px; font-weight: 700; line-height: 1.15; margin-top: 2px; }
+  .tile .meta { font-size: 12.5px; color: var(--muted); }
+
+  .sov { display: flex; height: 30px; gap: 2px; border-radius: 6px; overflow: hidden; }
+  .sov div { min-width: 2px; display: flex; align-items: center; padding: 0 8px; color: #fff; font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+  .sov div.dark-text { color: #0b0b0b; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .chart { position: relative; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart .gridline { stroke: var(--grid); stroke-width: 1; }
+  .chart .baseline { stroke: var(--axis); stroke-width: 1; }
+  .chart text { fill: var(--faint); font-size: 11px; font-family: inherit; }
+  .chart .series { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .chart .cross { stroke: var(--axis); stroke-width: 1; }
+  .tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.12); padding: 8px 10px; font-size: 12.5px; min-width: 150px; display: none; z-index: 5; }
+  .tip b { display: block; margin-bottom: 4px; }
+  .tip .row { display: flex; align-items: center; gap: 6px; justify-content: space-between; }
+  .tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .two .card { margin-top: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 99px; padding: 4px 11px; font: inherit; font-size: 13px; cursor: pointer; }
+  .chip[aria-pressed="true"] { border-color: var(--ink); font-weight: 600; }
+  .search { flex: 1 1 200px; min-width: 160px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 13.5px; }
+  .list { list-style: none; margin: 0; padding: 0; }
+  .list li { display: grid; grid-template-columns: 84px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+  .list li:first-child { border-top: 0; }
+  .list .date { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+  .list a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .list a:hover { color: var(--accent); text-decoration: underline; }
+  .list .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; color: var(--ink); }
+  .lang { font-size: 11px; font-weight: 700; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; text-transform: uppercase; }
+  .more { margin-top: 10px; }
+  .more button { border: 1px solid var(--line); background: var(--soft); color: var(--ink); font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+  .empty { color: var(--muted); padding: 10px 0; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 18px 0 40px; }
+
+  @media (max-width: 760px) {
+    .two { grid-template-columns: 1fr; gap: 0; }
+    .updated { margin-left: 0; width: 100%; }
+    .list li { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav><a href="./">&larr; SBS Watch home</a></nav>
+    <h1><svg class="i" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>News monitor</h1>
+    <p>News headlines naming SBS and competitors, collected daily from Google News in English, French and German.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="filters">
+    <div><label>Period</label><span class="seg" id="period"><button data-v="7">7 days</button><button data-v="30" aria-pressed="true">30 days</button><button data-v="90">90 days</button></span></div>
+    <div><label>Language</label><span class="seg" id="lang"><button data-v="all" aria-pressed="true">All</button><button data-v="en">EN</button><button data-v="fr">FR</button><button data-v="de">DE</button></span></div>
+    <div class="updated" id="updated"></div>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>Share of voice</h2>
+    <p class="sub">Share of all headlines in the period that name each brand.</p>
+    <div class="sov" id="sov"></div>
+    <div class="legend" id="sov-legend"></div>
+  </section>
+
+  <section class="card">
+    <h2 id="trend-title">Headlines per day</h2>
+    <p class="sub">Hover for the counts on each day.</p>
+    <div class="chart" id="trend"></div>
+    <div class="legend" id="trend-legend"></div>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <h2>Top publishers</h2>
+      <p class="sub">Who covers these brands most in the period.</p>
+      <table id="publishers"></table>
+    </section>
+    <section class="card">
+      <h2>Headlines by language</h2>
+      <p class="sub">The same counts as above, as a table.</p>
+      <table id="bylang"></table>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Headlines</h2>
+    <div class="chips" id="brand-chips"></div>
+    <ul class="list" id="list"></ul>
+    <div class="more" id="more"></div>
+  </section>
+
+  <p class="note">Source: Google News RSS search, filtered to headlines that name the brand, with stock-ticker and share-disclosure items removed. Counts cover headlines only, not article text, and depend on which outlets Google News indexes. Rules are in <a href="https://github.com/Cheomolina/sbs-watch/blob/main/collector/brands.json">collector/brands.json</a>.</p>
+</main>
+
+<script>
+const state = { period: 30, lang: "all", brand: "all", query: "", shown: 40 };
+let DATA = null;
+const COLORS = ["--s1", "--s2", "--s3", "--s4", "--s5", "--s6"];
+const DARK_TEXT_SLOTS = new Set([3]); // yellow takes dark label text
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const color = brand => `var(${COLORS[DATA.brands.indexOf(brand) % COLORS.length]})`;
+const dot = brand => `<span class="dot" style="background:${color(brand)}"></span>`;
+const dayKey = d => d.toISOString().slice(0, 10);
+const fmtDay = key => new Date(key + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+
+function inPeriod() {
+  const since = Date.now() - state.period * 86400000;
+  return DATA.articles.filter(a => Date.parse(a.published) >= since && (state.lang === "all" || a.lang === state.lang));
+}
+
+function countBy(articles) {
+  const c = Object.fromEntries(DATA.brands.map(b => [b, 0]));
+  articles.forEach(a => a.brands.forEach(b => { if (b in c) c[b]++; }));
+  return c;
+}
+
+function renderTiles(arts) {
+  const counts = countBy(arts);
+  const prevSince = Date.now() - 2 * state.period * 86400000, since = Date.now() - state.period * 86400000;
+  const prev = countBy(DATA.articles.filter(a => { const t = Date.parse(a.published); return t >= prevSince && t < since && (state.lang === "all" || a.lang === state.lang); }));
+  const total = Object.values(counts).reduce((s, n) => s + n, 0) || 1;
+  $("tiles").innerHTML = DATA.brands.map(b => {
+    const share = Math.round(counts[b] / total * 100);
+    const delta = prev[b] ? `${counts[b] - prev[b] >= 0 ? "+" : ""}${counts[b] - prev[b]} vs previous ${state.period} days` : "No earlier data yet";
+    return `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${counts[b]}</div><div class="meta">${share}% share · ${delta}</div></div>`;
+  }).join("");
+}
+
+function renderSov(arts) {
+  const counts = countBy(arts);
+  const total = Object.values(counts).reduce((s, n) => s + n, 0);
+  if (!total) { $("sov").innerHTML = `<div style="background:var(--soft);color:var(--muted);width:100%">No headlines in this period</div>`; $("sov-legend").innerHTML = ""; return; }
+  $("sov").innerHTML = DATA.brands.filter(b => counts[b]).map(b => {
+    const pct = counts[b] / total * 100, slot = DATA.brands.indexOf(b) % COLORS.length;
+    return `<div class="${DARK_TEXT_SLOTS.has(slot) ? "dark-text" : ""}" style="flex:${counts[b]};background:${color(b)}" title="${esc(b)}: ${counts[b]} (${pct.toFixed(0)}%)">${pct >= 9 ? `${esc(b)} ${pct.toFixed(0)}%` : ""}</div>`;
+  }).join("");
+  $("sov-legend").innerHTML = DATA.brands.map(b => `<span>${dot(b)}${esc(b)} · ${counts[b]} (${(counts[b] / total * 100).toFixed(0)}%)</span>`).join("");
+}
+
+function renderTrend(arts) {
+  const weekly = state.period > 30;
+  $("trend-title").textContent = weekly ? "Headlines per week" : "Headlines per day";
+  const buckets = [];
+  const today = new Date(); today.setUTCHours(0, 0, 0, 0);
+  if (weekly) {
+    const monday = new Date(today); monday.setUTCDate(today.getUTCDate() - ((today.getUTCDay() + 6) % 7));
+    for (let i = Math.ceil(state.period / 7) - 1; i >= 0; i--) { const d = new Date(monday); d.setUTCDate(monday.getUTCDate() - 7 * i); buckets.push(dayKey(d)); }
+  } else {
+    for (let i = state.period - 1; i >= 0; i--) { const d = new Date(today); d.setUTCDate(today.getUTCDate() - i); buckets.push(dayKey(d)); }
+  }
+  const series = Object.fromEntries(DATA.brands.map(b => [b, buckets.map(() => 0)]));
+  arts.forEach(a => {
+    const d = new Date(a.published); d.setUTCHours(0, 0, 0, 0);
+    if (weekly) d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+    const i = buckets.indexOf(dayKey(d));
+    if (i >= 0) a.brands.forEach(b => { if (series[b]) series[b][i]++; });
+  });
+
+  const W = 1000, H = 260, L = 34, R = 12, T = 10, B = 26;
+  const max = Math.max(4, ...Object.values(series).flat());
+  const step = Math.ceil(max / 4);
+  const top = step * 4;
+  const x = i => L + (buckets.length === 1 ? (W - L - R) / 2 : i * (W - L - R) / (buckets.length - 1));
+  const y = v => T + (H - T - B) * (1 - v / top);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Headlines over time per brand">`;
+  for (let v = 0; v <= top; v += step) svg += `<line class="${v ? "gridline" : "baseline"}" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const every = Math.ceil(buckets.length / 8);
+  const last = buckets.length - 1;
+  buckets.forEach((k, i) => { if ((i % every === 0 && last - i >= every / 2) || i === last) svg +=`<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${fmtDay(k)}</text>`; });
+  DATA.brands.forEach(b => {
+    svg += `<polyline class="series" style="stroke:${color(b)}" points="${series[b].map((v, i) => `${x(i)},${y(v)}`).join(" ")}"/>`;
+  });
+  svg += `<line class="cross" id="cross" x1="0" x2="0" y1="${T}" y2="${H - B}" style="display:none"/>`;
+  svg += `<g id="hover-dots"></g><rect id="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/></svg><div class="tip" id="tip"></div>`;
+  $("trend").innerHTML = svg;
+  $("trend-legend").innerHTML = DATA.brands.map(b => `<span>${dot(b)}${esc(b)}</span>`).join("");
+
+  const svgEl = $("trend").querySelector("svg"), tip = $("tip"), cross = $("cross"), dots = $("hover-dots");
+  const show = evt => {
+    const rect = svgEl.getBoundingClientRect();
+    const px = (evt.clientX - rect.left) * W / rect.width;
+    const i = Math.max(0, Math.min(buckets.length - 1, Math.round((px - L) / ((W - L - R) / Math.max(1, buckets.length - 1)))));
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.style.display = "";
+    dots.innerHTML = DATA.brands.map(b => `<circle cx="${x(i)}" cy="${y(series[b][i])}" r="4.5" fill="${color(b)}" stroke="var(--card)" stroke-width="2"/>`).join("");
+    const label = weekly ? `Week of ${fmtDay(buckets[i])}` : fmtDay(buckets[i]);
+    tip.innerHTML = `<b>${label}</b>` + DATA.brands.map(b => `<div class="row"><span>${dot(b)}${esc(b)}</span><span>${series[b][i]}</span></div>`).join("");
+    tip.style.display = "block";
+    const left = x(i) / W * rect.width;
+    tip.style.left = Math.min(rect.width - tip.offsetWidth, Math.max(0, left + (left > rect.width / 2 ? -tip.offsetWidth - 12 : 12))) + "px";
+    tip.style.top = "8px";
+  };
+  const hide = () => { tip.style.display = "none"; cross.style.display = "none"; dots.innerHTML = ""; };
+  const hit = $("hit");
+  hit.addEventListener("pointermove", show);
+  hit.addEventListener("pointerdown", show);
+  hit.addEventListener("pointerleave", hide);
+}
+
+function renderTables(arts) {
+  const pubs = {};
+  arts.forEach(a => { const p = pubs[a.source] ||= { n: 0, brands: new Set() }; p.n++; a.brands.forEach(b => p.brands.add(b)); });
+  const top = Object.entries(pubs).sort((a, b) => b[1].n - a[1].n).slice(0, 10);
+  $("publishers").innerHTML = top.length
+    ? `<tr><th>Publisher</th><th>Brands</th><th class="n">Headlines</th></tr>` + top.map(([name, p]) => `<tr><td>${esc(name)}</td><td>${DATA.brands.filter(b => p.brands.has(b)).map(dot).join(" ")}</td><td class="n">${p.n}</td></tr>`).join("")
+    : `<tr><td class="empty">No headlines in this period</td></tr>`;
+
+  const langs = ["en", "fr", "de"];
+  const since = Date.now() - state.period * 86400000;
+  const all = DATA.articles.filter(a => Date.parse(a.published) >= since);
+  const cell = (b, l) => all.filter(a => a.lang === l && a.brands.includes(b)).length;
+  $("bylang").innerHTML = `<tr><th>Brand</th>${langs.map(l => `<th class="n">${l.toUpperCase()}</th>`).join("")}<th class="n">Total</th></tr>` +
+    DATA.brands.map(b => { const v = langs.map(l => cell(b, l)); return `<tr><td><span class="tag">${dot(b)}${esc(b)}</span></td>${v.map(n => `<td class="n">${n}</td>`).join("")}<td class="n"><b>${v.reduce((s, n) => s + n, 0)}</b></td></tr>`; }).join("");
+}
+
+function renderList(arts) {
+  const q = state.query.trim().toLowerCase();
+  const rows = arts.filter(a => (state.brand === "all" || a.brands.includes(state.brand)) && (!q || (a.title + " " + a.source).toLowerCase().includes(q)));
+  $("brand-chips").innerHTML = [["all", "All brands"], ...DATA.brands.map(b => [b, b])].map(([v, label]) =>
+    `<button class="chip" data-v="${esc(v)}" aria-pressed="${state.brand === v}">${v === "all" ? "" : dot(v)}${esc(label)}</button>`).join("") +
+    `<input class="search" id="search" type="search" placeholder="Search headlines or publishers" value="${esc(state.query)}">`;
+  $("list").innerHTML = rows.slice(0, state.shown).map(a => `<li><div class="date">${fmtDay(a.published.slice(0, 10))}</div><div><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a><div class="meta">${a.brands.map(b => `<span class="tag">${dot(b)}${esc(b)}</span>`).join("")}<span>${esc(a.source)}</span><span class="lang">${esc(a.lang)}</span></div></div></li>`).join("") || `<li class="empty">No headlines match.</li>`;
+  $("more").innerHTML = rows.length > state.shown ? `<button id="show-more">Show more (${rows.length - state.shown} left)</button>` : "";
+
+  $("brand-chips").querySelectorAll(".chip").forEach(btn => btn.onclick = () => { state.brand = btn.dataset.v; state.shown = 40; renderList(inPeriod()); });
+  const search = $("search");
+  search.oninput = () => { state.query = search.value; state.shown = 40; renderList(inPeriod()); const s = $("search"); s.focus(); s.setSelectionRange(s.value.length, s.value.length); };
+  const more = $("show-more"); if (more) more.onclick = () => { state.shown += 40; renderList(inPeriod()); };
+}
+
+function render() {
+  const arts = inPeriod();
+  renderTiles(arts); renderSov(arts); renderTrend(arts); renderTables(arts); renderList(arts);
+}
+
+function bindSeg(id, key, parse) {
+  $(id).querySelectorAll("button").forEach(btn => btn.onclick = () => {
+    $(id).querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+    state[key] = parse(btn.dataset.v); state.shown = 40; render();
+  });
+}
+
+fetch("data/news.json", { cache: "no-store" }).then(r => r.json()).then(data => {
+  DATA = data;
+  $("updated").textContent = "Updated " + new Date(data.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  bindSeg("period", "period", Number); bindSeg("lang", "lang", String);
+  render();
+}).catch(() => { $("tiles").innerHTML = `<div class="card empty">Couldn't load data/news.json.</div>`; });
+</script>
+</body>
+</html>
