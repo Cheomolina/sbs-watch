@@ -43,6 +43,11 @@
   .updated { font-size: 12.5px; color: var(--muted); }
   .geo { font-size: 12px; }
   .print-only { display: none; }
+  .notice { display: flex; gap: 12px; align-items: flex-start; margin-top: 14px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; }
+  .notice svg.i { width: 20px; height: 20px; color: var(--accent); margin-top: 1px; }
+  .notice b { display: block; margin-bottom: 2px; }
+  .notice p { margin: 0; color: var(--muted); font-size: 13.5px; }
+  [hidden] { display: none !important; }
 
   @media print {
     @page { size: A4; margin: 12mm; }
@@ -145,7 +150,9 @@
     </div>
   </div>
   <div class="print-only print-head" id="print-head"></div>
+  <div class="notice" id="notice" role="status" hidden><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div><b id="notice-title"></b><p id="notice-text"></p></div></div>
 
+  <div id="content">
   <div class="tiles" id="tiles"></div>
 
   <section class="card">
@@ -195,6 +202,8 @@
     <div class="more" id="more"></div>
   </section>
 
+  </div>
+
   <p class="note">Source: Google News RSS search, filtered to headlines that name the brand, with stock-ticker and share-disclosure items removed. Counts cover headlines only, not article text, and depend on which outlets Google News indexes. Regions come from place names in the headline; headlines that name no place are "Not specified". Rules are in <a href="https://github.com/SBS-DM/sbs-watch/blob/main/collector/brands.json">collector/brands.json</a>.</p>
 </main>
 
@@ -235,7 +244,7 @@ function renderTiles(arts) {
   $("tiles").innerHTML = DATA.brands.map(b => {
     const share = Math.round(counts[b] / total * 100);
     const delta = prev[b] ? `${counts[b] - prev[b] >= 0 ? "+" : ""}${counts[b] - prev[b]} vs previous ${state.period} days` : "No earlier data yet";
-    return `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${counts[b]}</div><div class="meta">${share}% share · ${delta}</div></div>`;
+    return `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${counts[b]}</div><div class="meta">${counts[b] ? `${share}% share · ${delta}` : "No headlines found for these filters"}</div></div>`;
   }).join("");
 }
 
@@ -361,8 +370,23 @@ function printHeader() {
   $("print-head").innerHTML = `<b>Report filters:</b> last ${pressed("period")} · language: ${esc(pressed("lang"))} · region: ${esc(pressed("region"))} · headline list: ${esc(brand)}${state.query ? ` matching "${esc(state.query)}"` : ""} · printed ${new Date().toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}`;
 }
 
+function renderNotice(items) {
+  const empty = !items.length;
+  $("notice").hidden = !empty;
+  $("content").hidden = empty;
+  if (!empty) return;
+  const pressed = id => document.querySelector(`#${id} button[aria-pressed="true"]`);
+  const LANGS = { en: "English", fr: "French" };
+  const filters = [`last ${pressed("period").textContent}`];
+  if (state.lang !== "all") filters.push(LANGS[state.lang] || state.lang);
+  if (state.region !== "all") filters.push(pressed("region").textContent);
+  $("notice-title").textContent = `No headlines match these filters (${filters.join(" · ")})`;
+  $("notice-text").textContent = `This isn't an error. The collector last ran on ${new Date(DATA.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} and found no headlines about ${DATA.brands.slice(0, -1).join(", ")} or ${DATA.brands.at(-1)} for this selection. Try a longer period, or set the other filters back to All.`;
+}
+
 function render() {
   const arts = inPeriod();
+  renderNotice(arts);
   renderTiles(arts); renderSov(arts); renderTrend(arts); renderTables(arts); renderGeo(arts); renderList(arts);
 }
 

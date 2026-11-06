@@ -109,6 +109,11 @@
   .vids .views { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .vids .views b { display: block; font-size: 16px; }
   .vids .views span { font-size: 12px; color: var(--muted); }
+  .notice { display: flex; gap: 12px; align-items: flex-start; margin-top: 14px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; }
+  .notice svg.i { width: 20px; height: 20px; color: var(--accent); margin-top: 1px; }
+  .notice b { display: block; margin-bottom: 2px; }
+  .notice p { margin: 0; color: var(--muted); font-size: 13.5px; }
+  [hidden] { display: none !important; }
   .setup { border-left: 4px solid var(--s4); }
   .setup ol { margin: 8px 0 0; padding-left: 20px; }
   @media (max-width: 760px) {
@@ -136,6 +141,8 @@
     <div><label>Source</label><span class="seg" id="source"><button data-v="all" aria-pressed="true">All</button><button data-v="official">Brand channels</button><button data-v="third">Third-party</button></span></div>
     <div class="updated" id="updated"></div>
   </div>
+
+  <div class="notice" id="notice" role="status" hidden><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div><b id="notice-title"></b><p id="notice-text"></p></div></div>
 
   <div id="content">
     <div class="tiles" id="tiles"></div>
@@ -208,7 +215,7 @@ function renderTiles(vids) {
   const n = sums(vids), views = sums(vids, "views"), own = sums(vids.filter(v => v.official));
   const total = Object.values(n).reduce((s, x) => s + x, 0) || 1;
   $("tiles").innerHTML = DATA.brands.map(b =>
-    `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${n[b]}</div><div class="meta">videos · ${Math.round(n[b] / total * 100)}% share<br>${own[b]} own · ${n[b] - own[b]} third-party<br>${fmtNum(views[b])} views</div></div>`).join("");
+    `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${n[b]}</div><div class="meta">${n[b] ? `videos · ${Math.round(n[b] / total * 100)}% share<br>${own[b]} own · ${n[b] - own[b]} third-party<br>${fmtNum(views[b])} views` : "No videos found for these filters"}</div></div>`).join("");
 }
 
 function renderSov(vids) {
@@ -309,8 +316,23 @@ function renderList(vids) {
   const more = $("show-more"); if (more) more.onclick = () => { state.shown += 20; renderList(inPeriod()); };
 }
 
+function renderNotice(items) {
+  const empty = !items.length;
+  $("notice").hidden = !empty;
+  $("content").hidden = empty;
+  if (!empty) return;
+  const pressed = id => document.querySelector(`#${id} button[aria-pressed="true"]`);
+  const LANGS = { en: "English", fr: "French" };
+  const filters = [`last ${pressed("period").textContent}`];
+  if (state.lang !== "all") filters.push(LANGS[state.lang] || state.lang);
+  if (state.source !== "all") filters.push(pressed("source").textContent);
+  $("notice-title").textContent = `No videos match these filters (${filters.join(" · ")})`;
+  $("notice-text").textContent = `This isn't an error. The collector last ran on ${new Date(DATA.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} and found no videos about ${DATA.brands.slice(0, -1).join(", ")} or ${DATA.brands.at(-1)} for this selection. Try a longer period, or set the other filters back to All.`;
+}
+
 function render() {
   const vids = inPeriod();
+  renderNotice(vids);
   renderTiles(vids); renderSov(vids); renderTrend(vids); renderTables(vids); renderList(vids);
 }
 
