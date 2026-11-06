@@ -2,7 +2,7 @@
 
 In-house brand monitoring and AI-visibility tracking, built with Claude Code.
 
-**Team site:** https://cheomolina.github.io/sbs-watch/
+**Team site:** https://sbs-dm.github.io/sbs-watch/
 
 ## What's here
 
