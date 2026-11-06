@@ -133,6 +133,7 @@
   <div class="filters">
     <div><label>Published</label><span class="seg" id="period"><button data-v="30" aria-pressed="true">30 days</button><button data-v="90">90 days</button><button data-v="365">12 months</button></span></div>
     <div><label>Language</label><span class="seg" id="lang"><button data-v="all" aria-pressed="true">All</button><button data-v="en">EN</button><button data-v="fr">FR</button></span></div>
+    <div><label>Source</label><span class="seg" id="source"><button data-v="all" aria-pressed="true">All</button><button data-v="official">Brand channels</button><button data-v="third">Third-party</button></span></div>
     <div class="updated" id="updated"></div>
   </div>
 
@@ -175,11 +176,11 @@
     </section>
   </div>
 
-  <p class="note">Source: YouTube Data API search, filtered to videos whose title or description names the brand. View, like and comment counts are refreshed on every daily run. Rules are in <a href="https://github.com/Cheomolina/sbs-watch/blob/main/collector/brands.json">collector/brands.json</a>.</p>
+  <p class="note">Source: YouTube Data API. "Brand channels" are every upload from each brand's official channel; "third-party" videos come from YouTube search and count only if the title or description names the brand alongside banking words. View, like and comment counts are refreshed on every daily run. Rules are in <a href="https://github.com/Cheomolina/sbs-watch/blob/main/collector/brands.json">collector/brands.json</a>.</p>
 </main>
 
 <script>
-const state = { period: 30, lang: "all", metric: "videos", brand: "all", query: "", sort: "views", shown: 20 };
+const state = { period: 30, lang: "all", source: "all", metric: "videos", brand: "all", query: "", sort: "views", shown: 20 };
 let DATA = null;
 const COLORS = ["--s1", "--s2", "--s3", "--s4", "--s5", "--s6"];
 const DARK_TEXT_SLOTS = new Set([3]);
@@ -193,7 +194,8 @@ const fmtNum = n => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : 
 
 function inPeriod() {
   const since = Date.now() - state.period * 86400000;
-  return DATA.videos.filter(v => Date.parse(v.published) >= since && (state.lang === "all" || v.lang === state.lang));
+  return DATA.videos.filter(v => Date.parse(v.published) >= since && (state.lang === "all" || v.lang === state.lang) &&
+    (state.source === "all" || (state.source === "official") === !!v.official));
 }
 
 function sums(videos, field) {
@@ -203,10 +205,10 @@ function sums(videos, field) {
 }
 
 function renderTiles(vids) {
-  const n = sums(vids), views = sums(vids, "views");
+  const n = sums(vids), views = sums(vids, "views"), own = sums(vids.filter(v => v.official));
   const total = Object.values(n).reduce((s, x) => s + x, 0) || 1;
   $("tiles").innerHTML = DATA.brands.map(b =>
-    `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${n[b]}</div><div class="meta">videos · ${Math.round(n[b] / total * 100)}% share<br>${fmtNum(views[b])} views</div></div>`).join("");
+    `<div class="tile"><div class="who">${dot(b)}${esc(b)}</div><div class="big">${n[b]}</div><div class="meta">videos · ${Math.round(n[b] / total * 100)}% share<br>${own[b]} own · ${n[b] - own[b]} third-party<br>${fmtNum(views[b])} views</div></div>`).join("");
 }
 
 function renderSov(vids) {
@@ -278,7 +280,7 @@ function renderTables(vids) {
 
   const langs = ["en", "fr"];
   const since = Date.now() - state.period * 86400000;
-  const all = DATA.videos.filter(v => Date.parse(v.published) >= since);
+  const all = DATA.videos.filter(v => Date.parse(v.published) >= since && (state.source === "all" || (state.source === "official") === !!v.official));
   const cell = (b, l) => all.filter(v => v.lang === l && v.brands.includes(b)).length;
   $("bylang").innerHTML = `<tr><th>Brand</th>${langs.map(l => `<th class="n">${l.toUpperCase()}</th>`).join("")}<th class="n">Total</th></tr>` +
     DATA.brands.map(b => { const v = langs.map(l => cell(b, l)); return `<tr><td><span class="tag">${dot(b)}${esc(b)}</span></td>${v.map(n => `<td class="n">${n}</td>`).join("")}<td class="n"><b>${v.reduce((s, n) => s + n, 0)}</b></td></tr>`; }).join("");
@@ -296,7 +298,7 @@ function renderList(vids) {
   $("list").innerHTML = rows.slice(0, state.shown).map(v => `<li>
       <a href="${esc(v.url)}" target="_blank" rel="noopener"><img src="${esc(v.thumbnail)}" alt="" loading="lazy"></a>
       <div><a class="t" href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
-        <div class="meta">${v.brands.map(b => `<span class="tag">${dot(b)}${esc(b)}</span>`).join("")}<span>${esc(v.channel)}</span><span>${fmtDay(v.published.slice(0, 10))}</span><span class="lang">${esc(v.lang)}</span></div></div>
+        <div class="meta">${v.brands.map(b => `<span class="tag">${dot(b)}${esc(b)}</span>`).join("")}<span>${esc(v.channel)}</span>${v.official ? `<span class="lang">Brand channel</span>` : ""}<span>${fmtDay(v.published.slice(0, 10))}</span><span class="lang">${esc(v.lang)}</span></div></div>
       <div class="views"><b>${fmtNum(v.views)}</b><span>views · ${fmtNum(v.likes)} likes</span></div></li>`).join("") || `<li class="empty">No videos match.</li>`;
   $("more").innerHTML = rows.length > state.shown ? `<button id="show-more">Show more (${rows.length - state.shown} left)</button>` : "";
 
@@ -331,7 +333,7 @@ function showSetup() {
 fetch("data/youtube.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => {
   DATA = data;
   $("updated").textContent = "Updated " + new Date(data.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
-  bindSeg("period", "period", Number); bindSeg("lang", "lang", String);
+  bindSeg("period", "period", Number); bindSeg("lang", "lang", String); bindSeg("source", "source", String);
   bindSeg("metric", "metric", String, () => renderSov(inPeriod()));
   render();
 }).catch(showSetup);

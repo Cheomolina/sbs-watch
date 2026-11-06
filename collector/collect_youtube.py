@@ -1,8 +1,9 @@
 """Collect YouTube videos that mention our brand and competitors.
 
-Reads the "youtube" section of collector/brands.json, searches the YouTube Data
-API for every brand and language, keeps videos whose title or description names
-the brand, refreshes view counts for stored videos, and writes
+Reads the "youtube" section of collector/brands.json, takes every recent upload
+from each brand's official channel, searches the YouTube Data API for
+third-party videos whose title or description names the brand in a banking
+context, refreshes view counts for stored videos, and writes
 docs/data/youtube.json, which the dashboard reads. Standard library only.
 
 Needs a YouTube Data API key in the YOUTUBE_API_KEY environment variable (a
@@ -50,24 +51,40 @@ def call(endpoint, key, **params):
 
 
 def relevance_rules(config):
-    global_exclude = re.compile(config["exclude"], re.IGNORECASE) if config.get("exclude") else None
+    """Return {brand: test(text) -> bool} for third-party videos."""
+    settings = config["youtube"]
+    excludes = [re.compile(p, re.IGNORECASE) for p in (config.get("exclude"), settings.get("exclude")) if p]
+    context = re.compile(settings["context"], re.IGNORECASE) if settings.get("context") else None
     rules = {}
-    for name, brand in config["youtube"]["brands"].items():
+    for name, brand in settings["brands"].items():
         match = re.compile(brand["match"], re.IGNORECASE)
         exclude = re.compile(brand["exclude"], re.IGNORECASE) if brand.get("exclude") else None
 
         def test(text, match=match, exclude=exclude):
-            if not match.search(text):
+            if not match.search(text) or (context and not context.search(text)):
                 return False
             if exclude and exclude.search(text):
                 return False
-            return not (global_exclude and global_exclude.search(text))
+            return not any(pattern.search(text) for pattern in excludes)
 
         rules[name] = test
     return rules
 
 
+STOPWORDS = {
+    "en": {"the", "and", "for", "with", "how", "why", "of", "to", "is", "in", "on", "your", "our", "what", "from", "are"},
+    "fr": {"le", "les", "des", "une", "pour", "avec", "et", "du", "est", "dans", "sur", "au", "aux", "nous", "vous", "comment", "pourquoi"},
+    # Spanish is detected only so it can be dropped
+    "es": {"el", "los", "las", "con", "del", "para", "por", "que", "y", "una", "cómo", "qué", "pagos", "instantáneos"},
+}
+
+
 def video_language(snippet, fallback):
+    """Detect the language from the words used; channel language settings are often wrong."""
+    words = re.findall(r"[a-zà-ÿ]+", (snippet.get("title", "") + " " + snippet.get("description", "")[:400]).lower())
+    scores = sorted(((sum(w in vocab for w in words), lang) for lang, vocab in STOPWORDS.items()), reverse=True)
+    if scores[0][0] > scores[1][0]:
+        return scores[0][1]
     lang = (snippet.get("defaultAudioLanguage") or snippet.get("defaultLanguage") or "").lower()
     return lang[:2] if lang else fallback
 
@@ -99,7 +116,22 @@ def main():
                 for item in result.get("items", []):
                     candidates.setdefault(item["id"]["videoId"], lang)
 
-    # 2. Details and stats for new candidates plus everything stored: 1 unit per 50 videos
+    # 2. Official channels: every recent upload counts for its brand, 1 unit per call
+    official = {}
+    for name, brand in settings["brands"].items():
+        if not brand.get("channel_id"):
+            continue
+        uploads = "UU" + brand["channel_id"][2:]
+        result = call("playlistItems", key, part="snippet", playlistId=uploads, maxResults=50)
+        units += 1
+        for item in result.get("items", []):
+            if item["snippet"].get("publishedAt", "") >= since:
+                video_id = item["snippet"]["resourceId"]["videoId"]
+                official[video_id] = name
+                candidates.setdefault(video_id, "en")
+    official_channels = {b["channel_id"]: name for name, b in settings["brands"].items() if b.get("channel_id")}
+
+    # 3. Details and stats for new candidates plus everything stored: 1 unit per 50 videos
     ids = list(dict.fromkeys(list(candidates) + list(stored)))
     details = {}
     for start in range(0, len(ids), 50):
@@ -116,8 +148,9 @@ def main():
             continue
         snippet, stats = item["snippet"], item.get("statistics", {})
         text = snippet.get("title", "") + "\n" + snippet.get("description", "")
-        brands = [name for name, test in rules.items() if test(text)]
-        lang = stored.get(video_id, {}).get("lang") or video_language(snippet, candidates.get(video_id, "en"))
+        owner = official.get(video_id) or official_channels.get(snippet.get("channelId", ""))
+        brands = [owner] if owner else [name for name, test in rules.items() if test(text)]
+        lang = video_language(snippet, candidates.get(video_id) or stored.get(video_id, {}).get("lang", "en"))
         if not brands or lang not in languages:
             dropped += 1
             continue
@@ -134,6 +167,7 @@ def main():
             "thumbnail": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
             "url": f"https://www.youtube.com/watch?v={video_id}",
             "brands": brands,
+            "official": bool(owner),
             "first_seen": stored.get(video_id, {}).get("first_seen", now),
             "stats_updated": now,
         }

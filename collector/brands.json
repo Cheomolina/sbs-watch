@@ -51,15 +51,18 @@
   "lookback": "30d",
   "retention_days": 180,
   "youtube": {
-    "_comment": "YouTube search settings. Each search costs 100 of the 10,000 free daily API units. A video counts for a brand if its title or description matches the brand's regex below and neither the brand's exclude regex nor the global exclude above.",
+    "_comment": "YouTube settings. Each search costs 100 of the 10,000 free daily API units; reading an official channel costs 1. Every upload from a brand's official channel counts for that brand. A third-party video counts if its title or description matches the brand's regex AND the 'context' regex (banking words, to drop the Greek word 'temenos', games and music), and matches none of the exclude rules (brand, 'exclude' below, and the global exclude above).",
     "languages": [
       "en",
       "fr"
     ],
     "lookback_days": 30,
     "retention_days": 365,
+    "context": "\\b(banks?|banking|banque|banques|bancaire|fintech|core banking|payments?|paiements?|lending|loans?|crédit|credit unions?|financial|finance|wealth|SaaS|digital transformation|Sibos|Money20/20|T24|TEMN|Loan ?IQ|mortgages?|neobank|open banking|regtech|compliance)\\b",
+    "exclude": "Certification Test|Practice Test|exam dumps|\\bstocks?\\b|Octopath|Ensemble Temenos|Temenos Academy",
     "brands": {
       "SBS": {
+        "channel_id": "UCMhywLc-BENrJbuhCO-xWOw",
         "queries": [
           "\"Sopra Banking\"",
           "\"SBS\" \"core banking\"",
@@ -70,18 +73,21 @@
         "exclude": "SBS Bank\\b"
       },
       "Temenos": {
+        "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
         "queries": [
           "\"Temenos\""
         ],
         "match": "Temenos"
       },
       "Backbase": {
+        "channel_id": "UCFBCbncJmQvqLsnj7TXqN9Q",
         "queries": [
           "\"Backbase\""
         ],
         "match": "Backbase"
       },
       "Finastra": {
+        "channel_id": "UCXMHbdfIgA6bzw_fsPN39bg",
         "queries": [
           "\"Finastra\""
         ],

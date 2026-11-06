@@ -1,0 +1,543 @@
+{
+ "updated": "2026-11-06T15:20:04Z",
+ "brands": [
+  "SBS",
+  "Temenos",
+  "Backbase",
+  "Finastra"
+ ],
+ "videos": [
+  {
+   "id": "vrhCpmleJLk",
+   "title": "Beyond the Bank App: How Banks Stay Strategic When the Interface Moves",
+   "channel": "SBS",
+   "channel_id": "UCMhywLc-BENrJbuhCO-xWOw",
+   "published": "2026-11-04T09:27:02Z",
+   "lang": "en",
+   "views": 30,
+   "likes": 2,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/vrhCpmleJLk/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=vrhCpmleJLk",
+   "brands": [
+    "SBS"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "uJuUpBNOtOE",
+   "title": "From Temenos to Ethiopia: Ivan van Bladel on Banking Partnerships That Scale",
+   "channel": "Pitron Technology ",
+   "channel_id": "UCAFCAWclkcEC0YY8No93Q4w",
+   "published": "2026-11-04T08:54:36Z",
+   "lang": "en",
+   "views": 4,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/uJuUpBNOtOE/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=uJuUpBNOtOE",
+   "brands": [
+    "Temenos"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "9NG4iEJvCZY",
+   "title": "AI-Powered Observability | | AI-Powered Reliability Webinar Series with Temenos | #02",
+   "channel": "Performetriks ",
+   "channel_id": "UCjm6Nbm2L7Zh847scyEwvyQ",
+   "published": "2026-11-03T16:23:16Z",
+   "lang": "en",
+   "views": 45,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/9NG4iEJvCZY/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=9NG4iEJvCZY",
+   "brands": [
+    "Temenos"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "0ConH-8EF5k",
+   "title": "Human-AI-Powered Knowledge Modelling | AI-Powered Reliability Webinar Series with Temenos | #01",
+   "channel": "Performetriks ",
+   "channel_id": "UCjm6Nbm2L7Zh847scyEwvyQ",
+   "published": "2026-11-03T16:20:14Z",
+   "lang": "en",
+   "views": 57,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/0ConH-8EF5k/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=0ConH-8EF5k",
+   "brands": [
+    "Temenos"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "p7uvTF0ie0A",
+   "title": "Between US - Marsden",
+   "channel": "SBS",
+   "channel_id": "UCMhywLc-BENrJbuhCO-xWOw",
+   "published": "2026-11-02T11:17:33Z",
+   "lang": "en",
+   "views": 23,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/p7uvTF0ie0A/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=p7uvTF0ie0A",
+   "brands": [
+    "SBS"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "yv8hBOwnc2w",
+   "title": "CEE25: How it was - Mohamad Khalili (Backbase)",
+   "channel": "SME Banking TV",
+   "channel_id": "UCusZ5XZebufFbuIv2CkX5AQ",
+   "published": "2026-10-30T20:56:24Z",
+   "lang": "en",
+   "views": 391,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/yv8hBOwnc2w/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=yv8hBOwnc2w",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "bSyfVVugP8A",
+   "title": "FSC Core Banking Integration: FIS, Fiserv, Temenos & MuleSoft APIs! 🌐🔄 | Ep 12",
+   "channel": "ShubhCode | Salesforce & Coding",
+   "channel_id": "UCCYd4nVHNwv1snGb0x9JJZA",
+   "published": "2026-10-29T03:50:14Z",
+   "lang": "en",
+   "views": 21,
+   "likes": 0,
+   "comments": 2,
+   "thumbnail": "https://i.ytimg.com/vi/bSyfVVugP8A/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=bSyfVVugP8A",
+   "brands": [
+    "Temenos"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "SG8hgCStb5E",
+   "title": "Backbase Helps Banks Deploy Agentic AI... & SAP Empowers AI Developers to Build... | Top 10 AI He...",
+   "channel": "MultiKhabar",
+   "channel_id": "UCejcj3pGmJZi-gkFgzNkU3w",
+   "published": "2026-10-27T09:20:17Z",
+   "lang": "en",
+   "views": 2,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/SG8hgCStb5E/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=SG8hgCStb5E",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "T9dme-lLRak",
+   "title": "Interview with Radha Suvarna, Chief Product Officer, Payments, Finastra at Money 20/20 USA, Vegas",
+   "channel": "FinTech BoostUP",
+   "channel_id": "UCmXK8ebTGeQrdoJKc3KvY7A",
+   "published": "2026-10-26T22:33:04Z",
+   "lang": "en",
+   "views": 496,
+   "likes": 2,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/T9dme-lLRak/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=T9dme-lLRak",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "VdckIIeDRwI",
+   "title": "Sirma Temenos referral partnership video_2026",
+   "channel": "Sirma Group",
+   "channel_id": "UCXDbX1Z7w5hBEP5tmaDYrmw",
+   "published": "2026-10-26T08:49:35Z",
+   "lang": "en",
+   "views": 27,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/VdckIIeDRwI/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=VdckIIeDRwI",
+   "brands": [
+    "Temenos"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "2v6op5GFq14",
+   "title": "Finastra loan iq..",
+   "channel": "Yamchi Musk",
+   "channel_id": "UCEHeXk3HQxUFPX54IlLG6Sw",
+   "published": "2026-10-24T16:02:34Z",
+   "lang": "en",
+   "views": 34,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/2v6op5GFq14/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=2v6op5GFq14",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "nNyXqQ0qH0s",
+   "title": "Between US - Bath Building Society",
+   "channel": "SBS",
+   "channel_id": "UCMhywLc-BENrJbuhCO-xWOw",
+   "published": "2026-10-22T07:14:35Z",
+   "lang": "en",
+   "views": 23,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/nNyXqQ0qH0s/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=nNyXqQ0qH0s",
+   "brands": [
+    "SBS"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "NKFi_7v46As",
+   "title": "Why Payments Can't Be Probabilistic, with Radha Suvarna, Finastra | Fintech Garden Podcast 178",
+   "channel": "Fintech Garden",
+   "channel_id": "UCv8gUw-tx2-bEYUkWgXeT3A",
+   "published": "2026-10-20T13:15:06Z",
+   "lang": "en",
+   "views": 101,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/NKFi_7v46As/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=NKFi_7v46As",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "Qzr8xjaOIRg",
+   "title": "Backbase | Product Explainer Video | Commercial Banking SaaS",
+   "channel": "Zahid | SaaS & AI Product Explainer Videos",
+   "channel_id": "UClnv9f4OxAntYzo7R2PcFLA",
+   "published": "2026-10-17T12:49:31Z",
+   "lang": "en",
+   "views": 360,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/Qzr8xjaOIRg/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=Qzr8xjaOIRg",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "UK5_bjLlgj8",
+   "title": "Product Explainer Video | Backbase for Commercial Banking",
+   "channel": "Umar (Motion Designer)",
+   "channel_id": "UCn5JrIo93UIGFFOJwE01qyg",
+   "published": "2026-10-17T12:48:52Z",
+   "lang": "en",
+   "views": 16,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/UK5_bjLlgj8/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=UK5_bjLlgj8",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "ymr9b56S-v4",
+   "title": "Backbase | Product Explainer Video | Commercial Banking SaaS",
+   "channel": "Motion Graphix | SaaS Explainer Video Expert",
+   "channel_id": "UCDEYs4tjxnWJWTCWYbmwZdw",
+   "published": "2026-10-17T12:48:13Z",
+   "lang": "en",
+   "views": 12,
+   "likes": 1,
+   "comments": 1,
+   "thumbnail": "https://i.ytimg.com/vi/ymr9b56S-v4/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=ymr9b56S-v4",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "YOeuH1nvBK0",
+   "title": "Between Us - Dealer Financial",
+   "channel": "SBS",
+   "channel_id": "UCMhywLc-BENrJbuhCO-xWOw",
+   "published": "2026-10-16T13:39:22Z",
+   "lang": "en",
+   "views": 40,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/YOeuH1nvBK0/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=YOeuH1nvBK0",
+   "brands": [
+    "SBS"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "L66LZLVBoXs",
+   "title": "Core Modernization Is Now a Business Imperative for Banks",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T15:24:54Z",
+   "lang": "en",
+   "views": 63,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/L66LZLVBoXs/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=L66LZLVBoXs",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "9t2-s0PgREo",
+   "title": "Questbank on Why Modernization Is More Than a Technology Project",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:55:24Z",
+   "lang": "en",
+   "views": 38,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/9t2-s0PgREo/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=9t2-s0PgREo",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "utVOFcrbVjY",
+   "title": "Core Banking Modernization: How Raiffeisen Simplified Banking Delivery",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:50:07Z",
+   "lang": "en",
+   "views": 87,
+   "likes": 2,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/utVOFcrbVjY/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=utVOFcrbVjY",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "eo5XvxhqcAc",
+   "title": "Banking Agility: How Bank AlBilad Accelerated Product Delivery",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:47:00Z",
+   "lang": "en",
+   "views": 97,
+   "likes": 6,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/eo5XvxhqcAc/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=eo5XvxhqcAc",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "sDAoUaap7qs",
+   "title": "Banking Innovation: How NLB Achieved 50% Faster Time to Market",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:46:22Z",
+   "lang": "en",
+   "views": 39,
+   "likes": 2,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/sDAoUaap7qs/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=sDAoUaap7qs",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "-mDJz514Xh4",
+   "title": "Digital Banking Transformation: How O-Bank Launches Products in Days",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:40:28Z",
+   "lang": "en",
+   "views": 65,
+   "likes": 2,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/-mDJz514Xh4/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=-mDJz514Xh4",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "_OLISNmQZOA",
+   "title": "Core Banking Modernization: ASA International's Digital Journey",
+   "channel": "Temenos",
+   "channel_id": "UCdZU5ECbjGYRnQPnClO0BZw",
+   "published": "2026-10-14T14:40:12Z",
+   "lang": "en",
+   "views": 36,
+   "likes": 1,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/_OLISNmQZOA/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=_OLISNmQZOA",
+   "brands": [
+    "Temenos"
+   ],
+   "official": true,
+   "first_seen": "2026-11-06T15:19:09Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "MJEwPOYnxLE",
+   "title": "The future of AI security and core banking modernisation | Finastra at Sibos 2026",
+   "channel": "FinTech Futures",
+   "channel_id": "UC0ULGaJFZDTrMDMB8D_ZrUA",
+   "published": "2026-10-14T13:19:22Z",
+   "lang": "en",
+   "views": 1860,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/MJEwPOYnxLE/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=MJEwPOYnxLE",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "juIaGtNC4rc",
+   "title": "Cleareye_Finastra_CargoX_WebinarPanel",
+   "channel": "Cleareye.ai_Official",
+   "channel_id": "UCi1TKQZD928_0cnJg5cV3Cw",
+   "published": "2026-10-14T06:33:44Z",
+   "lang": "en",
+   "views": 46,
+   "likes": 3,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/juIaGtNC4rc/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=juIaGtNC4rc",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "POS5q_NQ_uI",
+   "title": "Interview with Vinay Mendoca, VP Product Management, Trade & Supply Chain Finance, Finastra",
+   "channel": "FinTech BoostUP",
+   "channel_id": "UCmXK8ebTGeQrdoJKc3KvY7A",
+   "published": "2026-10-10T10:19:56Z",
+   "lang": "en",
+   "views": 796,
+   "likes": 4,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/POS5q_NQ_uI/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=POS5q_NQ_uI",
+   "brands": [
+    "Finastra"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  },
+  {
+   "id": "4leWUH19ZyM",
+   "title": "Backbase Banking Agents & Vesta’s $30M Round | Oct 8, 2026",
+   "channel": "Tomorrow This Morning",
+   "channel_id": "UCUvMy9cVnJEASREbSVka4iw",
+   "published": "2026-10-08T18:47:12Z",
+   "lang": "en",
+   "views": 26,
+   "likes": 0,
+   "comments": 0,
+   "thumbnail": "https://i.ytimg.com/vi/4leWUH19ZyM/mqdefault.jpg",
+   "url": "https://www.youtube.com/watch?v=4leWUH19ZyM",
+   "brands": [
+    "Backbase"
+   ],
+   "official": false,
+   "first_seen": "2026-11-06T15:17:25Z",
+   "stats_updated": "2026-11-06T15:20:04Z"
+  }
+ ]
+}
